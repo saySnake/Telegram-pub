@@ -1440,6 +1440,7 @@
 		B62321B8206CCC3200BAAB88 /* RTDeviceHardWare.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */; };
 		B62321BB206CED2500BAAB88 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B9206CED2400BAAB88 /* UIView+Addition.m */; };
 		B62321BC206CED2500BAAB88 /* UIView+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = B62321BA206CED2500BAAB88 /* UIView+Addition.h */; };
+		B65BC6DA207C9B84006DB3CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65BC6D9207C9B83006DB3CC /* Icon@2x.png */; };
 		B67B02912075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */; };
 		B67B02932075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */; };
 		B67B02952075D35A00ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */; };
@@ -1450,7 +1451,6 @@
 		B67B02AE2077441200ADA2A4 /* ModernBubbleOutgoingFullHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B67B02A62077441200ADA2A4 /* ModernBubbleOutgoingFullHighlighted@2x.png */; };
 		B6820BA2207B392A000E3170 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6820BA0207B3927000E3170 /* WKWebViewController.m */; };
 		B6820BA3207B392A000E3170 /* WKWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B6820BA1207B392A000E3170 /* WKWebViewController.h */; };
-		B6E82660207B887700CD8D65 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82653207B885A00CD8D65 /* Icon@2x.png */; };
 		B6E82661207B887700CD8D65 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82654207B885D00CD8D65 /* Icon-60@2x.png */; };
 		B6E82662207B887700CD8D65 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82655207B885F00CD8D65 /* Icon-40.png */; };
 		B6E82663207B887700CD8D65 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82656207B886100CD8D65 /* Icon-40@2x.png */; };
@@ -7507,6 +7507,7 @@
 		B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardWare.m; sourceTree = "<group>"; };
 		B62321B9206CED2400BAAB88 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		B62321BA206CED2500BAAB88 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		B65BC6D9207C9B83006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
 		B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0.jpg"; sourceTree = "<group>"; };
 		B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
@@ -7521,7 +7522,6 @@
 		B67B02A62077441200ADA2A4 /* ModernBubbleOutgoingFullHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModernBubbleOutgoingFullHighlighted@2x.png"; path = "Resources/ModernBubbleOutgoingFullHighlighted@2x.png"; sourceTree = "<group>"; };
 		B6820BA0207B3927000E3170 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		B6820BA1207B392A000E3170 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
-		B6E82653207B885A00CD8D65 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../hottalk_icon 2/Icon@2x.png"; sourceTree = "<group>"; };
 		B6E82654207B885D00CD8D65 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B6E82655207B885F00CD8D65 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		B6E82656207B886100CD8D65 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -19612,7 +19612,7 @@
 				B6E82659207B886700CD8D65 /* Icon-167.png */,
 				B6E8265D207B887200CD8D65 /* Icon-Small@2x.png */,
 				B6E8265E207B887500CD8D65 /* Icon.png */,
-				B6E82653207B885A00CD8D65 /* Icon@2x.png */,
+				B65BC6D9207C9B83006DB3CC /* Icon@2x.png */,
 				D09EE2E0193A95ED00980617 /* iPad-Landscape@2x.png */,
 				D064421C1E4E2A3600394D5F /* AppStore.xcconfig */,
 				93EFBF0E173DC6DA00F7B89E /* Config.xcconfig */,
@@ -25281,7 +25281,6 @@
 				0978FEEB1E93C5B600F76E38 /* ModernConversationSend@3x.png in Resources */,
 				D061F28C1A928F580031BCBE /* NavigationBackArrow.png in Resources */,
 				09361CD41E725DCF007ED29C /* ModernBubbleOutgoingPartialHighlighted@3x.png in Resources */,
-				B6E82660207B887700CD8D65 /* Icon@2x.png in Resources */,
 				D0F0AAF71EC37770005EE2A5 /* Apple_Pay_Payment_Mark@3x.png in Resources */,
 				D0C925CE194A024000E629CA /* start_arrow_ipad@2x.png in Resources */,
 				D020B75F18B509C50026DB24 /* ModernConversationMicButton_Highlighted@2x.png in Resources */,
@@ -25542,6 +25541,7 @@
 				D0D97D831B3B99F5003457CD /* MusicPlayerControlBack@2x.png in Resources */,
 				09034EBF1EE1725B006997DB /* ModernContactListAddMemberIcon@3x.png in Resources */,
 				09EEAA081E6DCDF000246830 /* PanelInfoIcon@3x.png in Resources */,
+				B65BC6DA207C9B84006DB3CC /* Icon@2x.png in Resources */,
 				D00C7197193F3FD40005349C /* ModernBubbleOutgoingFullHighlightedPad@2x.png in Resources */,
 				931C5951174CC9D500D597D9 /* MenuArrowTop_Highlighted@2x.png in Resources */,
 				D035EBBB194868B700EEEC17 /* InfoPlist.strings in Resources */,

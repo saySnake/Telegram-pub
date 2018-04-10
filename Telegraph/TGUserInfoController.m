@@ -69,7 +69,9 @@
         [self.menuSections addSection:_actionsSection];
     }
     return self;
+    
 }
+
 
 - (void)backPressed
 {
