@@ -42,7 +42,7 @@
 "MESSAGE_STICKER" = "%1$@ 向您发送了 %2$@ 贴纸";
 "CHAT_MESSAGE_STICKER" = "%1$@ 发送了 %3$@ 贴纸到群组 %2$@";
 
-"CONTACT_JOINED" = "%1$@ 加入了 Telegram！";
+"CONTACT_JOINED" = "%1$@ 加入了 HotTalk！";
 
 "AUTH_REGION" = "在新设备上登录 %1$@， 位置： %2$@";
 
@@ -193,10 +193,10 @@
 "Tour.Text4" = "多币种资产管理\n随时随地查看行情，完成交易";
 
 "Tour.Title5" = "云端";
-"Tour.Text5" = "**Telegram** 允许您通过多个设备访问您的\n聊天记录";
+"Tour.Text5" = "**HotTalk** 允许您通过多个设备访问您的\n聊天记录";
 
 "Tour.Title6" = "免费";
-"Tour.Text6" = "**Telegram** 永久免费，无广告\n不收取任何费用";
+"Tour.Text6" = "**HotTalk** 永久免费，无广告\n不收取任何费用";
 
 //"Tour.Title1" = "Telegram";
 //"Tour.Text1" = "世界上**最快的**聊天工具\n**免费**又**安全**";
@@ -224,12 +224,12 @@
 "Login.HaveNotReceivedCodeInternal" = "没有收到验证码？";
 "Login.CodeSentSms" = "我们通过短信向您发送了验证码";
 "Login.Code" = "验证码";
-"Login.CallRequestState1" = "Telegram 会在 %d:%.2d 后改用电话语音播报验证码";
-"Login.CallRequestState2" = "正在向 Telegram 发送呼叫请求...";
-"Login.CallRequestState3" = "Telegram 已拨打您的电话\n[仍未收到验证码？]";
+"Login.CallRequestState1" = "HotTalk 会在 %d:%.2d 后改用电话语音播报验证码";
+"Login.CallRequestState2" = "正在向 HotTalk 发送呼叫请求...";
+"Login.CallRequestState3" = "HotTalk 已拨打您的电话\n[仍未收到验证码？]";
 "Login.EmailNotConfiguredError" = "请先启用邮箱账号";
 "Login.EmailCodeSubject" = "%@, no code";
-"Login.EmailCodeBody" = "My phone number is:\n%@\nI can't get an activation code for Telegram.";
+"Login.EmailCodeBody" = "My phone number is:\n%@\nI can't get an activation code for HotTalk.";
 "Login.UnknownError" = "出现未知错误，请稍后再试";
 "Login.InvalidCodeError" = "验证码错误，请重新输入";
 "Login.NetworkError" = "请检查您的网络连接后重试";
@@ -288,11 +288,11 @@
 "Contacts.TabTitle" = "联系人";
 "Contacts.Title" = "联系人";
 "Contacts.FailedToSendInvitesMessage" = "呃，出错了。";
-"Contacts.AccessDeniedError" = "Telegram 无法访问您的通讯录";
-"Contacts.AccessDeniedHelpLandscape" = "请前往 %@ 的“设置—隐私—通讯录”\n打开Telegram的开关";
-"Contacts.AccessDeniedHelpPortrait" = "请前往 %@ 的“设置—隐私—通讯录”\n打开Telegram的开关";
+"Contacts.AccessDeniedError" = "HotTalk 无法访问您的通讯录";
+"Contacts.AccessDeniedHelpLandscape" = "请前往 %@ 的“设置—隐私—通讯录”\n打开HotTalk的开关";
+"Contacts.AccessDeniedHelpPortrait" = "请前往 %@ 的“设置—隐私—通讯录”\n打开HotTalk的开关";
 "Contacts.AccessDeniedHelpON" = "开";
-"Contacts.InviteToTelegram" = "邀请到 Telegram";
+"Contacts.InviteToTelegram" = "邀请到 HotTalk";
 "Contacts.InviteFriends" = "邀请朋友";
 "Contacts.SelectAll" = "全选";
 
@@ -370,9 +370,9 @@
 "Notification.CreatedChat" = "%@ 创建了群组";
 "Notification.CreatedChannel" = "频道创建";
 "Notification.CreatedChatWithTitle" = "%@ 创建了群组 \"%@\"";
-"Notification.Joined" = "%@ 加入了 Telegram";
+"Notification.Joined" = "%@ 加入了 HotTalk";
 "Notification.ChangedGroupName" = "%@ 将群组名称更改为 \"%@\"";
-"Notification.NewAuthDetected" = "%1$@,\n我们在 %3$@ %2$@ %4$@发现一个新设备登录您的帐号\n\n设备: %5$@\n位置: %6$@\n\n如非本人登录, 请前往“设置—隐私与安全”点击“注销所有其他设备”。\n\n如果您怀疑有人未经您的同意登录您的账号，请在请在“隐私与安全”中启用两步验证。\n\n谢谢！\nTelegram 团队";
+"Notification.NewAuthDetected" = "%1$@,\n我们在 %3$@ %2$@ %4$@发现一个新设备登录您的帐号\n\n设备: %5$@\n位置: %6$@\n\n如非本人登录, 请前往“设置—隐私与安全”点击“注销所有其他设备”。\n\n如果您怀疑有人未经您的同意登录您的账号，请在请在“隐私与安全”中启用两步验证。\n\n谢谢！\nHotTalk 团队";
 "Notification.MessageLifetimeChanged" = "%1$@ 已将阅后即焚计时器设定为 %2$@";
 "Notification.MessageLifetimeChangedOutgoing" = "您已将阅后即焚计时器设定为 %1$@";
 "Notification.MessageLifetimeRemoved" = "%1$@ 取消了阅后即焚计时器";
@@ -452,7 +452,7 @@
 "UserInfo.NotificationsDisabled" = "已关闭";
 "UserInfo.NotificationsEnable" = "开启";
 "UserInfo.NotificationsDisable" = "关闭";
-"UserInfo.Invite" = "邀请使用 Telegram";
+"UserInfo.Invite" = "邀请使用 HotTalk";
 
 // New Contact
 "NewContact.Title" = "新建联系人";
@@ -529,7 +529,7 @@
 "Settings.Support" = "我有疑问";
 "Settings.FAQ" = "常见问题";
 "Settings.FAQ_URL" = "http://telegram.org/faq#general";
-"Settings.FAQ_Intro" = "请注意：Telegram 的技术支持由志愿者提供，反馈时请使用英文。我们会尽快回复您，但是仍可能需要等待一段时间。\n\n请前往“常见问题” 看看：那里有各种常见问题和故障排除指南。";
+"Settings.FAQ_Intro" = "请注意：HotTalk 的技术支持由志愿者提供，反馈时请使用英文。我们会尽快回复您，但是仍可能需要等待一段时间。\n\n请前往“常见问题” 看看：那里有各种常见问题和故障排除指南。";
 "Settings.FAQ_Button" = "常见问题";
 "Settings.SaveIncomingPhotos" = "自动保存图片";
 
@@ -574,7 +574,7 @@
 "Cache.Title" = "存储用量";
 "Cache.ClearCache" = "清除缓存";
 "Cache.KeepMedia" = "保留缓存";
-"Cache.Help" = "为节省储存空间，此期限内您没有使用过的缓存文件都会被删除。这包括你消息记录中的图片、视频或其他文件。\n\n但这些文件都会保留在 Telegram 云端，您需要时可再次下载。";
+"Cache.Help" = "为节省储存空间，此期限内您没有使用过的缓存文件都会被删除。这包括你消息记录中的图片、视频或其他文件。\n\n但这些文件都会保留在 HotTalk 云端，您需要时可再次下载。";
 
 // Blocked Users
 "BlockedUsers.Title" = "已屏蔽";
@@ -598,9 +598,9 @@
 
 
 "Settings.LogoutConfirmationTitle" = "退出登录";
-"Settings.LogoutConfirmationText" = "\nTelegram 能在所有设备上同时登录和使用。\n\n但请注意，注销将会清除所有的私密对话数据。";
+"Settings.LogoutConfirmationText" = "\nHotTalk 能在所有设备上同时登录和使用。\n\n但请注意，注销将会清除所有的私密对话数据。";
 
-"Login.PadPhoneHelp" = "\n您可以使用手机号在各种设备上登录 Telegram。\n请不要在此使用您 iPad SIM 卡的号码，我们需要您能够接收短信。\n\n使用此号码？\n{number}";
+"Login.PadPhoneHelp" = "\n您可以使用手机号在各种设备上登录 HotTalk。\n请不要在此使用您 iPad SIM 卡的号码，我们需要您能够接收短信。\n\n使用此号码？\n{number}";
 "Login.PadPhoneHelpTitle" = "手机号码";
 
 "MessageTimer.Custom" = "自定义";
@@ -796,8 +796,8 @@
 
 "Settings.PhoneNumber" = "更改号码";
 
-"PhoneNumberHelp.Help" = "更换当前与 Telegram 帐号绑定的电话号码。此帐号的一切资料，包括云端储存的消息，文件，联系人都会被迁移到新号码下。\n\n**注意：** 所有拥有您旧号码且未被您屏蔽的 Telegram 联系人会获得您的**新号码**。";
-"PhoneNumberHelp.Alert" = "所有拥有当前号码，且未被屏蔽的 Telegram 联系人会自动获取新号码。";
+"PhoneNumberHelp.Help" = "更换当前与 HotTalk 帐号绑定的电话号码。此帐号的一切资料，包括云端储存的消息，文件，联系人都会被迁移到新号码下。\n\n**注意：** 所有拥有您旧号码且未被您屏蔽的 HotTalk 联系人会获得您的**新号码**。";
+"PhoneNumberHelp.Alert" = "所有拥有当前号码，且未被屏蔽的 HotTalk 联系人会自动获取新号码。";
 "PhoneNumberHelp.ChangeNumber" = "更改号码";
 
 "ChangePhoneNumberNumber.Title" = "更改号码";
@@ -808,9 +808,9 @@
 "ChangePhoneNumberCode.Code" = "验证码";
 "ChangePhoneNumberCode.CodePlaceholder" = "输入验证码";
 "ChangePhoneNumberCode.Help" = "我们已向此号码发送短信验证码";
-"ChangePhoneNumberCode.CallTimer" = "Telegram 会在 %@ 后通过电话语音播报验证码";
+"ChangePhoneNumberCode.CallTimer" = "HotTalk 会在 %@ 后通过电话语音播报验证码";
 "ChangePhoneNumberCode.RequestingACall" = "发送呼叫请求...";
-"ChangePhoneNumberCode.Called" = "Telegram 已呼叫您";
+"ChangePhoneNumberCode.Called" = "HotTalk 已呼叫您";
 
 "LoginPassword.Title" = "输入密码";
 "LoginPassword.PasswordPlaceholder" = "密码";
@@ -943,14 +943,14 @@
 "SharedMedia.EmptyFilesText" = "您可以发送和收取上限为 1.5G 的任意文件，\n并在所有设备上访问。";
 
 "ShareFileTip.Title" = "分享文件";
-"ShareFileTip.Text" = "通过这里选择，并**无损**发送相机胶卷中的照片。\n\n如要分享其他类型的文件，请在 %@（例如浏览器）中打开它们，点按在 **通过其他应用打开** 或在分享按钮中选择「Telegram」打开。";
+"ShareFileTip.Text" = "通过这里选择，并**无损**发送相机胶卷中的照片。\n\n如要分享其他类型的文件，请在 %@（例如浏览器）中打开它们，点按在 **通过其他应用打开** 或在分享按钮中选择「HotTalk」打开。";
 "ShareFileTip.CloseTip" = "关闭提示";
 
 "DialogList.SearchSectionDialogs" = "会话与联系人";
 "DialogList.SearchSectionGlobal" = "全局搜索";
 "DialogList.SearchSectionMessages" = "消息";
 
-"Username.LinkHint" = "此链接会在 Telegram 中打开一个会话窗口：[\nhttps://t.me/%@]";
+"Username.LinkHint" = "此链接会在 HotTalk 中打开一个会话窗口：[\nhttps://t.me/%@]";
 "Username.LinkCopied" = "链接已复制到剪贴板";
 
 "SharedMedia.DeleteItemsConfirmation_1" = "删除媒体文件？";
@@ -965,12 +965,12 @@
 "PasscodeSettings.TurnPasscodeOn" = "开启密码锁";
 "PasscodeSettings.TurnPasscodeOff" = "关闭密码锁";
 "PasscodeSettings.ChangePasscode" = "更改密码";
-"PasscodeSettings.Help" = "开启密码锁后，会话页面将出现锁形图标，点击即可锁定或解锁 Telegram。\n\n注意：如果遗忘此密码，您只能删除并重装 Telegram 来移除密码锁。重装会丢失所有私密对话。";
+"PasscodeSettings.Help" = "开启密码锁后，会话页面将出现锁形图标，点击即可锁定或解锁 HotTalk。\n\n注意：如果遗忘此密码，您只能删除并重装 HotTalk 来移除密码锁。重装会丢失所有私密对话。";
 "PasscodeSettings.UnlockWithTouchId" = "使用 Touch ID 解锁";
 "PasscodeSettings.SimplePasscode" = "简单密码";
 "PasscodeSettings.SimplePasscodeHelp" = "简单密码由四位数字组成。";
 "PasscodeSettings.EncryptData" = "加密本地数据库";
-"PasscodeSettings.EncryptDataHelp" = "这是一个试验性功能，请谨慎使用。它通过密码锁生成密码，来加密本地储存的 Telegram 数据。";
+"PasscodeSettings.EncryptDataHelp" = "这是一个试验性功能，请谨慎使用。它通过密码锁生成密码，来加密本地储存的 HotTalk 数据。";
 
 "EnterPasscode.EnterTitle" = "输入解锁密码";
 "EnterPasscode.ChangeTitle" = "更改密码";
@@ -981,7 +981,7 @@
 "EnterPasscode.EnterCurrentPasscode" = "输入当前解锁密码";
 "EnterPasscode.TouchId" = "输入密码";
 
-"DialogList.PasscodeLockHelp" = "点击锁定 Telegram";
+"DialogList.PasscodeLockHelp" = "点击锁定 HotTalk";
 
 "PasscodeSettings.AutoLock" = "自动锁定";
 "PasscodeSettings.AutoLock.Disabled" = "停用";
@@ -1000,32 +1000,32 @@
 
 "AccessDenied.Title" = "请授权访问";
 
-"AccessDenied.Contacts" = "Telegram 基于通讯录来获取联系人列表，\n\n请前往「设置—隐私—通讯录」中打开 Telegram 的开关。";
+"AccessDenied.Contacts" = "HotTalk 基于通讯录来获取联系人列表，\n\n请前往「设置—隐私—通讯录」中打开 HotTalk 的开关。";
 
-"AccessDenied.VoiceMicrophone" = "Telegram 需要访问麦克风才能录制语音消息，\n\n请前往「设置—隐私—麦克风」中打开 Telegram 的开关。";
+"AccessDenied.VoiceMicrophone" = "HotTalk 需要访问麦克风才能录制语音消息，\n\n请前往「设置—隐私—麦克风」中打开 HotTalk 的开关。";
 
-"AccessDenied.VideoMicrophone" = "Telegram 需要访问麦克风才能在录制视频时录制声音，\n\n请前往「设置—隐私—麦克风」中打开 Telegram 的开关。";
+"AccessDenied.VideoMicrophone" = "HotTalk 需要访问麦克风才能在录制视频时录制声音，\n\n请前往「设置—隐私—麦克风」中打开 HotTalk 的开关。";
 
-"AccessDenied.MicrophoneRestricted" = "Telegram 无法访问麦克风，\n\n请前往「设置—隐私—麦克风」中打开 “Telegram” 的开关。";
+"AccessDenied.MicrophoneRestricted" = "HotTalk 无法访问麦克风，\n\n请前往「设置—隐私—麦克风」中打开 “HotTalk” 的开关。";
 
 
-"AccessDenied.Camera" = "Telegram 需要访问相机才能拍照或录制视频，\n\n请前往「设置—隐私—相机」中打开 Telegram 的开关。";
+"AccessDenied.Camera" = "HotTalk 需要访问相机才能拍照或录制视频，\n\n请前往「设置—隐私—相机」中打开 HotTalk 的开关。";
 
-"AccessDenied.CameraRestricted" = "Telegram 无法访问相机，\n\n请前往「设置—隐私—相机」中打开 Telegram 的开关。";
+"AccessDenied.CameraRestricted" = "HotTalk 无法访问相机，\n\n请前往「设置—隐私—相机」中打开 HotTalk 的开关。";
 
 "AccessDenied.CameraDisabled" = "此设备已经禁止使用相机，\n\n请前往「设置—通用—访问限制」中打开「相机」的开关。";
 
-"AccessDenied.PhotosAndVideos" = "Telegram 需要访问照片才能发送图片或视频，\n\n请前往「设置—隐私—照片」中打开 Telegram 的开关。";
+"AccessDenied.PhotosAndVideos" = "HotTalk 需要访问照片才能发送图片或视频，\n\n请前往「设置—隐私—照片」中打开 HotTalk 的开关。";
 
-"AccessDenied.SaveMedia" = "Telegram 需要访问照片才能保存图片或视频，\n\n请前往「设置—隐私—照片」中打开 Telegram 的开关。";
+"AccessDenied.SaveMedia" = "HotTalk 需要访问照片才能保存图片或视频，\n\n请前往「设置—隐私—照片」中打开 HotTalk 的开关。";
 
-"AccessDenied.PhotosRestricted" = "Telegram 无法访问照片，\n\n请前往「设置—隐私—照片」中打开 Telegram 的开关。";
+"AccessDenied.PhotosRestricted" = "HotTalk 无法访问照片，\n\n请前往「设置—隐私—照片」中打开 HotTalk 的开关。";
 
-"AccessDenied.LocationDenied" = "Telegram 需要使用定位服务才能获取，并分享当前位置，\n\n请前往「设置—隐私—定位服务」中打开 Telegram 的开关。";
+"AccessDenied.LocationDenied" = "HotTalk 需要使用定位服务才能获取，并分享当前位置，\n\n请前往「设置—隐私—定位服务」中打开 HotTalk 的开关。";
 
-"AccessDenied.LocationDisabled" = "Telegram 需要使用定位服务才能获取，并分享当前位置，\n\n请前往「设置—隐私—定位服务」中打开 Telegram 的开关。";
+"AccessDenied.LocationDisabled" = "HotTalk 需要使用定位服务才能获取，并分享当前位置，\n\n请前往「设置—隐私—定位服务」中打开 HotTalk 的开关。";
 
-"AccessDenied.LocationTracking" = "Telegram 需要访问定位服务才能在地图上显示您的位置，\n\n请前往「设置—隐私—定位服务」中打开 Telegram 的开关。";
+"AccessDenied.LocationTracking" = "HotTalk 需要访问定位服务才能在地图上显示您的位置，\n\n请前往「设置—隐私—定位服务」中打开 HotTalk 的开关。";
 
 "AccessDenied.Settings" = "设置";
 
@@ -1120,7 +1120,7 @@
 "TwoStepAuth.SetupEmail" = "设置密码找回邮箱";
 "TwoStepAuth.ChangeEmail" = "更换密保邮箱";
 "TwoStepAuth.PendingEmailHelp" = "邮箱 %@ 正在等待验证，在完成验证之前此恢复邮箱不会启用。";
-"TwoStepAuth.GenericHelp" = "两步验证已开启\n在登录 Telegram 时，请输入之前所设的密码。";
+"TwoStepAuth.GenericHelp" = "两步验证已开启\n在登录 HotTalk 时，请输入之前所设的密码。";
 
 "TwoStepAuth.ConfirmationTitle" = "两步验证";
 "TwoStepAuth.ConfirmationText" = "请检查邮箱，并点击验证链接来完成两步验证的设置。如未收到邮件请查看垃圾邮件。";
@@ -1140,7 +1140,7 @@
 
 "TwoStepAuth.EmailTitle" = "密码找回邮箱";
 "TwoStepAuth.EmailSkip" = "跳过";
-"TwoStepAuth.EmailSkipAlert" = "您确定不设置密码找回邮箱？\n\n一旦忘记密码，您将无法再登录此 Telegram 账号，并且无法恢复。";
+"TwoStepAuth.EmailSkipAlert" = "您确定不设置密码找回邮箱？\n\n一旦忘记密码，您将无法再登录此 HotTalk 账号，并且无法恢复。";
 "TwoStepAuth.Email" = "邮箱";
 "TwoStepAuth.EmailPlaceholder" = "邮箱地址";
 "TwoStepAuth.EmailHelp" = "请输入有效的邮箱地址，它是您找回密码的唯一途径。";
@@ -1168,7 +1168,7 @@
 "Conversation.FileDropbox" = "Dropbox";
 
 "Conversation.FileOpenIn" = "通过其他应用打开...";
-"Conversation.FileHowToText" = "如需分享其他类型的文件，在您的 %@（例如浏览器）中打开它们，在 **通过其他应用打开** 或分享按钮中选择使用 “Telegram” 打开。";
+"Conversation.FileHowToText" = "如需分享其他类型的文件，在您的 %@（例如浏览器）中打开它们，在 **通过其他应用打开** 或分享按钮中选择使用 “HotTalk” 打开。";
 
 "Map.LocationTitle" = "位置";
 "Map.OpenInMaps" = "在地图中显示";
@@ -1202,9 +1202,9 @@
 "Map.ETAHours_any" = "%@ 小时";
 "Map.ETAHours_many" = "%@ 小时";
 
-"ChangePhone.ErrorOccupied" = "该号码 %@ 已注册 Telegram，请在转移至新号码前删除对方帐户。";
+"ChangePhone.ErrorOccupied" = "该号码 %@ 已注册 HotTalk，请在转移至新号码前删除对方帐户。";
 
-"AccessDenied.LocationTracking" = "Telegram 需要访问定位服务才能在地图上显示您的位置，\n\n请前往「设置—隐私—定位服务」中打开 Telegram 的开关。";
+"AccessDenied.LocationTracking" = "HotTalk 需要访问定位服务才能在地图上显示您的位置，\n\n请前往「设置—隐私—定位服务」中打开 HotTalk 的开关。";
 
 "PrivacySettings.AuthSessions" = "所有设备";
 "AuthSessions.Title" = "所有设备";
@@ -1214,7 +1214,7 @@
 "AuthSessions.TerminateSession" = "注销此设备";
 "AuthSessions.OtherSessions" = "其他设备";
 "AuthSessions.EmptyTitle" = "无其他设备";
-"AuthSessions.EmptyText" = "您可以用同一个手机号码在其他手机、平板和桌面设备上登录 Telegram，所有数据会即时同步。";
+"AuthSessions.EmptyText" = "您可以用同一个手机号码在其他手机、平板和桌面设备上登录 HotTalk，所有数据会即时同步。";
 "AuthSessions.AppUnofficial" = "(ID: %@)";
 
 "WebPreview.GettingLinkInfo" = "获取链接信息...";
@@ -1227,7 +1227,7 @@
 
 "GroupInfo.InviteLink.Title" = "邀请链接";
 "GroupInfo.InviteLink.LinkSection" = "链接地址";
-"GroupInfo.InviteLink.Help" = "任何已安装 Telegram 的用户都可通过此链接加入您的群组。";
+"GroupInfo.InviteLink.Help" = "任何已安装 HotTalk 的用户都可通过此链接加入您的群组。";
 "GroupInfo.InviteLink.CopyLink" = "拷贝链接";
 "GroupInfo.InviteLink.RevokeLink" = "撤销链接";
 "GroupInfo.InviteLink.ShareLink" = "分享链接";
@@ -1313,7 +1313,7 @@
 
 "Login.PhoneNumberHelp" = "帮助";
 "Login.EmailPhoneSubject" = "无效的号码 %@";
-"Login.EmailPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut Telegram says it's invalid. Please help.\nAdditional Info: %@, %@.";
+"Login.EmailPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut HotTalk says it's invalid. Please help.\nAdditional Info: %@, %@.";
 
 
 "SharedMedia.EmptyLinksText" = "所有已分享的链接都会在此显示。";
@@ -1341,8 +1341,8 @@
 "Channel.Edit.LinkItem" = "链接";
 
 "Channel.Username.Title" = "链接";
-"Channel.Username.Help" = "您可以在 **Telegram** 上为频道设置一个名称，他人能通过该名称找到您的频道。\n\n您可以使用字母、数字及下划线，最小长度为 **5** 个字符。";
-"Channel.Username.LinkHint" = "此链接将打开您的 Telegram 频道：[\nhttps://t.me/%@]";
+"Channel.Username.Help" = "您可以在 **HotTalk** 上为频道设置一个名称，他人能通过该名称找到您的频道。\n\n您可以使用字母、数字及下划线，最小长度为 **5** 个字符。";
+"Channel.Username.LinkHint" = "此链接将打开您的 HotTalk 频道：[\nhttps://t.me/%@]";
 "Channel.Username.InvalidTooShort" = "频道名称必须包含至少 5 个字符。";
 "Channel.Username.InvalidStartsWithNumber" = "频道名称不能以数字开头。";
 "Channel.Username.InvalidCharacters" = "抱歉，该名称不符合规范。";
@@ -1385,7 +1385,7 @@
 
 "Channel.Setup.Title" = "频道";
 
-"Channel.Username.CreatePublicLinkHelp" = "用户可与他人分享此链接，使用 Telegram 搜索也能找到您的频道。";
+"Channel.Username.CreatePublicLinkHelp" = "用户可与他人分享此链接，使用 HotTalk 搜索也能找到您的频道。";
 "Channel.Username.CreatePrivateLinkHelp" = "用户可通过以上链接加入您的频道。您可以随时撤销此链接。";
 
 "Channel.Setup.PublicNoLink" = "请为您的公开频道选择一个链接，以便他人可以通过搜索找到此频道并分享给别人。\n\n如果您对此不感兴趣，我们建议您创建一个私人频道。";
@@ -1469,7 +1469,7 @@
 "Group.UpgradeNoticeText1" = "升级为超级群组即可提高成员上限、并获得更多功能：";
 "Group.UpgradeNoticeText2" = "•  超级群组成员上限为 {supergroup_member_limit} 人\n•  新成员可以看到所有聊天记录\n•  管理员可以使消息在所有成员的记录中被删除\n•  默认关闭消息通知";
 "GroupInfo.UpgradeButton" = "升级为超级群组";
-"Group.UpgradeConfirmation" = "请注意：群组成员必须更新最新版的 Telegram 才能看到您的超级群组。";
+"Group.UpgradeConfirmation" = "请注意：群组成员必须更新最新版的 HotTalk 才能看到您的超级群组。";
 
 
 "Notification.ChannelMigratedFrom" = "此群组已升级为超级群组";
@@ -1507,7 +1507,7 @@
 
 "Group.Management.AddModeratorHelp" = "您可以添加管理员来帮助您管理群组。";
 
-"Watch.AppName" = "Telegram";
+"Watch.AppName" = "HotTalk";
 "Watch.Compose.AddContact" = "选择联系人";
 "Watch.Compose.CreateMessage" = "新建消息";
 "Watch.Compose.CurrentLocation" = "当前位置";
@@ -1542,7 +1542,7 @@
 
 "Watch.Message.ForwardedFrom" = "转发自";
 
-"Watch.Notification.Joined" = "加入了 Telegram";
+"Watch.Notification.Joined" = "加入了 HotTalk";
 
 "Watch.MessageView.Title" = "输入消息...";
 "Watch.MessageView.Forward" = "转发";
@@ -1556,9 +1556,9 @@
 "Watch.Stickers.StickerPacks" = "贴纸包";
 
 "Watch.Location.Current" = "当前位置";
-"Watch.Location.Access" = "允许 Telegram 在手机上访问您的位置";
+"Watch.Location.Access" = "允许 HotTalk 在手机上访问您的位置";
 
-"Watch.AuthRequired" = "请在配对设备上登录 Telegram";
+"Watch.AuthRequired" = "请在配对设备上登录 HotTalk";
 
 "Watch.NoConnection" = "无网络连接";
 "Watch.ConnectionDescription" = "您的 Watch 需要连接到网络";
@@ -1605,7 +1605,7 @@
 "Cache.ClearProgress" = "请稍候...";
 "Cache.ClearEmpty" = "清空";
 "Cache.ByPeerHeader" = "对话";
-"Cache.Indexing" = "Telegram 正在计算当前缓存大小。\n这可能需要几分钟。";
+"Cache.Indexing" = "HotTalk 正在计算当前缓存大小。\n这可能需要几分钟。";
 
 "ExplicitContent.AlertTitle" = "抱歉";
 "ExplicitContent.AlertChannel" = "您无法访问这个频道，因为它违反了 App Store 的规定。";
@@ -1686,7 +1686,7 @@
 "PrivacyLastSeenSettings.GroupsAndChannelsHelp" = "控制谁能将您添加到频道或群组。";
 "MusicPlayer.VoiceNote" = "语音消息";
 
-"Watch.Microphone.Access" = "允许 Telegram 访问您的麦克风";
+"Watch.Microphone.Access" = "允许 HotTalk 访问您的麦克风";
 
 "Settings.AppleWatch" = "Apple Watch";
 "AppleWatch.Title" = "Apple Watch";
@@ -1705,7 +1705,7 @@
 "KeyCommand.SendMessage" = "发送消息";
 "KeyCommand.ChatInfo" = "详细信息";
 
-"Conversation.SecretLinkPreviewAlert" = "要为私密对话启用链接预览吗？预览信息需要通过 Telegram 服务器生成。";
+"Conversation.SecretLinkPreviewAlert" = "要为私密对话启用链接预览吗？预览信息需要通过 HotTalk 服务器生成。";
 "Conversation.SecretChatContextBotAlert" = "请注意：内嵌机器人服务是由第三方开发者提供的。为了使机器人工作，您使用这些机器人时发送的消息将会传递给相关的开发者。";
 
 "Map.OpenInWaze" = "在 Waze 中打开";
@@ -1874,12 +1874,12 @@
 
 "Login.CodeSentCall" = "我们正在呼叫您的手机来播报验证码。";
 
-"Login.SmsRequestState1" = "Telegram 将在 %d:%.2d 后给你发送短信";
-"Login.SmsRequestState2" = "正在向 Telegram 发送短信请求...";
-"Login.SmsRequestState3" = "Telegram 已向您发送短信\n[仍未收到验证码？]";
+"Login.SmsRequestState1" = "HotTalk 将在 %d:%.2d 后给你发送短信";
+"Login.SmsRequestState2" = "正在向 HotTalk 发送短信请求...";
+"Login.SmsRequestState3" = "HotTalk 已向您发送短信\n[仍未收到验证码？]";
 
 "CancelResetAccount.Title" = "取消账号重置";
-"CancelResetAccount.TextSMS" = "有个拥有你的电话号码 %@ 访问权限的人递交了删除您的 Telegram 账号、并重置两步验证密码的请求。\n\n如果你没有执行该操作，请输入我们刚刚发送给你的短信验证码。";
+"CancelResetAccount.TextSMS" = "有个拥有你的电话号码 %@ 访问权限的人递交了删除您的 HotTalk 账号、并重置两步验证密码的请求。\n\n如果你没有执行该操作，请输入我们刚刚发送给你的短信验证码。";
 
 "CancelResetAccount.Success" = "您的帐户 %@ 的删除请求已经被撤销。";
 
@@ -1977,14 +1977,14 @@
 "StickerPack.RemoveMaskCount_many" = "移除 %@ 个装饰";
 "StickerPack.RemoveMaskCount_0" = "移除 %@ 个装饰";
 
-"Conversation.BotInteractiveUrlAlert" = "是否允许 %@ 传送你的 Telegram 昵称及 ID（不是你的电话号码）到你通过此机器人打开的网页中呢？";
+"Conversation.BotInteractiveUrlAlert" = "是否允许 %@ 传送你的 HotTalk 昵称及 ID（不是你的电话号码）到你通过此机器人打开的网页中呢？";
 "StickerPacksSettings.ArchivedMasks" = "已归档装饰";
 "StickerSettings.MaskContextInfo" = "如果你归档了一套装饰，你可以立即从「已归档装饰」中将它们放回。";
 "StickerPacksSettings.ArchivedMasks.Info" = "你可以拥有最多 200 套装饰。\n未使用的装饰将在你添加更多的装饰时被归档。";
 
 "CloudStorage.Title" = "云存储";
 
-"Widget.AuthRequired" = "登陆到 Telegram";
+"Widget.AuthRequired" = "登陆到 HotTalk";
 "Widget.NoUsers" = "发送第一条消息后就能在这里看到你的朋友";
 
 "ShareMenu.CopyShareLinkGame" = "复制游戏链接";
@@ -2008,11 +2008,11 @@
 "Conversation.JumpToDate" = "跳转";
 "Conversation.AddToReadingList" = "添加到阅读列表";
 
-"AccessDenied.CallMicrophone" = "Telegram 需要访问麦克风的权限才能进行语音通话。\n\n请前往“设置—隐私—麦克风”打开 Telegram 的开关。";
+"AccessDenied.CallMicrophone" = "HotTalk 需要访问麦克风的权限才能进行语音通话。\n\n请前往“设置—隐私—麦克风”打开 HotTalk 的开关。";
 
 "Call.EncryptionKey.Title" = "加密密钥";
 
-"Application.Name" = "Telegram";
+"Application.Name" = "HotTalk";
 "DialogList.Pin" = "置顶";
 "DialogList.Unpin" = "取消置顶";
 "DialogList.PinLimitError" = "对不起，您最多只能将 %@ 个会话置顶。";
@@ -2041,8 +2041,8 @@
 
 "Settings.CallSettings" = "语音通话";
 
-//"Calls.TabTitle" = "呼叫";
-"Calls.TabTitle" = "发现";
+"Calls.TabTitle" = "呼叫";
+"Founds.TabTitle" = "发现";
 
 "Calls.All" = "全部";
 "Calls.Missed" = "未接";
@@ -2063,7 +2063,7 @@
 "Calls.AddTab" = "添加标签";
 "Calls.NewCall" = "新呼叫";
 
-"Calls.RatingTitle" = "请对你这次的 Telegram 呼叫\n做出评价";
+"Calls.RatingTitle" = "请对你这次的 HotTalk 呼叫\n做出评价";
 "Calls.SubmitRating" = "提交";
 
 "Call.Seconds_1" = "%@ 秒";
@@ -2228,12 +2228,12 @@
 
 "Calls.RatingFeedback" = "输入文字...";
 
-"Call.StatusIncoming" = "Telegram 语音...";
+"Call.StatusIncoming" = "HotTalk 语音...";
 "Call.StatusRequesting" = "连接中...";
 "Call.StatusWaiting" = "等待中...";
 "Call.StatusRinging" = "响铃中...";
 "Call.StatusConnecting" = "连接中...";
-"Call.StatusOngoing" = "Telegram 语音 %@";
+"Call.StatusOngoing" = "HotTalk 语音 %@";
 "Call.StatusEnded" = "通话结束";
 "Call.StatusFailed" = "通话失败";
 "Call.StatusBusy" = "忙线";
@@ -2287,7 +2287,7 @@
 "Call.AudioRouteHeadphones" = "耳机";
 "Call.AudioRouteHide" = "隐藏";
 
-"Call.PhoneCallInProgressMessage" = "你不能在电话通话时同时使用 Telegram 通话。";
+"Call.PhoneCallInProgressMessage" = "你不能在电话通话时同时使用 HotTalk 通话。";
 "Call.RecordingDisabledMessage" = "请在录制语音消息前结束通话。";
 
 "Call.EmojiDescription" = "如果这些绘文字也出现在 %@ 的屏幕上，本次通话的安全性是 100%%。";
@@ -2297,7 +2297,7 @@
 "Conversation.HoldForAudio" = "按住来录制音频。点击切换为拍摄视频。";
 "Conversation.HoldForVideo" = "按住来拍摄视频。点击切换为录制音频。";
 
-"UserInfo.TelegramCall" = "Telegram Call";
+"UserInfo.TelegramCall" = "HotTalk Call";
 "UserInfo.PhoneCall" = "电话";
 
 "SharedMedia.CategoryMedia" = "已共享媒体";
@@ -2305,8 +2305,8 @@
 "SharedMedia.CategoryLinks" = "链接";
 "SharedMedia.CategoryOther" = "语音";
 
-"AccessDenied.VideoMessageCamera" = "Telegram 需要访问相机才能录制视频，\n\n请前往「设置—隐私—相机」中打开 Telegram 的开关。";
-"AccessDenied.VideoMessageMicrophone" = "Telegram 需要访问麦克风才能录制视频消息，\n\n请前往「设置—隐私—麦克风」中打开 Telegram 的开关。";
+"AccessDenied.VideoMessageCamera" = "HotTalk 需要访问相机才能录制视频，\n\n请前往「设置—隐私—相机」中打开 HotTalk 的开关。";
+"AccessDenied.VideoMessageMicrophone" = "HotTalk 需要访问麦克风才能录制视频消息，\n\n请前往「设置—隐私—麦克风」中打开 HotTalk 的开关。";
 
 "ChatSettings.AutomaticVideoMessageDownload" = "自动下载视频消息";
 
@@ -2324,7 +2324,7 @@
 "Message.ForwardedMessageShort" = "转发自\n%@";
 
 "Checkout.LiabilityAlertTitle" = "警告";
-"Checkout.LiabilityAlert" = "Telegram 服务器 和 %1$@ 均无法获取您的信用卡信息。信用卡信息将仅由支付平台 %2$@ 处理。\n\n您的款项将直接发送至 %1$@ 的开发者。Telegram 无法提供任何保障，因此您需要自行承担风险。如果出现问题，请联系 %1$@ 的开发者或信用卡的开户行。";
+"Checkout.LiabilityAlert" = "HotTalk 服务器 和 %1$@ 均无法获取您的信用卡信息。信用卡信息将仅由支付平台 %2$@ 处理。\n\n您的款项将直接发送至 %1$@ 的开发者。HotTalk 无法提供任何保障，因此您需要自行承担风险。如果出现问题，请联系 %1$@ 的开发者或信用卡的开户行。";
 
 "Settings.AppLanguage" = "语言";
 
@@ -2332,7 +2332,7 @@
 
 "Privacy.PaymentsTitle" = "支付";
 "Privacy.PaymentsClearInfo" = "清除付款和配送信息";
-"Privacy.PaymentsClearInfoHelp" = "您可以删除您的配送信息，并要求所有服务提供商删除您提供的信用卡信息。请注意：Telegram 从不保存您的信用卡信息。";
+"Privacy.PaymentsClearInfoHelp" = "您可以删除您的配送信息，并要求所有服务提供商删除您提供的信用卡信息。请注意：HotTalk 从不保存您的信用卡信息。";
 "Privacy.PaymentsClear.PaymentInfo" = "付款信息";
 "Privacy.PaymentsClear.ShippingInfo" = "配送信息";
 
@@ -2464,7 +2464,7 @@
 
 "Contacts.PhoneNumber" = "手机号码";
 "Contacts.AddPhoneNumber" = "添加 %@";
-"Contacts.ShareTelegram" = "分享 Telegram";
+"Contacts.ShareTelegram" = "分享 HotTalk";
 
 "Conversation.ViewChannel" = "查看频道";
 "Conversation.ViewGroup" = "查看群组";
@@ -2520,10 +2520,10 @@
 "Group.Members.AddMemberBotErrorNotAllowed" = "抱歉，您没有向此群组添加机器人的权限。";
 
 "Privacy.Calls.P2P" = "端对端连接";
-"Privacy.Calls.P2PHelp" = "禁用端对端连接后，所有通话流量将使用 Telegram 服务器中转以避免泄露您的 IP 地址，但可能会轻微降低音质。";
+"Privacy.Calls.P2PHelp" = "禁用端对端连接后，所有通话流量将使用 HotTalk 服务器中转以避免泄露您的 IP 地址，但可能会轻微降低音质。";
 
 "Privacy.Calls.Integration" = "iOS 通话集成";
-"Privacy.Calls.IntegrationHelp" = "iOS 通话集成能将 Telegram 通话显示在锁屏界面上和系统的通话记录里。如果启用了 iCloud 同步，您的通话记录将被共享给 Apple。";
+"Privacy.Calls.IntegrationHelp" = "iOS 通话集成能将 HotTalk 通话显示在锁屏界面上和系统的通话记录里。如果启用了 iCloud 同步，您的通话记录将被共享给 Apple。";
 
 "Call.ReportPlaceholder" = "出了什么问题？";
 "Call.ReportIncludeLog" = "发送技术信息";
@@ -2542,12 +2542,12 @@
 
 "Stickers.FrequentlyUsed" = "近期使用过";
 
-"Contacts.ImportersCount_1" = "1 位在 Telegram 上的联系人";
-"Contacts.ImportersCount_2" = "%@ 位在 Telegram 上的联系人";
-"Contacts.ImportersCount_3_10" = "%@ 位在 Telegram 上的联系人";
-"Contacts.ImportersCount_any" = "%@ 位在 Telegram 上的联系人";
-"Contacts.ImportersCount_many" = "%@ 位在 Telegram 上的联系人";
-"Contacts.ImportersCount_0" = "%@ 位在 Telegram 上的联系人";
+"Contacts.ImportersCount_1" = "1 位在 HotTalk 上的联系人";
+"Contacts.ImportersCount_2" = "%@ 位在 HotTalk 上的联系人";
+"Contacts.ImportersCount_3_10" = "%@ 位在 HotTalk 上的联系人";
+"Contacts.ImportersCount_any" = "%@ 位在 HotTalk 上的联系人";
+"Contacts.ImportersCount_many" = "%@ 位在 HotTalk 上的联系人";
+"Contacts.ImportersCount_0" = "%@ 位在 HotTalk 上的联系人";
 
 "Conversation.ContextMenuBan" = "封禁";
 
@@ -2555,13 +2555,13 @@
 "SocksProxySetup.UseForCallsHelp" = "使用代理服务器可能降低通话质量。";
 
 "InviteText.URL" = "https://telegram.org/dl";
-"InviteText.SingleContact" = "嗨，我在使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_1" = "嗨，我在使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_2" = "嗨，我在和另外 %@ 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_3_10" = "嗨，我在和另外 %@ 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_any" = "嗨，我在和另外 %@ 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_many" = "嗨，我在和另外 %@ 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
-"InviteText.ContactsCount_0" = "嗨，我在和另外 %@ 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%@";
+"InviteText.SingleContact" = "嗨，我在使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_1" = "嗨，我在使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_2" = "嗨，我在和另外 %@ 个联系人使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_3_10" = "嗨，我在和另外 %@ 个联系人使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_any" = "嗨，我在和另外 %@ 个联系人使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_many" = "嗨，我在和另外 %@ 个联系人使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
+"InviteText.ContactsCount_0" = "嗨，我在和另外 %@ 个联系人使用 HotTalk 聊天。加入我们吧！从这里下载：%@";
 
 "Invite.LargeRecipientsCountWarning" = "请注意发送所有这些邀请函将花费一些时间。";
 
@@ -2712,12 +2712,12 @@
 
 
 
-"AccessDenied.LocationAlwaysDenied" = "Telegram 需要使用定位服务才能获取并分享实时位置，\n\n请前往「设置—隐私—定位服务」中将 Telegram 设置为“总是”。";
+"AccessDenied.LocationAlwaysDenied" = "HotTalk 需要使用定位服务才能获取并分享实时位置，\n\n请前往「设置—隐私—定位服务」中将 HotTalk 设置为“总是”。";
 
 "UserInfo.UnblockConfirmation" = "要取消屏蔽 %@ 吗？";
 
 "Login.BannedPhoneSubject" = "Banned phone number: %@";
-"Login.BannedPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut Telegram says it's banned. Please help.";
+"Login.BannedPhoneBody" = "I'm trying to use my mobile phone number: %@\nBut HotTalk says it's banned. Please help.";
 
 "Conversation.StopLiveLocation" = "停止共享";
 
@@ -2800,16 +2800,16 @@
 
 
 
-"InfoPlist.NSContactsUsageDescription" = "Telegram 将持续上传您的通讯录信息到加密的服务器，以便使您在任何设备上联系您的朋友。";
-"InfoPlist.NSLocationWhenInUseUsageDescription" = "当您向伙伴发送您的位置时，Telegram 需要此权限。";
+"InfoPlist.NSContactsUsageDescription" = "HotTalk 将持续上传您的通讯录信息到加密的服务器，以便使您在任何设备上联系您的朋友。";
+"InfoPlist.NSLocationWhenInUseUsageDescription" = "当您向伙伴发送您的位置时，HotTalk 需要此权限。";
 "InfoPlist.NSCameraUsageDescription" = "我们需要它来拍照或录像。";
 "InfoPlist.NSPhotoLibraryUsageDescription" = "我们需要它来分享图库中的照片和视频。";
 "InfoPlist.NSPhotoLibraryAddUsageDescription" = "我们需要它来保存照片和视频到您的图库。";
 "InfoPlist.NSMicrophoneUsageDescription" = "我们需要它来录制并分享语音消息和带声音的视频。";
 "InfoPlist.NSSiriUsageDescription" = "您可以使用 Siri 发送消息。";
-"InfoPlist.NSLocationAlwaysAndWhenInUseUsageDescription" = "当您使用 “实时位置分享” 功能时，Telegram 需要后台访问您的位置信息用于持续更新。";
-"InfoPlist.NSLocationAlwaysUsageDescription" = "当您使用 “实时位置分享” 功能时，Telegram 需要后台访问您的位置信息用于持续更新。当您需要从 Apple Watch 发送位置时该权限也是必需的。";
-"InfoPlist.NSLocationWhenInUseUsageDescription" = "当您向伙伴发送您的位置时，Telegram 需要此权限。";
+"InfoPlist.NSLocationAlwaysAndWhenInUseUsageDescription" = "当您使用 “实时位置分享” 功能时，HotTalk 需要后台访问您的位置信息用于持续更新。";
+"InfoPlist.NSLocationAlwaysUsageDescription" = "当您使用 “实时位置分享” 功能时，HotTalk 需要后台访问您的位置信息用于持续更新。当您需要从 Apple Watch 发送位置时该权限也是必需的。";
+"InfoPlist.NSLocationWhenInUseUsageDescription" = "当您向伙伴发送您的位置时，HotTalk 需要此权限。";
 "InfoPlist.NSFaceIDUsageDescription" = "您可以使用 Face ID 解锁应用。";
 
 "Privacy.Calls.P2PNever" = "从不";
@@ -2853,10 +2853,10 @@
 "Channel.AdminLogFilter.EventsNewSubscribers" = "新的订阅者";
 "Channel.AdminLogFilter.EventsLeavingSubscribers" = "已被移除的订阅者";
 
-"Conversation.ClearPrivateHistory" = "此操作将会从您的 Telegram 云中删除该对话的所有消息和媒体，但对方储存的内容仍将被保留。";
-"Conversation.ClearGroupHistory" = "此操作将会从您的 Telegram 云中删除该群组的所有消息和媒体，但其他群成员储存的内容仍将被保留。";
+"Conversation.ClearPrivateHistory" = "此操作将会从您的 HotTalk 云中删除该对话的所有消息和媒体，但对方储存的内容仍将被保留。";
+"Conversation.ClearGroupHistory" = "此操作将会从您的 HotTalk 云中删除该群组的所有消息和媒体，但其他群成员储存的内容仍将被保留。";
 "Conversation.ClearSecretHistory" = "此操作将会删除会话双方的所有消息和媒体。";
-"Conversation.ClearSelfHistory" = "这将从 Telegram 服务器中移除所有该对话的消息记录和媒体文件。";
+"Conversation.ClearSelfHistory" = "这将从 HotTalk 服务器中移除所有该对话的消息记录和媒体文件。";
 
 "MediaPicker.LivePhotoDescription" = "这个视频将会像 GIF 动画一样自动循环播放。";
 

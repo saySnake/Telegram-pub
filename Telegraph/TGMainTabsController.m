@@ -8,7 +8,7 @@
 
 #import "TGAppDelegate.h"
 #import "TGDebugController.h"
-
+#import "TGAnotherViewController.h"
 #import "TGPresentation.h"
 
 @protocol TGTabBarDelegate <NSObject>
@@ -148,6 +148,10 @@
             
             _imageView.image = [UIImage imageNamed:@"found_selected"];
         }
+        if ([title isEqualToString:TGLocalized(@"Founds.TabTitle")]) {
+            
+            _imageView.image = [UIImage imageNamed:@"found_selected"];
+        }
         
         [self addSubview:_imageView];
         _label = [[UILabel alloc] init];
@@ -181,7 +185,7 @@
 {
     _selected = selected;
     if (_imageView.highlightedImage == nil && selected)
-        _imageView.highlightedImage = TGTintedImage(_imageView.image, _presentation.pallete.tabActiveIconColor);
+    _imageView.highlightedImage = TGTintedImage(_imageView.image, _presentation.pallete.tabActiveIconColor);
     _imageView.highlighted = selected;
     _label.highlighted = selected;
 }
@@ -312,6 +316,7 @@
 @property (nonatomic, strong) TGTabBarButton *callsButton;
 @property (nonatomic, strong) TGTabBarButton *chatsButton;
 @property (nonatomic, strong) TGTabBarButton *settingsButton;
+@property (nonatomic, strong) TGTabBarButton *foundsButton;
 @property (nonatomic, assign) bool callsHidden;
 
 @property (nonatomic, strong) TGTabBarBadge *callsBadge;
@@ -351,14 +356,16 @@
         
         _contactsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarContactsIcon title:TGLocalized(@"Contacts.TabTitle") presentation:presentation];
         _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation];
-        _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
+        _foundsButton = [[TGTabBarButton alloc] initWithImage:[UIImage imageNamed:@"found_selected"] title:TGLocalized(@"Founds.TabTitle") presentation:presentation];
         _callsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarCallsIcon title:TGLocalized(@"Calls.TabTitle") presentation:presentation];
+        _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
         _callsButton.hidden = true;
         _callsHidden = true;
         
         [_tabButtons addObject:_chatsButton];
         [_tabButtons addObject:_contactsButton];
         [_tabButtons addObject:_callsButton];
+        [_tabButtons addObject:_foundsButton];
         [_tabButtons addObject:_settingsButton];
         
         for (TGTabBarButton *button in _tabButtons)
@@ -378,6 +385,7 @@
     [_chatsButton setImage:presentation.images.tabBarChatsIcon presentation:presentation];
     [_settingsButton setImage:presentation.images.tabBarSettingsIcon presentation:presentation];
     [_callsButton setImage:presentation.images.tabBarCallsIcon presentation:presentation];
+    [_foundsButton setImage:presentation.images.tabBarSettingsIcon presentation:presentation];
     
     _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation];
     _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
@@ -400,8 +408,9 @@
 
 - (void)setCallsTabHidden:(bool)hidden animated:(bool)animated
 {
-    if (_callsHidden == hidden)
+    if (_callsHidden == hidden){
         return;
+    }
     
     if (animated)
     {
@@ -450,14 +459,18 @@
     [super touchesBegan:touches withEvent:event];
     
     UITouch *touch = [touches anyObject];
-    NSInteger buttonsCount = _callsHidden ? 3 : 4;
+//    NSInteger buttonsCount = _callsHidden ? 3 : 4;
+    NSInteger buttonsCount = _callsHidden ? 4 : 5;
     CGPoint location = [touch locationInView:self];
     if (location.y > [TGTabBar tabBarHeight:_landscape])
         return;
     
     int index = MAX(0, MIN((int)buttonsCount - 1, (int)(location.x / (self.frame.size.width / buttonsCount))));
-    if (buttonsCount == 3 && index > 0)
-        index += 1;
+    if (buttonsCount ==4 && index >1) {
+        index +=1;
+    }
+//    if (buttonsCount == 4 && index > 0)
+//        index += 1;
     [self setSelectedIndex:index];
     
     __strong id<TGTabBarDelegate> delegate = _tabDelegate;
@@ -512,13 +525,15 @@
     
     CGFloat width = viewSize.width - self.safeAreaInset.left - self.safeAreaInset.right;
     
-    NSUInteger buttonsCount = _callsHidden ? 3 : 4;
+//    NSUInteger buttonsCount = _callsHidden ? 3 : 4;
+    NSUInteger buttonsCount = _callsHidden ? 4 : 5;
+
     CGFloat buttonWidth = floor(width / buttonsCount);
     
     [_tabButtons enumerateObjectsUsingBlock:^(TGTabBarButton *button, NSUInteger index, __unused BOOL *stop)
      {
          NSInteger realIndex = index;
-         if (buttonsCount == 3 && index > 1)
+         if (buttonsCount == 4 && index > 1)
              index--;
          
          button.landscape = self.landscape;

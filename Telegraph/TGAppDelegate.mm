@@ -151,6 +151,7 @@
 
 #import "TGLegacyComponentsContext.h"
 
+#import "TGAnotherViewController.h"
 NSString *TGDeviceProximityStateChangedNotification = @"TGDeviceProximityStateChangedNotification";
 
 CFAbsoluteTime applicationStartupTimestamp = 0;
@@ -1380,9 +1381,12 @@ static unsigned int overrideIndexAbove(__unused id self, __unused SEL _cmd)
             {
                 [_rootController.mainTabsController setSelectedIndex:2];
                 
+#pragma mark -修改
                 [_rootController.dialogListController.dialogListCompanion clearData];
                 [_rootController.contactsController clearData];
                 [_rootController.callsController clearData];
+                
+                
                 
                 [TGAppDelegateInstance.rootController clearContentControllers];
                 
@@ -4306,8 +4310,12 @@ static unsigned int overrideIndexAbove(__unused id self, __unused SEL _cmd)
         if (show > 0)
             flag = true;
     }
-    _showCallsTab = true;
+    
+    
+#pragma mark -修改
+    _showCallsTab = false;
 }
+
 
 - (void)setShowCallsTab:(int)showCallsTab
 {
@@ -4318,11 +4326,11 @@ static unsigned int overrideIndexAbove(__unused id self, __unused SEL _cmd)
     [data writeToFile:[self _callsTabFilePath] atomically:true];
 }
 
+#pragma mark -修改
 - (void)resetCallsTab
 {
     _showCallsTab = true;
 //    _showCallsTab = false;
-
     [[NSFileManager defaultManager] removeItemAtPath:[self _callsTabFilePath] error:NULL];
 }
 

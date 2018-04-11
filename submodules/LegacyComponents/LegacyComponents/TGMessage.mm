@@ -278,6 +278,9 @@ typedef enum {
     {
         if (attachment.type == TGForwardedMessageMediaAttachmentType)
         {
+#pragma mark -修改
+            
+            
             TGForwardedMessageMediaAttachment *forwardedMessageAttachment = (TGForwardedMessageMediaAttachment *)attachment;
             return forwardedMessageAttachment.forwardPeerId;
         }

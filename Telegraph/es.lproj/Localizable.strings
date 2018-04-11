@@ -213,11 +213,11 @@
 "Login.CodeSentSms" = "Te hemos enviado un SMS con el código";
 "Login.Code" = "Código";
 "Login.CallRequestState1" = "Te llamaremos en %d:%.2d";
-"Login.CallRequestState2" = "Solicitando una llamada de Telegram...";
-"Login.CallRequestState3" = "Telegram marcó tu número\n[¿No recibiste el código?]";
+"Login.CallRequestState2" = "Solicitando una llamada de HotTalk...";
+"Login.CallRequestState3" = "HotTalk marcó tu número\n[¿No recibiste el código?]";
 "Login.EmailNotConfiguredError" = "Por favor, pon un correo electrónico.";
 "Login.EmailCodeSubject" = "%@, sin código";
-"Login.EmailCodeBody" = "Mi número de teléfono es:\n%@\nNo puedo obtener un código de activación para Telegram.";
+"Login.EmailCodeBody" = "Mi número de teléfono es:\n%@\nNo puedo obtener un código de activación para HotTalk.";
 "Login.UnknownError" = "Ocurrió un error. Por favor, reinténtalo más tarde.";
 "Login.InvalidCodeError" = "El código es inválido. Por favor, reinténtalo.";
 "Login.NetworkError" = "Por favor, revisa tu conexión a internet y reinténtalo.";

@@ -77,11 +77,13 @@ static NSString *fallbackString(NSString *key) {
 - (TGLocalization *)withUpdatedIsActive:(bool)isActive {
     return [[TGLocalization alloc] initWithVersion:_version code:_code dict:_dict isActive:isActive];
 }
-    
+
+#pragma mark -修改
 - (NSString *)get:(NSString *)key {
     
     return NSLocalizedString(key, nil);
     
+//    NSLog(@"%@",NSLocalizedString(key,nil));
     if (key == nil) {
         return nil;
     }

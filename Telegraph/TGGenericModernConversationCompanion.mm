@@ -1796,7 +1796,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
     }
 }
 
-#pragma mark -
+#pragma mark -修改
 
 - (void)controllerWantsToSendTextMessage:(NSString *)text entities:(NSArray *)entities asReplyToMessageId:(int32_t)replyMessageId withAttachedMessages:(NSArray *)withAttachedMessages completeGroups:(NSSet *)completeGroups disableLinkPreviews:(bool)disableLinkPreviews botContextResult:(TGBotContextResultAttachment *)botContextResult botReplyMarkup:(TGBotReplyMarkup *)botReplyMarkup
 {

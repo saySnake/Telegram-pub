@@ -7927,6 +7927,9 @@ typedef enum {
         }]];
         _disableLinkPreviewsForMessage = false;
     } else {
+        
+        
+        
         [_companion controllerWantsToSendTextMessage:text entities:entities asReplyToMessageId:[self currentReplyMessageId] withAttachedMessages:[self currentForwardMessages] completeGroups:[self currentForwardCompleteGroups] disableLinkPreviews:_disableLinkPreviewsForMessage botContextResult:nil botReplyMarkup:nil];
         _disableLinkPreviewsForMessage = false;
     }

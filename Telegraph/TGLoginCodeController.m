@@ -234,7 +234,7 @@
     _timeoutLabel.backgroundColor = [UIColor clearColor];
     [_timeoutLabel sizeToFit];
     [self.view addSubview:_timeoutLabel];
-    
+
     _requestingCallLabel = [[UILabel alloc] init];
     _requestingCallLabel.font = TGSystemFontOfSize(17);
     _requestingCallLabel.textColor = UIColorRGB(0x999999);

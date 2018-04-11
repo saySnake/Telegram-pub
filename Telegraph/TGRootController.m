@@ -83,9 +83,10 @@
         _mainTabsController = [[TGMainTabsController alloc] initWithPresentation:_presentation];
         [_mainTabsController setViewControllers:[NSArray arrayWithObjects:
                                                  _dialogListController, //会话
-                                                 _contactsController,
-                                                 _anotherBarView,
-                                                 _accountSettingsController,
+                                                 _contactsController,//联系人
+                                                 _callsController, //电话
+                                                 _anotherBarView, //发现
+                                                 _accountSettingsController,//设置
                                                  nil]]; //4 把call替换了 OK？？
         
         [_mainTabsController setCallsHidden:!TGAppDelegateInstance.showCallsTab animated:false];

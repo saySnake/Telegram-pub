@@ -212,7 +212,7 @@
 "Login.HaveNotReceivedCodeInternal" = "Non hai ricevuto il codice?";
 "Login.CodeSentSms" = "Ti abbiamo inviato un SMS con il codice";
 "Login.Code" = "Codice";
-"Login.CallRequestState1" = "Telegram ti chiamerà tra %d:%.2d";
+"Login.CallRequestState1" = "HotTalk ti chiamerà tra %d:%.2d";
 "Login.CallRequestState2" = "Richiesta di chiamata a Telegram...";
 "Login.CallRequestState3" = "Telegram ha composto il tuo numero\n[Non hai ricevuto il codice?]";
 "Login.EmailNotConfiguredError" = "Configura un account email";

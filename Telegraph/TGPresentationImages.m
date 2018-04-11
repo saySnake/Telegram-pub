@@ -15,12 +15,14 @@
 
 #pragma mark - Tabs
 
+
 - (UIImage *)tabBarContactsIcon
 {
     return [self imageWithKey:@"tabContacts" generator:^UIImage *{
         return [TGPresentationAssets tabBarContactsIcon:self.pallete.tabIconColor];
     }];
 }
+
 
 - (UIImage *)tabBarCallsIcon
 {
