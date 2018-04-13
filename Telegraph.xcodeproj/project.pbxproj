@@ -7505,6 +7505,7 @@
 		B62321B9206CED2400BAAB88 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		B62321BA206CED2500BAAB88 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
 		B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B669720D20805ADD000172D7 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
 		B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0.jpg"; sourceTree = "<group>"; };
 		B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
@@ -19613,6 +19614,7 @@
 				D09EE2E0193A95ED00980617 /* iPad-Landscape@2x.png */,
 				D064421C1E4E2A3600394D5F /* AppStore.xcconfig */,
 				93EFBF0E173DC6DA00F7B89E /* Config.xcconfig */,
+				B669720D20805ADD000172D7 /* Reveal.framework */,
 				933E6A3E170B300100651252 /* MediaPlayer.framework */,
 				93A109BE1705D77A00FE4F89 /* MobileCoreServices.framework */,
 				93AD03CD16A327DE005D4575 /* Accelerate.framework */,
@@ -28560,7 +28562,12 @@
 					"-DTGVOIP_USE_AUDIO_SESSION",
 					"-DINTERNAL_RELEASE",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talk.appp;
 				PRODUCT_NAME = Telegram;
 				PROVISIONING_PROFILE = "";
@@ -29118,7 +29125,12 @@
 					"-DTGVOIP_USE_AUDIO_SESSION",
 					"-DINTERNAL_RELEASE",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talk.appp;
 				PRODUCT_NAME = Telegram;
 				PROVISIONING_PROFILE = "";
@@ -29444,7 +29456,12 @@
 					"-DTGVOIP_USE_AUDIO_SESSION",
 					"-DINTERNAL_RELEASE",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talk.appp;
 				PRODUCT_NAME = Telegram;
 				PROVISIONING_PROFILE = "";
@@ -29535,7 +29552,12 @@
 					"-DTGVOIP_USE_CUSTOM_CRYPTO",
 					"-DTGVOIP_USE_AUDIO_SESSION",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.talk.appp;
 				PRODUCT_NAME = Telegram;
 				PROVISIONING_PROFILE = "";
