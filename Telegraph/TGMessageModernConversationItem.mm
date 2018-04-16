@@ -631,6 +631,30 @@ static UIColor *coloredNameForUid(int uid, __unused int currentUserId)
     id forwardAuthor = nil;
     int32_t forwardMessageId = 0;
     
+    
+#pragma mark -修改
+    if ([message.text containsString:@"https://www.biyong.info/redpacket.html"]) {
+        NSMutableArray * imageArray = [NSMutableArray array];
+        for (id attachment in message.mediaAttachments) {
+            if ([attachment isKindOfClass:[TGWebPageMediaAttachment class]]) {
+                
+                NSLog(@"(TGWebPageMediaAttachment *)attachment ============:%@\n",(TGWebPageMediaAttachment *)attachment);
+                TGWebPageMediaAttachment * attachmentemp = (TGWebPageMediaAttachment *)attachment;
+                if(attachmentemp.photo != nil) {
+                    TGImageMediaAttachment * imageArrachment = attachmentemp.photo;
+                    [imageArray addObject: imageArrachment];
+                }
+            }
+        }
+        if ((imageArray.count > 0)) {
+            message.mediaAttachments = [imageArray copy];
+        }
+    }
+    
+    
+#pragma mark -------
+    
+    
     if (message.hole != nil || message.group != nil)
     {
         TGHoleMessageViewModel *model = [[TGHoleMessageViewModel alloc] initWithMessage:_message context:_context];

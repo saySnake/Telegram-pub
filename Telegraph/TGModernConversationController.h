@@ -192,4 +192,16 @@ typedef enum {
 
 - (CGFloat)initialUnreadOffset;
 
+//图片或者视频
+- (void)_displayMediaPicker:(bool)file fromFileMenu:(bool)fromFileMenu;
+//联系人
+- (void)_displayContactPicker;
+
+//地理
+- (void)_displayLocationPicker;
+
+//文件
+- (void)_displayFileMenuWithController:(TGMenuSheetController *)menuController;
+
+
 @end

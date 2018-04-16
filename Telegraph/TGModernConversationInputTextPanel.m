@@ -33,7 +33,13 @@
 
 #import <LegacyComponents/TGInputTextTag.h>
 
+
 #import <MTProtoKit/MTProtoKit.h>
+
+#import "HBKeyBoardView.h"
+#import "HBMoreViewItem.h"
+#import "TGModernConversationController.h"
+#define App_Frame_Width    [[UIScreen mainScreen] bounds].size.width
 
 
 static void removeViewAnimation(UIView *view, NSString *animationPrefix)
@@ -62,7 +68,10 @@ static CGRect viewFrame(UIView *view)
     return CGRectMake(center.x - size.width / 2, center.y - size.height / 2, size.width, size.height);
 }
 
+
 @implementation TGMessageEditingContext
+
+
 
 + (NSAttributedString *)attributedStringForText:(NSString *)text entities:(NSArray *)entities {
     if (text == nil) {
@@ -216,9 +225,20 @@ static CGRect viewFrame(UIView *view)
     SMetaDisposable *_inputTypeKeyboardUpdateDisposable;
 }
 
+@property (nonatomic, strong) HBKeyBoardView *chatBoxMoreView;
+
+
 @end
 
+
+
+@interface TGModernConversationInputTextPanel()<HBKeyBoardViewDelegate>
+
+@end
+
+
 @implementation TGModernConversationInputTextPanel
+
 
 - (instancetype)initWithFrame:(CGRect)frame accessoryView:(UIView *)panelAccessoryView
 {
@@ -255,6 +275,8 @@ static CGRect viewFrame(UIView *view)
         UIColor *modeIconColor = UIColorRGB(0xa0a7b0);
         CGFloat modeWidth = 29.0f;
         
+        
+#pragma mark -键盘聊天框
         UIImage *stickerModeImage = TGTintedImage(TGImageNamed(@"ConversationInputFieldStickerIcon.png"), modeIconColor);
         _stickerModeButton = [[TGModernButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, modeWidth, 33.0f)];
         [_stickerModeButton setImage:stickerModeImage forState:UIControlStateNormal];
@@ -329,6 +351,8 @@ static CGRect viewFrame(UIView *view)
         attachButton.delegate = self;
         attachButton.extendedEdgeInsets = UIEdgeInsetsMake(0, 9, 0, 9);
         [attachButton setImage:attachImage forState:UIControlStateNormal];
+        
+#pragma  mark -修改文件按钮
         [attachButton addTarget:self action:@selector(attachButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         _attachButton = attachButton;
         [self addSubview:_attachButton];
@@ -1234,18 +1258,98 @@ static CGRect viewFrame(UIView *view)
 
 - (void)attachButtonPressed
 {
-    if (self.isCustomKeyboardExpanded)
-        [self setCustomKeyboardExpanded:false animated:true];
     
+//    if (self.isCustomKeyboardExpanded)
+//        [self setCustomKeyboardExpanded:false animated:true];
+//
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self updateSendButtonVisibility:true];
+//        [self updateModeButtonVisibility:true reset:false];
+//
+//    });
+//
+//    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
+//    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
+//        [delegate inputPanelRequestedAttachmentsMenu:self];
+    
+#pragma mark -修改
+    if ([_customKeyboardView isKindOfClass:[HBKeyBoardView class]])
+        return;
+
+    if (_canOpenStickersPanel != nil && !_canOpenStickersPanel()) {
+        return;
+    }
+
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateSendButtonVisibility:true];
-        [self updateModeButtonVisibility:true reset:false];
-        
+        if (_chatBoxMoreView == nil)
+        {
+            _chatBoxMoreView =[[HBKeyBoardView alloc] initWithFrame:CGRectMake(0, 0, App_Frame_Width, 215)];
+            _chatBoxMoreView.delegate =self;
+            _chatBoxMoreView.isCollectionViewisHidden =YES;
+            HBMoreViewItem *xiangji   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相机" imageName:@"gengduotuijian"];
+            HBMoreViewItem *xiangce   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相册" imageName:@"gengduotuijian"];
+            HBMoreViewItem *shipin    =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"视频" imageName:@"gengduotuijian"];
+            HBMoreViewItem *hongbao   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"红包" imageName:@"gengduotuijian"];
+            HBMoreViewItem *lianxiren =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"联系人" imageName:@"gengduotuijian"];
+            HBMoreViewItem *weizhi    =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"位置" imageName:@"gengduotuijian"];
+            HBMoreViewItem *wenjian   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
+            HBMoreViewItem *wenjian1  =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
+            HBMoreViewItem *wenjian2  =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
+            [_chatBoxMoreView setItems:[[NSMutableArray alloc] initWithObjects:xiangji, xiangce, shipin,hongbao,lianxiren,weizhi,wenjian,wenjian1,wenjian2, nil]];
+            _chatBoxMoreView.channelInfoSignal = _channelInfoSignal;
+            id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
+            //获取了父视图
+            _stickerKeyboardView.parentViewController = [delegate inputPanelParentViewController:self];
+
+        }else
+        {
+            _chatBoxMoreView.hidden = false;
+            [_chatBoxMoreView updateIfNeeded];
+        }
+        _chatBoxMoreView.enableAnimation = true;
+        [self setCustomKeyboard:_chatBoxMoreView animated:true force:false];
     });
+}
+
+#pragma mark -HBBoardDelegate
+- (void)chatBoxMoreView:(HBKeyBoardView *)chatBoxMoreView didSelectItem:(ICChatBoxItem )itemType
+{
     
-    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
-    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
-        [delegate inputPanelRequestedAttachmentsMenu:self];
+    TGModernConversationController *tg =[[TGModernConversationController alloc] init];
+ 
+    switch (itemType) {
+        case ICChatBoxItemCamera:{
+            
+        }
+            break;
+        case ICChatBoxItemAlbum:{
+            [tg _displayMediaPicker:false fromFileMenu:false];
+        }
+            break;
+        case ICChatBoxItemVideo:{
+            [tg _displayMediaPicker:false fromFileMenu:false];
+        }
+            break;
+        case ICChatBoxItemRedPackage:{
+            
+        }
+            break;
+        case ICChatBoxItemPerson:{
+            [tg _displayContactPicker];
+        }
+            break;
+            
+        case ICChatBoxItemLocation:{
+            [tg _displayLocationPicker];
+        }
+            break;
+        case ICChatBoxItemDoc:{
+            TGMenuSheetController *shet = [TGMenuSheetController new];
+            [tg _displayFileMenuWithController:shet];
+        }
+        default:
+            break;
+    }
 }
 
 - (void)attachButtonInteractionBegan
@@ -3141,6 +3245,9 @@ static CGRect viewFrame(UIView *view)
             };
             [_stickerKeyboardView sizeToFitForWidth:self.frame.size.width];
         }
+        
+#pragma mark - 修改
+
         else
         {
             _stickerKeyboardView.hidden = false;

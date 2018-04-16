@@ -176,6 +176,8 @@ typedef enum {
         
         self.clipsToBounds = true;
         
+        if (!self.isCollectionViewisHidden) {
+            
         _collectionLayout = [[UICollectionViewFlowLayout alloc] init];
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_collectionLayout];
         if (iosMajorVersion() >= 11)
@@ -193,6 +195,9 @@ typedef enum {
         [_collectionView registerClass:[TGStickerGroupPackCell class] forCellWithReuseIdentifier:@"TGStickerGroupPackCell"];
         [_collectionView registerClass:[TGStickerCollectionHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"TGStickerCollectionHeader"];
         [self addSubview:_collectionView];
+        
+        
+        
         _visibleCollectionReusableHeaderViews = [NSMapTable mapTableWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableWeakMemory];
         
         _trendingCollectionLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -228,6 +233,7 @@ typedef enum {
         [_gifsCollectionView registerClass:[TGGifKeyboardCell class] forCellWithReuseIdentifier:@"TGGifKeyboardCell"];
         [self addSubview:_gifsCollectionView];
         
+        }
         UILongPressGestureRecognizer *tapRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleStickerPress:)];
         tapRecognizer.minimumPressDuration = 0.25;
         [_collectionView addGestureRecognizer:tapRecognizer];

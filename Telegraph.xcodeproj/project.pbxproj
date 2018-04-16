@@ -1438,6 +1438,10 @@
 		B62321B8206CCC3200BAAB88 /* RTDeviceHardWare.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */; };
 		B62321BB206CED2500BAAB88 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B9206CED2400BAAB88 /* UIView+Addition.m */; };
 		B62321BC206CED2500BAAB88 /* UIView+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = B62321BA206CED2500BAAB88 /* UIView+Addition.h */; };
+		B6479B692080B95200A1AD46 /* HBKeyBoardView.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B672080B95200A1AD46 /* HBKeyBoardView.h */; };
+		B6479B6A2080B95200A1AD46 /* HBKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B682080B95200A1AD46 /* HBKeyBoardView.m */; };
+		B6479B76208469D400A1AD46 /* HBMoreViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B74208469D400A1AD46 /* HBMoreViewItem.h */; };
+		B6479B77208469D400A1AD46 /* HBMoreViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B75208469D400A1AD46 /* HBMoreViewItem.m */; };
 		B65BC6CA207C4DE7006DB3CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */; };
 		B67B02912075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */; };
 		B67B02932075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */; };
@@ -7504,8 +7508,11 @@
 		B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardWare.m; sourceTree = "<group>"; };
 		B62321B9206CED2400BAAB88 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		B62321BA206CED2500BAAB88 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		B6479B672080B95200A1AD46 /* HBKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBKeyBoardView.h; sourceTree = "<group>"; };
+		B6479B682080B95200A1AD46 /* HBKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBKeyBoardView.m; sourceTree = "<group>"; };
+		B6479B74208469D400A1AD46 /* HBMoreViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMoreViewItem.h; sourceTree = "<group>"; };
+		B6479B75208469D400A1AD46 /* HBMoreViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMoreViewItem.m; sourceTree = "<group>"; };
 		B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		B669720D20805ADD000172D7 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
 		B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0.jpg"; sourceTree = "<group>"; };
 		B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
@@ -15625,6 +15632,10 @@
 				B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */,
 				B602E768207A239C00EBAE31 /* CustBtn.h */,
 				B602E769207A239C00EBAE31 /* CustBtn.m */,
+				B6479B672080B95200A1AD46 /* HBKeyBoardView.h */,
+				B6479B682080B95200A1AD46 /* HBKeyBoardView.m */,
+				B6479B74208469D400A1AD46 /* HBMoreViewItem.h */,
+				B6479B75208469D400A1AD46 /* HBMoreViewItem.m */,
 			);
 			name = HuoBi;
 			sourceTree = "<group>";
@@ -19614,7 +19625,6 @@
 				D09EE2E0193A95ED00980617 /* iPad-Landscape@2x.png */,
 				D064421C1E4E2A3600394D5F /* AppStore.xcconfig */,
 				93EFBF0E173DC6DA00F7B89E /* Config.xcconfig */,
-				B669720D20805ADD000172D7 /* Reveal.framework */,
 				933E6A3E170B300100651252 /* MediaPlayer.framework */,
 				93A109BE1705D77A00FE4F89 /* MobileCoreServices.framework */,
 				93AD03CD16A327DE005D4575 /* Accelerate.framework */,
@@ -22890,6 +22900,7 @@
 				D0249BCE1ABF5B470076ECBF /* GDGoogleDriveMetadata.h in Headers */,
 				D0115F281F41F1300039383E /* TLRPCauth_checkPassword.h in Headers */,
 				09327E991F1C7CC200DDB721 /* TGUserInfoEditingAboutCollectionItemView.h in Headers */,
+				B6479B692080B95200A1AD46 /* HBKeyBoardView.h in Headers */,
 				D0C09C8A1A6E974D008369D7 /* TGSharedMediaVideoItem.h in Headers */,
 				D0115F041F41F12F0039383E /* TLRPCaccount_getPasswordSettings.h in Headers */,
 				D04324EA1DC279FB00E0C528 /* ImageResourceDatas.h in Headers */,
@@ -23073,6 +23084,7 @@
 				D0249B961ABF5B470076ECBF /* AFJSONRequestOperation.h in Headers */,
 				686ED3011BF362B6001F2F96 /* TGNotificationContactPreviewView.h in Headers */,
 				68B639751BB2506F00205AC3 /* SSignal+Dispatch.h in Headers */,
+				B6479B76208469D400A1AD46 /* HBMoreViewItem.h in Headers */,
 				D01162921F41F1350039383E /* TLLabeledPrice.h in Headers */,
 				D01160201F41F1310039383E /* TLRPCmessages_getPinnedDialogs.h in Headers */,
 				D0115E841F41F12F0039383E /* TLmessages_RecentStickers.h in Headers */,
@@ -24501,6 +24513,7 @@
 				D061F3021A9290F80031BCBE /* Embed App Extensions */,
 				6879BEE41B43683E007C9800 /* Embed Watch Content */,
 				D020FB161D99637200F279AA /* Embed Frameworks */,
+				B61C770F20809D53004E94F1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -25607,6 +25620,19 @@
 			shellPath = /bin/sh;
 			shellScript = "#/usr/bin/perl -pe 's/(BUILD_NUMBER = )(\\d+)/$1.($2+1)/eg' -i buildnumber.xcconfig\nsh ${PROJECT_DIR}/tools/bump_build_number.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\nsh ${PROJECT_DIR}/tools/sync_watch_version.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}/Watch/App/Info.plist\"\n";
 		};
+		B61C770F20809D53004E94F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -26460,6 +26486,7 @@
 				D0CD11FA1CCFDB3B000DE7BC /* EMInMemoryImageCache.m in Sources */,
 				D09C751E19F1C8C100BF51BC /* TGUsernameCollectionItemView.m in Sources */,
 				D01162191F41F1340039383E /* TLDocumentAttribute.mm in Sources */,
+				B6479B77208469D400A1AD46 /* HBMoreViewItem.m in Sources */,
 				D09C751119F1BBA800BF51BC /* TGUserInfoUsernameCollectionItem.m in Sources */,
 				B62321B2206CC46300BAAB88 /* MASViewAttribute.m in Sources */,
 				D06B21FE1E49F94000EE2F70 /* TGPaymentCheckoutPriceItemView.m in Sources */,
@@ -27609,6 +27636,7 @@
 				6836F8ED1BB2626600D3A77B /* TGBridgeStickersSubscription.m in Sources */,
 				D044E16D1B2B17D0001EE087 /* TGEmbedPreviewController.m in Sources */,
 				D0EA691B1A07A81400D1F747 /* TGWebSearchInternalImageItem.m in Sources */,
+				B6479B6A2080B95200A1AD46 /* HBKeyBoardView.m in Sources */,
 				D02EA2061A36512C001A25CD /* TGShareSheetView.m in Sources */,
 				D0115F8F1F41F1300039383E /* TLRPCcontacts_getContacts.mm in Sources */,
 				B602E764207A036100EBAE31 /* TAAbstractDotView.m in Sources */,

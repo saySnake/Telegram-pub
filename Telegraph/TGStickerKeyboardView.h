@@ -13,6 +13,7 @@
 @property (nonatomic, strong) SSignal *channelInfoSignal;
 
 @property (nonatomic, readonly) bool isGif;
+@property (nonatomic ,assign)BOOL isCollectionViewisHidden;
 
 @property (nonatomic, weak) TGViewController *parentViewController;
 @property (nonatomic, copy) void (^stickerSelected)(TGDocumentMediaAttachment *);
@@ -31,5 +32,6 @@
 - (void)updateExpanded;
 
 + (CGFloat)preferredHeight:(bool)landscape;
+
 
 @end

@@ -8291,8 +8291,11 @@ typedef enum {
     };
     [itemViews addObject:carouselItem];
     
+#pragma mark -ItemTarget
     TGMenuSheetButtonItemView *galleryItem = [[TGMenuSheetButtonItemView alloc] initWithTitle:TGLocalized(@"AttachmentMenu.PhotoOrVideo") type:TGMenuSheetButtonTypeDefault action:^
     {
+        
+#pragma mark -图片或者视频
         __strong TGModernConversationController *strongSelf = weakSelf;
         if (strongSelf == nil)
             return;
@@ -8304,6 +8307,8 @@ typedef enum {
         [strongController dismissAnimated:true];
         [strongSelf _displayMediaPicker:false fromFileMenu:false];
     }];
+    
+    
     galleryItem.longPressAction = ^
     {
         __strong TGModernConversationController *strongSelf = weakSelf;
@@ -8348,6 +8353,8 @@ typedef enum {
     
     carouselItem.underlyingViews = @[ galleryItem, fileItem ];
     
+
+#pragma mark -位置
     TGMenuSheetButtonItemView *locationItem = [[TGMenuSheetButtonItemView alloc] initWithTitle:TGLocalized(@"Conversation.Location") type:TGMenuSheetButtonTypeDefault action:^
                                                {
                                                    __strong TGModernConversationController *strongSelf = weakSelf;
@@ -8363,6 +8370,8 @@ typedef enum {
                                                }];
     [itemViews addObject:locationItem];
     
+    
+#pragma mark -联系人
     if (hasContactItem)
     {
         TGMenuSheetButtonItemView *contactItem = [[TGMenuSheetButtonItemView alloc] initWithTitle:TGLocalized(@"Conversation.Contact")  type:TGMenuSheetButtonTypeDefault action:^
