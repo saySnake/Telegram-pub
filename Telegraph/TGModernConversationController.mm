@@ -277,6 +277,7 @@
 
 #import "TGLiveLocationSignals.h"
 #import "TGScreenCaptureSignals.h"
+#import "HBKeyBoardView.h"
 
 #if TARGET_IPHONE_SIMULATOR
 NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
@@ -524,11 +525,40 @@ typedef enum {
 
 @implementation TGModernConversationController
 
+
+-(void)aa:(NSNotification *)noti
+{
+    ICChatBoxItem  a =(ICChatBoxItem)[noti.object integerValue];
+    if (a ==ICChatBoxItemCamera) {
+        [self _displayLocationPicker];
+    }
+    else if (a ==ICChatBoxItemPerson){
+        [self _displayContactPicker];
+    }else if (a ==ICChatBoxItemDoc){
+        
+        
+        __strong TGMenuSheetController *strongController = _menuController;
+        
+        [self _displayFileMenuWithController:strongController];
+
+//        TGMenuSheetController *shet =[[TGMenuSheetController alloc] init];
+//
+//        [self _displayFileMenuWithController:shet];
+        
+//        [shet presentInViewController:self sourceView:self.view animated:true];
+
+    }
+}
+
+
 - (instancetype)init
 {
     self = [super init];
     if (self != nil)
     {
+        
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aa:) name:@"postNotication" object:nil];
         _actionHandle = [[ASHandle alloc] initWithDelegate:self releaseOnMainThread:true];
         _requestDateJumpDisposable = [[SMetaDisposable alloc] init];
         
@@ -8224,7 +8254,9 @@ typedef enum {
     NSMutableArray *itemViews = [[NSMutableArray alloc] init];
     
     bool hasContactItem = [self.companion allowContactSharing];
+
     
+#pragma mark - 修改
     TGAttachmentCarouselItemView *carouselItem = [[TGAttachmentCarouselItemView alloc] initWithContext:[TGLegacyComponentsContext shared] camera:[PGCamera cameraAvailable] selfPortrait:false forProfilePhoto:false assetType:TGMediaAssetAnyType saveEditedPhotos:TGAppDelegateInstance.saveEditedPhotos allowGrouping:[_companion allowMediaGrouping]];
     carouselItem.condensed = !hasContactItem;
     carouselItem.parentController = self;

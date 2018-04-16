@@ -1259,18 +1259,18 @@ static CGRect viewFrame(UIView *view)
 - (void)attachButtonPressed
 {
     
-//    if (self.isCustomKeyboardExpanded)
-//        [self setCustomKeyboardExpanded:false animated:true];
-//
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self updateSendButtonVisibility:true];
-//        [self updateModeButtonVisibility:true reset:false];
-//
-//    });
-//
-//    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
-//    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
-//        [delegate inputPanelRequestedAttachmentsMenu:self];
+    if (self.isCustomKeyboardExpanded)
+        [self setCustomKeyboardExpanded:false animated:true];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self updateSendButtonVisibility:true];
+        [self updateModeButtonVisibility:true reset:false];
+
+    });
+
+    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
+    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
+        [delegate inputPanelRequestedAttachmentsMenu:self];
     
 #pragma mark -修改
     if ([_customKeyboardView isKindOfClass:[HBKeyBoardView class]])
@@ -1300,7 +1300,6 @@ static CGRect viewFrame(UIView *view)
             id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
             //获取了父视图
             _stickerKeyboardView.parentViewController = [delegate inputPanelParentViewController:self];
-
         }else
         {
             _chatBoxMoreView.hidden = false;
@@ -1314,42 +1313,7 @@ static CGRect viewFrame(UIView *view)
 #pragma mark -HBBoardDelegate
 - (void)chatBoxMoreView:(HBKeyBoardView *)chatBoxMoreView didSelectItem:(ICChatBoxItem )itemType
 {
-    
-    TGModernConversationController *tg =[[TGModernConversationController alloc] init];
- 
-    switch (itemType) {
-        case ICChatBoxItemCamera:{
-            
-        }
-            break;
-        case ICChatBoxItemAlbum:{
-            [tg _displayMediaPicker:false fromFileMenu:false];
-        }
-            break;
-        case ICChatBoxItemVideo:{
-            [tg _displayMediaPicker:false fromFileMenu:false];
-        }
-            break;
-        case ICChatBoxItemRedPackage:{
-            
-        }
-            break;
-        case ICChatBoxItemPerson:{
-            [tg _displayContactPicker];
-        }
-            break;
-            
-        case ICChatBoxItemLocation:{
-            [tg _displayLocationPicker];
-        }
-            break;
-        case ICChatBoxItemDoc:{
-            TGMenuSheetController *shet = [TGMenuSheetController new];
-            [tg _displayFileMenuWithController:shet];
-        }
-        default:
-            break;
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"postNotication" object:@(itemType)];
 }
 
 - (void)attachButtonInteractionBegan
