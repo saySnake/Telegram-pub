@@ -2221,7 +2221,6 @@ typedef enum {
         if ([v isKindOfClass:[TGModernFlatteningView class]]) {
             for (UIView *f  in v.subviews) {
                 [f removeFromSuperview];
-                
             }
         }
     }

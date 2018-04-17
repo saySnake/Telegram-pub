@@ -4,6 +4,10 @@
 #import "TGModernFlatteningViewModel.h"
 #import "TGModernFlatteningView.h"
 #import "Masonry.h"
+#import "TGModernCollectionCell.h"
+#import "TGMessageModernConversationItem.h"
+#import <LegacyComponents/LegacyComponents.h>
+
 #define  YKScreenWidth [UIScreen mainScreen].bounds.size.width
 #define YKScale YKScreenWidth/375
 
@@ -102,7 +106,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     return _redSource;
 }
 
-
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    TGModernCollectionCell *cell=(TGModernCollectionCell *)self.superview.superview.superview;
+    TGMessageModernConversationItem *item=(TGMessageModernConversationItem *)cell.boundItem;
+    
+    NSString *link=item->_message.text;
+    
+}
 
 
 @end

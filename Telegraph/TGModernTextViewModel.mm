@@ -130,7 +130,6 @@
     if (_layoutData == nil || ABS(containerSize.width - _cachedLayoutContainerWidth) > FLT_EPSILON || _cachedLayoutFlags != _layoutFlags || ABS(_additionalTrailingWidth - _cachedAdditionalTrailingWidth) > FLT_EPSILON)
     {
         
-        
         if (self.isRedPackege) {
             
             UIImage*image = [UIImage imageNamed:@"红包背景"];
