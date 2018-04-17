@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4415359"
+            timestampString = "545639522.701136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3036"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.442407"
+            timestampString = "545639522.701591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3030"
@@ -170,12 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.443046"
+            timestampString = "545637800.990028"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8455"
-            endingLineNumber = "8455"
-            landmarkName = "-_displayLegacyAttachmentsMenu"
+            startingLineNumber = "8475"
+            endingLineNumber = "8475"
+            landmarkName = "-_displayAttachmentsMenu"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -217,13 +217,13 @@
                   symbolName = "-[TGTabBar layoutButtons]"
                   moduleName = "Telegram"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGMainTabsController.m"
-                  timestampString = "545572160.10291"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGMainTabsController.m"
+                  timestampString = "545637274.732776"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "533"
                   endingLineNumber = "533"
-                  offsetFromSymbolStart = "330">
+                  offsetFromSymbolStart = "312">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -232,13 +232,13 @@
                   symbolName = "__destroy_helper_block_.263"
                   moduleName = "Telegram"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGMainTabsController.m"
-                  timestampString = "545572160.104912"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGMainTabsController.m"
+                  timestampString = "545637274.734984"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "533"
                   endingLineNumber = "533"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -394,7 +394,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.443347"
+            timestampString = "545639522.702106"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1201"
@@ -410,12 +410,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.443975"
+            timestampString = "545637800.990755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7897"
-            endingLineNumber = "7897"
-            landmarkName = "-inputPanelRequestedSendMessage:text:entities:"
+            startingLineNumber = "7914"
+            endingLineNumber = "7914"
+            landmarkName = "-currentForwardMessages"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -426,12 +426,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.444092"
+            timestampString = "545637800.990857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7888"
-            endingLineNumber = "7888"
-            landmarkName = "-inputPanelRequestedSendMessage:text:entities:"
+            startingLineNumber = "7905"
+            endingLineNumber = "7905"
+            landmarkName = "-currentReplyMessage"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.444204"
+            timestampString = "545637800.9909509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7933"
-            endingLineNumber = "7933"
+            startingLineNumber = "7950"
+            endingLineNumber = "7950"
             landmarkName = "-inputPanelRequestedSendMessage:text:entities:"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGGenericModernConversationCompanion.mm"
-            timestampString = "545137693.355626"
+            timestampString = "545629518.234588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1803"
@@ -522,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGMessageModernConversationItem.mm"
-            timestampString = "545572241.444394"
+            timestampString = "545635466.4341609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "636"
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGMessageModernConversationItem.mm"
-            timestampString = "545572241.444459"
+            timestampString = "545635466.434212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "268"
@@ -554,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "submodules/LegacyComponents/LegacyComponents/HPTextViewInternal.m"
-            timestampString = "545572241.444532"
+            timestampString = "545572731.756076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -570,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "submodules/LegacyComponents/LegacyComponents/HPTextViewInternal.m"
-            timestampString = "545572241.444594"
+            timestampString = "545572731.756153"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "249"
@@ -586,7 +586,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "submodules/LegacyComponents/LegacyComponents/HPTextViewInternal.m"
-            timestampString = "545572241.444661"
+            timestampString = "545572731.756231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -602,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "submodules/LegacyComponents/LegacyComponents/HPTextViewInternal.m"
-            timestampString = "545572241.444715"
+            timestampString = "545572731.756297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "submodules/LegacyComponents/LegacyComponents/HPTextViewInternal.m"
-            timestampString = "545572241.444767"
+            timestampString = "545572731.7563781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
@@ -666,13 +666,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.444833"
+            timestampString = "545639522.702634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2560"
             endingLineNumber = "2560"
-            landmarkName = "-prepareForResultPreviewDismissal:"
+            landmarkName = "-setAssociatedPanel:animated:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TGModernConversationInputTextPanel setAssociatedPanel:animated:]"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637274.832392"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2560"
+                  endingLineNumber = "2560"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__66-[TGModernConversationInputTextPanel setAssociatedPanel:animated:]_block_invoke"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637274.834518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2560"
+                  endingLineNumber = "2560"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.979"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637274.836563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2560"
+                  endingLineNumber = "2560"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -682,7 +729,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.445527"
+            timestampString = "545639522.702956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1392"
@@ -698,27 +745,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.446148"
+            timestampString = "545639522.703245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1430"
             endingLineNumber = "1430"
-            landmarkName = "-decideMicButtonAction"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.44677"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1464"
-            endingLineNumber = "1464"
             landmarkName = "-micButtonInteractionBegan"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,7 +761,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.447323"
+            timestampString = "545639522.703524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1464"
+            endingLineNumber = "1464"
+            landmarkName = "-micButtonInteractionCancelled:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.703841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "411"
@@ -746,7 +793,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.447884"
+            timestampString = "545639522.704115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "429"
@@ -762,7 +809,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.44838"
+            timestampString = "545639522.704392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "608"
@@ -778,7 +825,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.448938"
+            timestampString = "545639522.704668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "617"
@@ -794,7 +841,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.449495"
+            timestampString = "545639522.704935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "625"
@@ -810,7 +857,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4500051"
+            timestampString = "545639522.705198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "636"
@@ -826,7 +873,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.450536"
+            timestampString = "545639522.705451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "640"
@@ -842,7 +889,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.451023"
+            timestampString = "545639522.7057199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "644"
@@ -858,7 +905,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4515001"
+            timestampString = "545639522.705988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "649"
@@ -874,7 +921,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4519759"
+            timestampString = "545639522.7062449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "654"
@@ -890,7 +937,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.452464"
+            timestampString = "545639522.706501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "659"
@@ -906,7 +953,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.453014"
+            timestampString = "545639522.706769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "670"
@@ -922,7 +969,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.453503"
+            timestampString = "545639522.707033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "678"
@@ -938,7 +985,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.453995"
+            timestampString = "545639522.707312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "686"
@@ -954,7 +1001,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.454495"
+            timestampString = "545639522.707564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "696"
@@ -970,7 +1017,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.454976"
+            timestampString = "545639522.707853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "731"
@@ -986,7 +1033,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4554631"
+            timestampString = "545639522.708107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1188"
@@ -1002,27 +1049,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.456179"
+            timestampString = "545639522.708374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1500"
             endingLineNumber = "1500"
-            landmarkName = "-micButtonInteractionCancelled:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.456727"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1518"
-            endingLineNumber = "1518"
             landmarkName = "-micButtonInteractionCompleted:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1034,7 +1065,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.457217"
+            timestampString = "545639522.70867"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1518"
+            endingLineNumber = "1518"
+            landmarkName = "-micButtonInteractionUpdate:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.708962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1542"
@@ -1050,43 +1097,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.45771"
+            timestampString = "545639522.709232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1604"
             endingLineNumber = "1604"
-            landmarkName = "-setLocked"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.458196"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1609"
-            endingLineNumber = "1609"
-            landmarkName = "-micButtonInteractionLocked"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.458672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1644"
-            endingLineNumber = "1644"
             landmarkName = "-micButtonInteractionRequestedLockedAction"
             landmarkType = "7">
          </BreakpointContent>
@@ -1098,43 +1113,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.459182"
+            timestampString = "545639522.709525"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1651"
-            endingLineNumber = "1651"
-            landmarkName = "-micButtonInteractionStopped"
+            startingLineNumber = "1609"
+            endingLineNumber = "1609"
+            landmarkName = "-micButtonInteractionRequestedLockedAction"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.459664"
+            timestampString = "545639522.709815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1676"
-            endingLineNumber = "1676"
-            landmarkName = "-adjustForSize:keyboardHeight:duration:animationCurve:contentAreaHeight:safeAreaInset:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.460184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1681"
-            endingLineNumber = "1681"
+            startingLineNumber = "1644"
+            endingLineNumber = "1644"
             landmarkName = "-adjustForSize:keyboardHeight:duration:animationCurve:contentAreaHeight:safeAreaInset:dismissOffset:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1146,12 +1145,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.460691"
+            timestampString = "545639522.710089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1651"
+            endingLineNumber = "1651"
+            landmarkName = "TGModernConversationInputTextPanel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.71038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1676"
+            endingLineNumber = "1676"
+            landmarkName = "-inputFieldInsets"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.710647"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1681"
+            endingLineNumber = "1681"
+            landmarkName = "-inputFieldInsets"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.710914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1816"
             endingLineNumber = "1816"
-            landmarkName = "-updateInputFieldLayout"
+            landmarkName = "-changeToSize:keyboardHeight:duration:contentAreaHeight:safeAreaInset:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1162,12 +1209,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4612139"
+            timestampString = "545639522.711177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1920"
             endingLineNumber = "1920"
-            landmarkName = "-updateHeight"
+            landmarkName = "-updateMainLayout:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1178,12 +1225,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.461733"
+            timestampString = "545639522.71147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2094"
             endingLineNumber = "2094"
-            landmarkName = "-removeDotAnimation"
+            landmarkName = "-setShowRecordingInterface:video:velocity:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1194,12 +1241,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.462257"
+            timestampString = "545639522.711822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2099"
             endingLineNumber = "2099"
-            landmarkName = "-isLocked"
+            landmarkName = "-setShowRecordingInterface:video:velocity:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1210,7 +1257,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.462744"
+            timestampString = "545639522.712113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2105"
@@ -1226,91 +1273,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4632519"
+            timestampString = "545639522.712422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2394"
             endingLineNumber = "2394"
-            landmarkName = "-stopAudioRecordingTimer"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.463745"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2403"
-            endingLineNumber = "2403"
-            landmarkName = "-audioRecordingStarted"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.464233"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2408"
-            endingLineNumber = "2408"
-            landmarkName = "-audioRecordingFinished"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.464729"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2413"
-            endingLineNumber = "2413"
-            landmarkName = "-setFrame:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.46522"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2422"
-            endingLineNumber = "2422"
-            landmarkName = "-recordingFinished"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.465793"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2431"
-            endingLineNumber = "2431"
             landmarkName = "-recordingStopped"
             landmarkType = "7">
          </BreakpointContent>
@@ -1322,11 +1289,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.466372"
+            timestampString = "545639522.7127219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2440"
-            endingLineNumber = "2440"
+            startingLineNumber = "2403"
+            endingLineNumber = "2403"
             landmarkName = "-shakeControls"
             landmarkType = "7">
          </BreakpointContent>
@@ -1338,13 +1305,93 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.466941"
+            timestampString = "545639522.713039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2408"
+            endingLineNumber = "2408"
+            landmarkName = "-shakeControls"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.713397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2413"
+            endingLineNumber = "2413"
+            landmarkName = "-shakeControls"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.713763"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2422"
+            endingLineNumber = "2422"
+            landmarkName = "-attachmentButtonFrame"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.714165"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2431"
+            endingLineNumber = "2431"
+            landmarkName = "-stickerButtonFrame"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.714691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2440"
+            endingLineNumber = "2440"
+            landmarkName = "-stickerButton"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationInputTextPanel.m"
+            timestampString = "545639522.715127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2494"
             endingLineNumber = "2494"
-            landmarkName = "-keyboardSnapshotView"
-            landmarkType = "7">
+            landmarkName = "TGModernConversationInputTextPanel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1354,13 +1401,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.46751"
+            timestampString = "545639522.715493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2513"
             endingLineNumber = "2513"
-            landmarkName = "-prepareForResultPreviewAppearance:"
+            landmarkName = "-prepareForResultPreviewDismissal:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__71-[TGModernConversationInputTextPanel prepareForResultPreviewDismissal:]_block_invoke"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.1410021"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2514"
+                  endingLineNumber = "2514"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.968"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.143052"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2506"
+                  endingLineNumber = "2506"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1370,13 +1449,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4680721"
+            timestampString = "545639522.715809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2585"
             endingLineNumber = "2585"
             landmarkName = "-setAssociatedPanel:animated:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__66-[TGModernConversationInputTextPanel setAssociatedPanel:animated:]_block_invoke.992"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.148802"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2586"
+                  endingLineNumber = "2586"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.995"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.151284"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "2581"
+                  endingLineNumber = "2581"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1386,13 +1497,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.468612"
+            timestampString = "545639522.716114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2665"
             endingLineNumber = "2665"
-            landmarkName = "-updateInlineBotPanelOffset"
-            landmarkType = "7">
+            landmarkName = "TGModernConversationInputTextPanel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1402,13 +1513,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.469175"
+            timestampString = "545639522.716415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3857"
             endingLineNumber = "3857"
-            landmarkName = "-toggleCustomKeyboardExpanded"
+            landmarkName = "-setCustomKeyboardExpanded:animated:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__73-[TGModernConversationInputTextPanel setCustomKeyboardExpanded:animated:]_block_invoke"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.161617"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3857"
+                  endingLineNumber = "3857"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.1270"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.164287"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3836"
+                  endingLineNumber = "3836"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1418,12 +1561,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.469698"
+            timestampString = "545639522.716713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3485"
             endingLineNumber = "3485"
-            landmarkName = "-broadcastButtonPressed"
+            landmarkName = "-setContextPlaceholder:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1434,60 +1577,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.470185"
+            timestampString = "545639522.71701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3668"
             endingLineNumber = "3668"
-            landmarkName = "-clearButtonPressed"
+            landmarkName = "-replaceInlineBot:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TGModernConversationInputTextPanel clearButtonPressed]"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationInputTextPanel.m"
-                  timestampString = "545572160.779456"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3667"
-                  endingLineNumber = "3667"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__56-[TGModernConversationInputTextPanel clearButtonPressed]_block_invoke"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationInputTextPanel.m"
-                  timestampString = "545572160.7830909"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3667"
-                  endingLineNumber = "3667"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.1229"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationInputTextPanel.m"
-                  timestampString = "545572160.7854609"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3667"
-                  endingLineNumber = "3667"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1497,12 +1593,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.4707251"
+            timestampString = "545639522.71732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3162"
             endingLineNumber = "3162"
-            landmarkName = "-keyboardModeButtonPressed"
+            landmarkName = "-stickerModeButtonPressed"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1513,45 +1609,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.471229"
+            timestampString = "545639522.717621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3284"
             endingLineNumber = "3284"
-            landmarkName = "-slashModeButtonPressed"
+            landmarkName = "-showCommandsKeyboard:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TGModernConversationInputTextPanel slashModeButtonPressed]"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationInputTextPanel.m"
-                  timestampString = "545572160.797442"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3283"
-                  endingLineNumber = "3283"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.1163"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationInputTextPanel.m"
-                  timestampString = "545572160.799781"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "3283"
-                  endingLineNumber = "3283"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1561,12 +1625,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.471715"
+            timestampString = "545639522.7179559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3297"
             endingLineNumber = "3297"
-            landmarkName = "-commandModeButtonPressed"
+            landmarkName = "-showCommandsKeyboard:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1577,7 +1641,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.472314"
+            timestampString = "545639522.718393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3189"
@@ -1593,13 +1657,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.472935"
+            timestampString = "545639522.718828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3197"
             endingLineNumber = "3197"
             landmarkName = "-stickerModeButtonPressed"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[TGModernConversationInputTextPanel stickerModeButtonPressed]_block_invoke.1134"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.1976449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3197"
+                  endingLineNumber = "3197"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.1137"
+                  moduleName = "Telegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangwei0320/Desktop/TG/Telegraph/TGModernConversationInputTextPanel.m"
+                  timestampString = "545637275.199968"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "3192"
+                  endingLineNumber = "3192"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1609,7 +1705,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGStickerKeyboardView.m"
-            timestampString = "545572241.473479"
+            timestampString = "545572731.764791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -1625,11 +1721,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.4735661"
+            timestampString = "545637801.009647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8198"
-            endingLineNumber = "8198"
+            startingLineNumber = "8215"
+            endingLineNumber = "8215"
+            landmarkName = "-inputPanelRequestedAttachmentsMenu:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationController.mm"
+            timestampString = "545637801.00974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8349"
+            endingLineNumber = "8349"
             landmarkName = "-_displayAttachmentsMenu"
             landmarkType = "7">
          </BreakpointContent>
@@ -1641,11 +1753,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.473683"
+            timestampString = "545637801.009823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8329"
-            endingLineNumber = "8329"
+            startingLineNumber = "8418"
+            endingLineNumber = "8418"
             landmarkName = "-_displayAttachmentsMenu"
             landmarkType = "7">
          </BreakpointContent>
@@ -1657,109 +1769,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.473766"
+            timestampString = "545637801.0099061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8312"
-            endingLineNumber = "8312"
+            startingLineNumber = "8397"
+            endingLineNumber = "8397"
             landmarkName = "-_displayAttachmentsMenu"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TGModernConversationController _displayAttachmentsMenu]"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationController.mm"
-                  timestampString = "545572160.833284"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8312"
-                  endingLineNumber = "8312"
-                  offsetFromSymbolStart = "5837">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.3342"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationController.mm"
-                  timestampString = "545572160.835397"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8312"
-                  endingLineNumber = "8312"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.473843"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8398"
-            endingLineNumber = "8398"
-            landmarkName = "-_displayAttachmentsMenu"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.4739079"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8377"
-            endingLineNumber = "8377"
-            landmarkName = "-_displayAttachmentsMenu"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TGModernConversationController _displayAttachmentsMenu]"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationController.mm"
-                  timestampString = "545572160.8478431"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8377"
-                  endingLineNumber = "8377"
-                  offsetFromSymbolStart = "7177">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.3366"
-                  moduleName = "Telegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwei0320/Desktop/Telegram-pub/Telegraph/TGModernConversationController.mm"
-                  timestampString = "545572160.849941"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "8377"
-                  endingLineNumber = "8377"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1769,12 +1785,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationInputTextPanel.m"
-            timestampString = "545572241.473972"
+            timestampString = "545639522.719436"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1325"
             endingLineNumber = "1325"
-            landmarkName = "-chatBoxMoreView:didSelectItem:"
+            landmarkName = "-attachButtonInteractionUpdate:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1785,11 +1801,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.474377"
+            timestampString = "545637801.010391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8308"
-            endingLineNumber = "8308"
+            startingLineNumber = "8566"
+            endingLineNumber = "8566"
+            landmarkName = "-_suggestionContext"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationController.mm"
+            timestampString = "545637801.010482"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8289"
+            endingLineNumber = "8289"
             landmarkName = "-_displayAttachmentsMenu"
             landmarkType = "7">
          </BreakpointContent>
@@ -1801,12 +1833,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Telegraph/TGModernConversationController.mm"
-            timestampString = "545572241.474447"
+            timestampString = "545637801.010566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8546"
-            endingLineNumber = "8546"
-            landmarkName = "-_displayMediaPicker:fromFileMenu:"
+            startingLineNumber = "8302"
+            endingLineNumber = "8302"
+            landmarkName = "-_displayAttachmentsMenu"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Telegraph/TGModernConversationController.mm"
+            timestampString = "545637801.010648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8316"
+            endingLineNumber = "8316"
+            landmarkName = "-_displayAttachmentsMenu"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "submodules/LegacyComponents/LegacyComponents/TGAttachmentCarouselItemView.m"
+            timestampString = "545626936.071649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "-initWithContext:camera:selfPortrait:forProfilePhoto:assetType:saveEditedPhotos:allowGrouping:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="JSI-eM-GYp">
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="JSI-eM-GYp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                             </imageView>
                         </subviews>
@@ -45,6 +45,6 @@
         </navigationController>
     </objects>
     <resources>
-        <image name="LaunchImage.png" width="16" height="16"/>
+        <image name="LaunchImage" width="16" height="16"/>
     </resources>
 </document>

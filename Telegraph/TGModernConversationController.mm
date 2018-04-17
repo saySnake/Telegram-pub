@@ -279,13 +279,14 @@
 #import "TGScreenCaptureSignals.h"
 #import "HBKeyBoardView.h"
 
-#if TARGET_IPHONE_SIMULATOR
+//#if TARGET_IPHONE_SIMULATOR
+//NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
+//NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
+//#else
+
 NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
-#else
-NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
-NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
-#endif
+//#endif
 
 #define TGModernConversationControllerLogCellOperations false
 
@@ -526,28 +527,46 @@ typedef enum {
 @implementation TGModernConversationController
 
 
+
 -(void)aa:(NSNotification *)noti
 {
     ICChatBoxItem  a =(ICChatBoxItem)[noti.object integerValue];
     if (a ==ICChatBoxItemCamera) {
-        [self _displayLocationPicker];
-    }
-    else if (a ==ICChatBoxItemPerson){
+        [self xiangji];
+    }else if (a ==ICChatBoxItemPerson){
         [self _displayContactPicker];
     }else if (a ==ICChatBoxItemDoc){
-        
-        
-        __strong TGMenuSheetController *strongController = _menuController;
-        
-        [self _displayFileMenuWithController:strongController];
-
-//        TGMenuSheetController *shet =[[TGMenuSheetController alloc] init];
-//
-//        [self _displayFileMenuWithController:shet];
-        
-//        [shet presentInViewController:self sourceView:self.view animated:true];
-
+        [self _displayMediaPicker:false fromFileMenu:false];
+    }else if ( a==ICChatBoxItemLocation){
+        [self _displayLocationPicker];
+    }else if (a ==ICChatBoxItemAlbum){
+        [self _displayMediaPicker:false fromFileMenu:false];
+    }else if (a ==ICChatBoxItemVideo){
+        [self _displayMediaPicker:false fromFileMenu:false];
     }
+}
+
+- (void)xiangji
+{
+    __autoreleasing NSString *disabledMessage = nil;
+    if (![TGApplicationFeatures isPhotoUploadEnabledForPeerType:[_companion applicationFeaturePeerType] disabledMessage:&disabledMessage])
+    {
+        [[[TGAlertView alloc] initWithTitle:TGLocalized(@"FeatureDisabled.Oops") message:disabledMessage cancelButtonTitle:TGLocalized(@"Common.OK") okButtonTitle:nil completionBlock:nil] show];
+        return;
+    }
+    
+    TGLegacyCameraController *legacyCameraController = [[TGLegacyCameraController alloc] initWithContext:[TGLegacyComponentsContext shared]];
+    legacyCameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    legacyCameraController.mediaTypes = [[NSArray alloc] initWithObjects:(__bridge NSString *)kUTTypeImage, (__bridge NSString *)kUTTypeMovie, nil];
+    
+    legacyCameraController.storeCapturedAssets = [_companion controllerShouldStoreCapturedAssets];
+    legacyCameraController.completionDelegate = self;
+    
+    legacyCameraController.videoMaximumDuration = 100 * 60 * 60;
+    [legacyCameraController setVideoQuality:UIImagePickerControllerQualityTypeMedium];
+    legacyCameraController.completionDelegate = self;
+    
+    [self presentViewController:legacyCameraController animated:true completion:nil];
 }
 
 
@@ -556,8 +575,6 @@ typedef enum {
     self = [super init];
     if (self != nil)
     {
-        
-        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aa:) name:@"postNotication" object:nil];
         _actionHandle = [[ASHandle alloc] initWithDelegate:self releaseOnMainThread:true];
         _requestDateJumpDisposable = [[SMetaDisposable alloc] init];
@@ -8256,7 +8273,7 @@ typedef enum {
     bool hasContactItem = [self.companion allowContactSharing];
 
     
-#pragma mark - 修改
+#pragma mark - 修改相机
     TGAttachmentCarouselItemView *carouselItem = [[TGAttachmentCarouselItemView alloc] initWithContext:[TGLegacyComponentsContext shared] camera:[PGCamera cameraAvailable] selfPortrait:false forProfilePhoto:false assetType:TGMediaAssetAnyType saveEditedPhotos:TGAppDelegateInstance.saveEditedPhotos allowGrouping:[_companion allowMediaGrouping]];
     carouselItem.condensed = !hasContactItem;
     carouselItem.parentController = self;
@@ -8279,6 +8296,7 @@ typedef enum {
         
         [strongSelf _displayCameraWithView:cameraView menuController:strongController];
     };
+    
     carouselItem.sendPressed = ^(TGMediaAsset *currentItem, bool asFiles)
     {
         __strong TGModernConversationController *strongSelf = weakSelf;
@@ -8322,6 +8340,8 @@ typedef enum {
         [strongSelf _updateCanReadHistory:TGModernConversationActivityChangeActive];
     };
     [itemViews addObject:carouselItem];
+    
+    
     
 #pragma mark -ItemTarget
     TGMenuSheetButtonItemView *galleryItem = [[TGMenuSheetButtonItemView alloc] initWithTitle:TGLocalized(@"AttachmentMenu.PhotoOrVideo") type:TGMenuSheetButtonTypeDefault action:^
@@ -8839,6 +8859,8 @@ typedef enum {
     };
 }
 
+
+#pragma mark-相机
 - (void)_displayLegacyCamera
 {
     __autoreleasing NSString *disabledMessage = nil;
@@ -8862,6 +8884,8 @@ typedef enum {
     [self presentViewController:legacyCameraController animated:true completion:nil];
 }
 
+
+#pragma mark -云盘
 - (void)_displayICloudDrivePicker
 {
     NSArray *documentTypes = @

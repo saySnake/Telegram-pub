@@ -1258,19 +1258,18 @@ static CGRect viewFrame(UIView *view)
 
 - (void)attachButtonPressed
 {
-    
-    if (self.isCustomKeyboardExpanded)
-        [self setCustomKeyboardExpanded:false animated:true];
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateSendButtonVisibility:true];
-        [self updateModeButtonVisibility:true reset:false];
-
-    });
-
-    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
-    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
-        [delegate inputPanelRequestedAttachmentsMenu:self];
+//    if (self.isCustomKeyboardExpanded)
+//        [self setCustomKeyboardExpanded:false animated:true];
+//
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self updateSendButtonVisibility:true];
+//        [self updateModeButtonVisibility:true reset:false];
+//
+//    });
+//
+//    id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
+//    if ([delegate respondsToSelector:@selector(inputPanelRequestedAttachmentsMenu:)])
+//        [delegate inputPanelRequestedAttachmentsMenu:self];
     
 #pragma mark -修改
     if ([_customKeyboardView isKindOfClass:[HBKeyBoardView class]])
@@ -1279,20 +1278,19 @@ static CGRect viewFrame(UIView *view)
     if (_canOpenStickersPanel != nil && !_canOpenStickersPanel()) {
         return;
     }
-
     dispatch_async(dispatch_get_main_queue(), ^{
         if (_chatBoxMoreView == nil)
         {
             _chatBoxMoreView =[[HBKeyBoardView alloc] initWithFrame:CGRectMake(0, 0, App_Frame_Width, 215)];
             _chatBoxMoreView.delegate =self;
             _chatBoxMoreView.isCollectionViewisHidden =YES;
-            HBMoreViewItem *xiangji   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相机" imageName:@"gengduotuijian"];
-            HBMoreViewItem *xiangce   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相册" imageName:@"gengduotuijian"];
-            HBMoreViewItem *shipin    =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"视频" imageName:@"gengduotuijian"];
+            HBMoreViewItem *xiangji   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相机" imageName:@"sharemore_video"];
+            HBMoreViewItem *xiangce   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"相册" imageName:@"sharemore_pic"];
+            HBMoreViewItem *shipin    =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"视频" imageName:@"sharemore_sight"];
             HBMoreViewItem *hongbao   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"红包" imageName:@"gengduotuijian"];
             HBMoreViewItem *lianxiren =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"联系人" imageName:@"gengduotuijian"];
             HBMoreViewItem *weizhi    =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"位置" imageName:@"gengduotuijian"];
-            HBMoreViewItem *wenjian   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
+            HBMoreViewItem *wenjian   =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"sharemore_wallet"];
             HBMoreViewItem *wenjian1  =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
             HBMoreViewItem *wenjian2  =[HBMoreViewItem createChatBoxMoreItemWithTitle:@"文件" imageName:@"gengduotuijian"];
             [_chatBoxMoreView setItems:[[NSMutableArray alloc] initWithObjects:xiangji, xiangce, shipin,hongbao,lianxiren,weizhi,wenjian,wenjian1,wenjian2, nil]];
