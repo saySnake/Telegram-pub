@@ -22,6 +22,7 @@
 
 @interface TGMessage (Telegraph)
 
+
 + (NSArray *)parseTelegraphMedia:(id)media mediaLifetime:(int32_t *)mediaLifetime;
 + (NSArray *)parseTelegraphEntities:(NSArray *)entities;
 

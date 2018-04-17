@@ -1443,6 +1443,10 @@
 		B6479B76208469D400A1AD46 /* HBMoreViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B74208469D400A1AD46 /* HBMoreViewItem.h */; };
 		B6479B77208469D400A1AD46 /* HBMoreViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B75208469D400A1AD46 /* HBMoreViewItem.m */; };
 		B65BC6CA207C4DE7006DB3CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */; };
+		B67240262085EAE4002CA111 /* YKUntil.h in Headers */ = {isa = PBXBuildFile; fileRef = B67240242085EAE4002CA111 /* YKUntil.h */; };
+		B67240272085EAE4002CA111 /* YKUntil.m in Sources */ = {isa = PBXBuildFile; fileRef = B67240252085EAE4002CA111 /* YKUntil.m */; };
+		B672403B2085F312002CA111 /* YKRedPacketView.h in Headers */ = {isa = PBXBuildFile; fileRef = B67240392085F312002CA111 /* YKRedPacketView.h */; };
+		B672403C2085F312002CA111 /* YKRedPacketView.m in Sources */ = {isa = PBXBuildFile; fileRef = B672403A2085F312002CA111 /* YKRedPacketView.m */; };
 		B67B02912075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */; };
 		B67B02932075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */; };
 		B67B02952075D35A00ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */; };
@@ -7513,6 +7517,10 @@
 		B6479B74208469D400A1AD46 /* HBMoreViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMoreViewItem.h; sourceTree = "<group>"; };
 		B6479B75208469D400A1AD46 /* HBMoreViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMoreViewItem.m; sourceTree = "<group>"; };
 		B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B67240242085EAE4002CA111 /* YKUntil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUntil.h; sourceTree = "<group>"; };
+		B67240252085EAE4002CA111 /* YKUntil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUntil.m; sourceTree = "<group>"; };
+		B67240392085F312002CA111 /* YKRedPacketView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKRedPacketView.h; sourceTree = "<group>"; };
+		B672403A2085F312002CA111 /* YKRedPacketView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKRedPacketView.m; sourceTree = "<group>"; };
 		B67B02902075D30F00ADA2A4 /* pad-builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
 		B67B02922075D31700ADA2A4 /* pad-builtin-wallpaper-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pad-builtin-wallpaper-0.jpg"; sourceTree = "<group>"; };
 		B67B02942075D35900ADA2A4 /* builtin-wallpaper-0-thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "builtin-wallpaper-0-thumbnail.jpg"; sourceTree = "<group>"; };
@@ -15626,6 +15634,8 @@
 		B62321B4206CCC0700BAAB88 /* HuoBi */ = {
 			isa = PBXGroup;
 			children = (
+				B67240392085F312002CA111 /* YKRedPacketView.h */,
+				B672403A2085F312002CA111 /* YKRedPacketView.m */,
 				B62321BA206CED2500BAAB88 /* UIView+Addition.h */,
 				B62321B9206CED2400BAAB88 /* UIView+Addition.m */,
 				B62321B5206CCC3200BAAB88 /* RTDeviceHardWare.h */,
@@ -15636,6 +15646,8 @@
 				B6479B682080B95200A1AD46 /* HBKeyBoardView.m */,
 				B6479B74208469D400A1AD46 /* HBMoreViewItem.h */,
 				B6479B75208469D400A1AD46 /* HBMoreViewItem.m */,
+				B67240242085EAE4002CA111 /* YKUntil.h */,
+				B67240252085EAE4002CA111 /* YKUntil.m */,
 			);
 			name = HuoBi;
 			sourceTree = "<group>";
@@ -23790,6 +23802,7 @@
 				D051B1061B04EB85003AFD52 /* TGPhonebookSignals.h in Headers */,
 				68D3C1B81BD936D2003F8131 /* TGNotificationMediaPreviewView.h in Headers */,
 				D0514EF71DD1D0590008DF17 /* TLPhoneCall$phoneCallWaiting.h in Headers */,
+				B67240262085EAE4002CA111 /* YKUntil.h in Headers */,
 				D060B7991CF714760050BE9B /* TGPeerReadState.h in Headers */,
 				D01160641F41F1310039383E /* TLRPCmessages_setEncryptedTyping.h in Headers */,
 				09FAA0C81F447ED30099E8E7 /* TGCachedStickerPack.h in Headers */,
@@ -23809,6 +23822,7 @@
 				D053B41F1F1907D100E2D58A /* TGSecretPeerMediaTimerView.h in Headers */,
 				D0C09C721A6E974D008369D7 /* TGSharedMediaFileItemView.h in Headers */,
 				D0967BC91BB58751008A7B4B /* TGModernConversationControllerView.h in Headers */,
+				B672403B2085F312002CA111 /* YKRedPacketView.h in Headers */,
 				D01161241F41F1330039383E /* NSArray_ContactSuggested.h in Headers */,
 				D0A4D7911C0F72AA00537E74 /* TGVTPlayer.h in Headers */,
 				D011600C1F41F1310039383E /* TLRPCmessages_getFavedStickers.h in Headers */,
@@ -26770,6 +26784,7 @@
 				D051B1071B04EB85003AFD52 /* TGPhonebookSignals.m in Sources */,
 				68B63D371BB25B1F00205AC3 /* TGBridgeLocationHandler.m in Sources */,
 				D09262C21D88434100742741 /* TGMultipleStickerPacksCell.m in Sources */,
+				B67240272085EAE4002CA111 /* YKUntil.m in Sources */,
 				D07147771A14B6EF00D7896A /* TGStickerMessageImageViewModel.m in Sources */,
 				B62321A8206CC46300BAAB88 /* MASCompositeConstraint.m in Sources */,
 				D0741C8519E7F22B0076369C /* TGStoredSecretAction.m in Sources */,
@@ -27743,6 +27758,7 @@
 				D0F2E10C1E3B698A00759C97 /* TGPaymentForm.m in Sources */,
 				D04324CF1DC25D2900E0C528 /* MultipartFetch.m in Sources */,
 				D060391F1918E24B00EF850D /* TGMessageImageViewTimestampClockFrameLayer.m in Sources */,
+				B672403C2085F312002CA111 /* YKRedPacketView.m in Sources */,
 				93A6063F185FC042007E3477 /* TGDocumentMessageViewModel.m in Sources */,
 				9352A9D5181DBCD8002A1A1A /* TGModernConversationCompanion.mm in Sources */,
 				9386E897185CB77000930205 /* TGRegularCheckCollectionItem.m in Sources */,

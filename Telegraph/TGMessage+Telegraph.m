@@ -331,7 +331,8 @@
             if ([desc isKindOfClass:[TLMessage$modernMessage class]])
             {
                 TLMessage$modernMessage *modernMessage = (TLMessage$modernMessage *)desc;
-                if (modernMessage.fwd_from != nil)
+#pragma mark -红包
+                if (modernMessage.fwd_from != nil &&!self.isRedpacket)
                 {
                     TGForwardedMessageMediaAttachment *forwardedMessageAttachment = [[TGForwardedMessageMediaAttachment alloc] init];
                     TLMessageFwdHeader$messageFwdHeader *fwd_header = ((TLMessageFwdHeader$messageFwdHeader *)modernMessage.fwd_from);

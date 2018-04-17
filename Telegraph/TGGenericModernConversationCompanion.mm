@@ -153,6 +153,7 @@
 #import "TGMessage+Telegraph.h"
 
 #import "TGSendMessageSignals.h"
+#import "YKUntil.h"
 
 #ifdef DEBUG
 #   define DEBUG_DONOTREAD
@@ -1816,8 +1817,12 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
     TGWebPageMediaAttachment *parsedWebpage = nil;
     if ([self canAttachLinkPreviews] && !disableLinkPreviews && [self allowExternalContent] && ([self allowMessageForwarding] || TGAppDelegateInstance.allowSecretWebpages))
     {
+#pragma 链接
+        if ( ![YKUntil linkRedPacketText:text]) {
         NSString *webpageLink = [TGModernConversationInputTextPanel linkCandidateInText:text];
         if (webpageLink != nil) {
+            NSLog(@"aaaaaaaa 链接%@",webpageLink);
+            
             parsedWebpage = [TGUpdateStateRequestBuilder webPageWithLink:webpageLink];
             if (parsedWebpage == nil && [self encryptUploads]) {
                 parsedWebpage = [[TGWebPageMediaAttachment alloc] init];
@@ -1826,6 +1831,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
                 parsedWebpage.webPageLocalId = randomId;
                 parsedWebpage.url = webpageLink;
             }
+        }
         }
     }
     
@@ -1837,6 +1843,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
     {
         if (text.length <= messagePartLimit)
         {
+            //文本信息
             NSString *resultingText = text;
             NSArray *parsedEntities = entities == nil ? [TGMessage entitiesForMarkedUpText:text resultingText:&resultingText] : entities;
             TGPreparedTextMessage *preparedMessage = [[TGPreparedTextMessage alloc] initWithText:resultingText replyMessage:replyMessage disableLinkPreviews:disableLinkPreviews parsedWebpage:parsedWebpage entities:parsedEntities botContextResult:botContextResult replyMarkup:replyMarkup];
@@ -1870,6 +1877,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
             [preparedMessages addObjectsFromArray:[self _createPreparedForwardMessagesFromMessages:withAttachedMessages]];
         }
         
+        NSLog(@"aaaa 发准备信息");
         [self _sendPreparedMessages:preparedMessages automaticallyAddToList:true withIntent:TGSendMessageIntentSendText];
         
         
@@ -3846,6 +3854,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
             //TGLog(@"send time: %f + %f", [[NSDate date] timeIntervalSince1970] + [[TGTelegramNetworking instance].context globalTimeDifference]);
             
             TGMessage *message = [preparedMessage message];
+            NSLog(@"aaaaa消息体");
             if (message == nil)
             {
                 TGLog(@"***** Failed to generate message from prepared message");
@@ -4072,6 +4081,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
         if (TGPeerIdIsChannel(_conversationId)) {
             [TGDatabaseInstance() addMessagesToChannel:_conversationId messages:addToDatabaseMessages deleteMessages:nil unimportantGroups:nil addedHoles:nil removedHoles:nil removedUnimportantHoles:nil updatedMessageSortKeys:nil returnGroups:nil keepUnreadCounters:false changedMessages:nil];
         } else {
+            NSLog(@"云克消息本地数据库写入");
             [TGDatabaseInstance() transactionAddMessages:addToDatabaseMessages updateConversationDatas:nil notifyAdded:false];
         }
         
@@ -4113,6 +4123,8 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
             [ActionStageInstance() requestActor:action[@"action"] options:action[@"options"] watcher:self];
             if ([ActionStageInstance() executingActorWithPath:action[@"action"]] != nil) // in case of instantaneous error
                 [ActionStageInstance() requestActor:action[@"action"] options:action[@"options"] watcher:TGTelegraphInstance];
+            NSLog(@"云克发送消息给网络");//TGTelegraphInstance 是AFHTTPClient的子类对象
+
         }
     }];
     
@@ -4141,6 +4153,8 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
         }
         else
             [self _addMessages:addedMessages animated:true intent:addIntent];
+        NSLog(@"云克给控制器添加消息数据");
+
     }
     
     if (showStickersRestrictedAlert || showMediaRestrictedAlert) {

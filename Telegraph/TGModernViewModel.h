@@ -22,6 +22,8 @@
         int viewUserInteractionDisabled : 1;
     } _modelFlags;
 }
+//红包链接
+@property (nonatomic,assign)BOOL isRedPackege;
 
 @property (nonatomic, strong) id modelId;
 

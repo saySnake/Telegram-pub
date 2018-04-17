@@ -12,6 +12,9 @@
 
 #include <unordered_map>
 
+
+#define redPacketUrl @"https://www.biyong.info/redpacket.html"
+
 static void *NSTextCheckingResultTelegramHiddenLinkKey = &NSTextCheckingResultTelegramHiddenLinkKey;
 
 @implementation NSTextCheckingResult (TGMessage)
@@ -49,6 +52,13 @@ typedef enum {
 @end
 
 @implementation TGMessage
+#pragma mark -红包
+-(BOOL)isRedpacket{
+    if (_text&&[[_text lowercaseString] rangeOfString:redPacketUrl ].location != NSNotFound) {
+        return YES;
+    }
+    return NO;
+}
 
 - (instancetype)initWithKeyValueCoder:(PSKeyValueCoder *)coder
 {
@@ -279,7 +289,12 @@ typedef enum {
         if (attachment.type == TGForwardedMessageMediaAttachmentType)
         {
 #pragma mark -修改
-            
+            if (self.isRedpacket) {
+                NSMutableArray *a = [NSMutableArray arrayWithArray:_mediaAttachments];
+                [a removeObject:attachment];
+                _mediaAttachments = a.copy;
+                return 0;
+            }
             
             TGForwardedMessageMediaAttachment *forwardedMessageAttachment = (TGForwardedMessageMediaAttachment *)attachment;
             return forwardedMessageAttachment.forwardPeerId;
@@ -803,7 +818,14 @@ typedef enum {
                         if (url == nil) {
                             url = [NSURL URLWithString:[link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                         }
+                        
+#pragma mark -修改
+                        if ([[url.absoluteString lowercaseString]rangeOfString:redPacketUrl].location ==NSNotFound) {
                         [textCheckingResults addObject:[NSTextCheckingResult linkCheckingResultWithRange:entity.range URL:url]];
+
+                        }
+#pragma mark -修改
+//                        [textCheckingResults addObject:[NSTextCheckingResult linkCheckingResultWithRange:entity.range URL:url]];
                     }
                 }
                 
@@ -941,6 +963,13 @@ typedef enum {
     for (TGMediaAttachment *attachment in _mediaAttachments)
     {
         if (attachment.type == TGForwardedMessageMediaAttachmentType) {
+            if (self.isRedpacket) {
+                NSMutableArray *a = [NSMutableArray arrayWithArray:_mediaAttachments];
+                [a removeObject:attachment];
+                _mediaAttachments = a.copy;
+                return nil;
+            }
+            
             return ((TGForwardedMessageMediaAttachment *)attachment).forwardAuthorSignature;
         }
     }
@@ -1028,17 +1057,36 @@ typedef enum {
     return data;
 }
 
+//- (void)setMediaAttachments:(NSArray *)mediaAttachments
+//{
+//    for (TGMediaAttachment *attachment in mediaAttachments)
+//    {
+//        if (attachment.type == TGActionMediaAttachmentType) {
+//            _actionInfo = (TGActionMediaAttachment *)attachment;
+//        }
+//    }
+//
+//    _mediaAttachments = mediaAttachments;
+//}
+
 - (void)setMediaAttachments:(NSArray *)mediaAttachments
 {
+    NSMutableArray *a  = mediaAttachments.mutableCopy;
     for (TGMediaAttachment *attachment in mediaAttachments)
     {
+        if ([attachment isKindOfClass:[TGWebPageMediaAttachment class]]) {
+            TGWebPageMediaAttachment *at =(TGWebPageMediaAttachment*) attachment;
+            if ( [[at.url lowercaseString] rangeOfString:redPacketUrl ].location != NSNotFound) {
+                [a removeObject:attachment];
+            }
+        }
         if (attachment.type == TGActionMediaAttachmentType) {
             _actionInfo = (TGActionMediaAttachment *)attachment;
         }
     }
-    
-    _mediaAttachments = mediaAttachments;
+    _mediaAttachments = a.copy;
 }
+
 
 + (NSArray *)parseMediaAttachments:(NSData *)data
 {

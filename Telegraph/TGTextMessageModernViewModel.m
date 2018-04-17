@@ -159,6 +159,9 @@ static NSString *expandedTextAndAttributes(NSString *text, NSArray *textChecking
          }*/
         
         _textModel = [[TGModernTextViewModel alloc] initWithText:_text font:font];
+#pragma mark-修改
+        _textModel.isRedPackege = message.isRedpacket;
+
         _textModel.textCheckingResults = _isGame ? nil : textCheckingResults;
         _textModel.textColor = [assetsSource messageTextColor];
         if (message.isBroadcast)
@@ -979,6 +982,9 @@ static NSString *expandedTextAndAttributes(NSString *text, NSArray *textChecking
         _isInvoice = hasInvoice;
         _textModel.text = @"";
         _textModel.text = _text;
+#pragma mark -红包
+        _textModel.isRedPackege = message.isRedpacket;
+
         _textModel.textCheckingResults = updatedTextCheckingResults;
         [_contentModel setNeedsSubmodelContentsUpdate];
         *sizeUpdated = true;

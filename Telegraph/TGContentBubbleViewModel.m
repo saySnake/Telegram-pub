@@ -139,7 +139,8 @@ bool debugShowMessageIds = false;
         _contentModel.viewUserInteractionDisabled = true;
         [self addSubmodel:_contentModel];
         
-        if (authorPeer != nil)
+#pragma mark -修改
+        if (authorPeer != nil &&!_message.isRedpacket)
         {
             NSString *title = @"";
             if ([authorPeer isKindOfClass:[TGUser class]]) {

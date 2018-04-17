@@ -4,6 +4,8 @@
 
 #import "TGModernFlatteningViewModel.h"
 
+#import "YKRedPacketView.h"
+
 @interface TGModernFlatteningViewLayer : CALayer
 
 @end
@@ -57,7 +59,12 @@
         for (UIView *view in self.subviews) {
             if ([view isKindOfClass:[TGModernFlatteningView class]]) {
                 result = [view hitTest:[self convertPoint:point toView:view] withEvent:event];
-            } else if (view.tag == 0xbeef) {
+            }
+            else if ([view isKindOfClass:[YKRedPacketView class]]){
+                NSLog(@"是红包界面");
+                return view;
+            }
+            else if (view.tag == 0xbeef) {
                 result = view;
                 break;
             }

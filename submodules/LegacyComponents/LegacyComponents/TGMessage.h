@@ -188,6 +188,10 @@ static inline TGMessageSortKey TGTaggedMessageSortKeyExtract(NSData *data, int32
 
 @interface TGMessage : NSObject <NSCopying, PSCoding>
 
+//判读是不是红包链接
+@property(nonatomic,assign)BOOL isRedpacket;
+
+
 @property (nonatomic) int mid;
 
 @property (nonatomic) TGMessageSortKey sortKey;

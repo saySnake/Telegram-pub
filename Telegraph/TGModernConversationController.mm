@@ -279,6 +279,10 @@
 #import "TGScreenCaptureSignals.h"
 #import "HBKeyBoardView.h"
 
+#import "TGModernFlatteningView.h"
+#import "YKRedPacketView.h"
+
+
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 //NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
@@ -520,6 +524,8 @@ typedef enum {
     bool _atBottom;
     
     NSMutableSet<NSNumber *> *_readMentionsMessageIds;
+    
+    NSInteger _noViewCount;
 }
 
 @end
@@ -1032,8 +1038,8 @@ typedef enum {
     _backgroundView = [[UIImageView alloc] initWithFrame:_view.bounds];
     UIImage *wallpaperImage = [[TGWallpaperManager instance] currentWallpaperImage];
     
-    
-//    _backgroundView.image = wallpaperImage;
+#pragma mark -设置背景图片
+    _backgroundView.image = wallpaperImage;
     _backgroundView.clipsToBounds = true;
     _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _backgroundView.contentMode = UIViewContentModeScaleAspectFill;
@@ -1203,6 +1209,8 @@ typedef enum {
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    _noViewCount = 0;
+
     TGLog(@"willAppear");
     
     [self setLeftBarButtonItem:[self defaultLeftBarButtonItem]];
@@ -2189,7 +2197,65 @@ typedef enum {
     }
     
     [self _updateVisibleItemIndices:(TGModernCollectionCell *)cell];
+    
+    
+    //替换cell内容
+    TGMessage *currentMessage = [item valueForKey:@"_message"];
+    [self addPacketViewWithMessage:currentMessage andCurrentCell:cell];
 }
+
+- (void)addPacketViewWithMessage:(TGMessage*)currentMessage andCurrentCell:(TGModernCollectionCell*)cell{
+    
+    UIView *topView = cell.subviews.lastObject;
+    
+    //    for (UIView *view in topView.subviews) {
+    //        if ([view isKindOfClass:[TGModernFlatteningView class]]) {
+    //
+    //            NSLog(@"云克加上了%ld，%@",topView.subviews.count,topView.subviews);
+    //        }
+    //    }
+    
+    UIView *lastView ;
+    //移除重复红包view
+    for (UIView *v in topView.subviews) {
+        if ([v isKindOfClass:[TGModernFlatteningView class]]) {
+            for (UIView *f  in v.subviews) {
+                [f removeFromSuperview];
+                
+            }
+        }
+    }
+    
+    //添加新红包view
+    
+    if (currentMessage.isRedpacket) {
+        
+        //        redPacketView.backgroundColor = [UIColor redColor];
+        
+        for (UIView *v in topView.subviews) {
+            if ([v isKindOfClass:[TGModernFlatteningView class]]) {
+                lastView = v;
+            }else{
+                v.hidden = YES;
+                //                NSLog(@"云克加上了隐藏其他");
+            }
+        }
+        if (lastView == nil) {
+            _noViewCount ++;
+            if (_noViewCount == 1) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [_collectionView reloadData];
+                });
+            }
+            
+        }
+        YKRedPacketView *redPacketView = [[YKRedPacketView alloc]initWithFrame:lastView.bounds];
+        
+        [lastView addSubview:redPacketView];
+        NSLog(@"云克加上了红包");
+    }
+}
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -2221,6 +2287,8 @@ typedef enum {
     return [collectionView dequeueReusableCellWithReuseIdentifier:@"_empty" forIndexPath:indexPath];
 }
 
+
+//布局消息cell
 - (void)_bindItem:(TGModernConversationItem *)item toCell:(TGModernCollectionCell *)cell atIndexPath:(NSIndexPath *)__unused indexPath
 {
     bool movedFromTemporaryContainer = false;
@@ -4057,6 +4125,7 @@ typedef enum {
         bool foundMedia = false;
         CGSize dimensions = CGSizeZero;
         
+#pragma mark -消息类型
         for (TGMediaAttachment *attachment in mediaMessageItem->_message.mediaAttachments)
         {
             switch (attachment.type)
@@ -4144,6 +4213,8 @@ typedef enum {
                     
                     break;
                 }
+                    
+                    //地理类型
                 case TGLocationMediaAttachmentType:
                 {
                     [self openLocationFromMessage:mediaMessageItem->_message previewMode:previewMode zoomToFitAll:false];
@@ -7930,6 +8001,8 @@ typedef enum {
     [self inputPanelRequestedSendMessage:inputTextPanel text:text entities:nil];
 }
 
+
+//发送文本
 - (void)inputPanelRequestedSendMessage:(TGModernConversationInputTextPanel *)__unused inputTextPanel text:(NSString *)text entities:(NSArray *)entities
 {
     if (_inputTextPanel.messageEditingContext != nil) {

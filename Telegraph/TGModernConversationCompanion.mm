@@ -1958,6 +1958,9 @@ static void dispatchOnMessageQueue(dispatch_block_t block, bool synchronous)
  //               }
                 if (itemDate < date || (itemDate == date && passes))
                 {
+                    //将发送的消息体转换成item加入items中
+                    NSLog(@"云克将发送的消息体转换成item加入items中");
+
                     [insertArray insertObject:[[TGMessageModernConversationItem alloc] initWithMessage:message context:_viewContext] atIndex:index];
                     inserted = true;
                     break;
@@ -2001,6 +2004,7 @@ static void dispatchOnMessageQueue(dispatch_block_t block, bool synchronous)
                     break;
             }
             
+            NSLog(@"云克控制器加入所有消息数据");
             [controller insertItems:insertItems atIndices:insertAtIndices animated:animated intent:insertIntent removeAtIndices:deletedIndexSet];
             if (intent == TGModernConversationAddMessageIntentSendTextMessage)
                 [controller setEnableSendButton:true];

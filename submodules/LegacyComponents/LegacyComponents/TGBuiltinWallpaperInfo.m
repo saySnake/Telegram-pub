@@ -59,6 +59,7 @@ const int32_t TGBuilitinWallpaperCurrentVersion = 1;
     return [[NSString alloc] initWithFormat:@"builtin-wallpaper://?id=%d", _builtinId];
 }
 
+
 - (int)tintColor
 {
     return _tintColor;

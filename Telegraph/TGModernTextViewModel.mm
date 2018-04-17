@@ -3,6 +3,9 @@
 #import "TGModernTextView.h"
 
 #import "TGReusableLabel.h"
+#define  YKScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define YKScale YKScreenWidth/375
 
 @implementation TGModernTextViewLinesInset
 
@@ -126,17 +129,25 @@
 {
     if (_layoutData == nil || ABS(containerSize.width - _cachedLayoutContainerWidth) > FLT_EPSILON || _cachedLayoutFlags != _layoutFlags || ABS(_additionalTrailingWidth - _cachedAdditionalTrailingWidth) > FLT_EPSILON)
     {
+        
+        
+        if (self.isRedPackege) {
+            
+            UIImage*image = [UIImage imageNamed:@"红包背景"];
+            self.frame = CGRectMake(0, 0, YKScale*image.size.width*0.85-7, image.size.height*YKScale*0.85-5);
+
+        }else{
         _layoutData = [TGReusableLabel calculateLayout:_text additionalAttributes:_additionalAttributes textCheckingResults:_textCheckingResults font:_font textColor:_textColor frame:CGRectZero orMaxWidth:(float)containerSize.width flags:_layoutFlags textAlignment:(NSTextAlignment)_alignment outIsRTL:&_isRTL additionalTrailingWidth:_additionalTrailingWidth maxNumberOfLines:_maxNumberOfLines numberOfLinesToInset:_linesInset.numberOfLinesToInset linesInset:_linesInset.inset containsEmptyNewline:&_containsEmptyNewline additionalLineSpacing:_additionalLineSpacing ellipsisString:_ellipsisString];
         _cachedLayoutContainerWidth = containerSize.width;
         _cachedLayoutFlags = _layoutFlags;
         _cachedAdditionalTrailingWidth = _additionalTrailingWidth;
+            CGRect frame = self.frame;
+            frame.size = _layoutData.size;
+            frame.size.width = CGFloor(frame.size.width);
+            frame.size.height = CGFloor(frame.size.height);
+            self.frame = frame;
+            }
     }
-    
-    CGRect frame = self.frame;
-    frame.size = _layoutData.size;
-    frame.size.width = CGFloor(frame.size.width);
-    frame.size.height = CGFloor(frame.size.height);
-    self.frame = frame;
 }
 
 - (NSString *)linkAtPoint:(CGPoint)point regionData:(__autoreleasing NSArray **)regionData

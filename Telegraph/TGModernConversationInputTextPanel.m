@@ -39,6 +39,7 @@
 #import "HBKeyBoardView.h"
 #import "HBMoreViewItem.h"
 #import "TGModernConversationController.h"
+#import "YKUntil.h"
 #define App_Frame_Width    [[UIScreen mainScreen] bounds].size.width
 
 
@@ -726,6 +727,8 @@ static CGRect viewFrame(UIView *view)
     return linkCandidate;
 }
 
+
+//文本信息内容
 - (void)growingTextViewDidChange:(HPGrowingTextView *)growingTextView afterSetText:(bool)afterSetText afterPastingText:(bool)afterPastingText
 {
     if (!afterSetText && ![growingTextView.text isEqualToString:@"@gif "]) {
@@ -735,6 +738,8 @@ static CGRect viewFrame(UIView *view)
     id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;
     
     NSString *text = growingTextView.text;
+    NSLog(@"云克输入框文本：%@",text);
+
     int textLength = (int)text.length;
     
     bool hasNonWhitespace = [text hasNonWhitespaceCharacters];
@@ -929,9 +934,17 @@ static CGRect viewFrame(UIView *view)
     if ([delegate respondsToSelector:@selector(inputPanelAlphacodeEntered:alphacode:)])
         [delegate inputPanelAlphacodeEntered:self alphacode:candidateAlphacode];
     
-    NSString *linkCandidate = [TGModernConversationInputTextPanel linkCandidateInText:text];
-    if ([delegate respondsToSelector:@selector(inputPanelLinkParsed:link:probablyComplete:)])
-        [delegate inputPanelLinkParsed:self link:linkCandidate probablyComplete:afterPastingText];
+    
+    if (![YKUntil linkRedPacketText:text]) {
+        NSString *linkCandidate = [TGModernConversationInputTextPanel linkCandidateInText:text];
+        
+        if ([delegate respondsToSelector:@selector(inputPanelLinkParsed:link:probablyComplete:)])
+            [delegate inputPanelLinkParsed:self link:linkCandidate probablyComplete:afterPastingText];
+    }
+
+//    NSString *linkCandidate = [TGModernConversationInputTextPanel linkCandidateInText:text];
+//    if ([delegate respondsToSelector:@selector(inputPanelLinkParsed:link:probablyComplete:)])
+//        [delegate inputPanelLinkParsed:self link:linkCandidate probablyComplete:afterPastingText];
     
     bool sendButtonEnabled = hasNonWhitespace;
     if ([delegate respondsToSelector:@selector(inputPanelSendShouldBeAlwaysEnabled:)])
@@ -1196,6 +1209,8 @@ static CGRect viewFrame(UIView *view)
     }
 }
 
+
+#pragma mark -发送消息
 - (void)sendButtonPressed
 {
     if (_inputField.internalTextView.isFirstResponder)
