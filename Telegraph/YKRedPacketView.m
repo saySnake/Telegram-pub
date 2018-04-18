@@ -9,6 +9,15 @@
 #import "TGMessageModernConversationItem.h"
 #import <LegacyComponents/LegacyComponents.h>
 #import "WSRedPacketView.h"
+#import "TGTelegraph.h"
+
+#import <LegacyComponents/TGDataResource.h>
+
+
+#import <LegacyComponents/TGImageManager.h>
+
+#import <LegacyComponents/UIImage+TG.h>
+
 
 #define  YKScreenWidth [UIScreen mainScreen].bounds.size.width
 #define YKScale YKScreenWidth/375
@@ -29,7 +38,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blueColor];
+        self.backgroundColor = [UIColor clearColor];
         [self addSubview];
     }
     return  self;
@@ -113,26 +122,66 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     TGMessageModernConversationItem *item=(TGMessageModernConversationItem *)cell.boundItem;
     
     NSString *link=item->_message.text;
+    int64_t  fromuid =item->_message.fromUid;
+    int64_t toud =item->_message.toUid;
+    int64_t cid =item->_message.cid;
+    CGPoint currentpoint=[touches.anyObject locationInView:self];
+    BOOL ispoint =CGRectContainsPoint(self.bounds,currentpoint);
+    if (ispoint ) {
+        
+        int clid =TGTelegraphInstance.clientUserId;
+        
+//        int clientUserId = TGTelegraphInstance.clientUserId;
+        
 
-    //实现
-    WSRewardConfig *info = ({
-        WSRewardConfig *info   = [[WSRewardConfig alloc] init];
-        info.money         = 100.0;
-        info.avatarImage    = [UIImage imageNamed:@"hangqing"];
-        info.content = @"恭喜发财，吉祥如意";
-        info.userName  = @"小雨同学";
-        info;
-    });
-    
-    [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
-        NSLog(@"取消领取");
-    } finishBlock:^(float money) {
-        NSLog(@"领取金额：%f",money);
-    }];
+        if (toud ==cid) {
+            //自己红包
+            TGUser *user = [[TGDatabase instance] loadUser:(int32_t)toud];
+            WSRewardConfig *info = ({
+                WSRewardConfig *info   = [[WSRewardConfig alloc] init];
+                info.money         = 100.0;
+              UIImage * image = [[TGImageManager instance] loadImageSyncWithUri:user.photoUrlSmall canWait:false decode:true acceptPartialData:false asyncTaskId:NULL progress:nil partialCompletion:nil completion:nil];
 
-    
-    
-    
+//                info.avatarImage    = [UIImage imageNamed:user.photoUrlSmall];
+                info.avatarImage= image;
+                info.content = @"恭喜发财，吉祥如意";
+                info.userName  = @"小雨同学";
+                info;
+            });
+            
+            //实现
+            
+            [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
+                NSLog(@"取消领取");
+            } finishBlock:^(float money) {
+                NSLog(@"领取金额：%f",money);
+            }];
+
+        }
+        else{
+            //别人红包
+            
+            TGUser *user = [[TGDatabase instance] loadUser:(int32_t)fromuid];
+            WSRewardConfig *info = ({
+                WSRewardConfig *info   = [[WSRewardConfig alloc] init];
+                info.money         = 100.0;
+                info.avatarImage    = [UIImage imageNamed:user.photoUrlSmall];
+                info.content = @"恭喜发财，吉祥如意";
+                info.userName  = @"小雨同学";
+                info;
+            });
+            
+            //实现
+            
+            [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
+                NSLog(@"取消领取");
+            } finishBlock:^(float money) {
+                NSLog(@"领取金额：%f",money);
+            }];
+
+        }
+
+    }
 }
 
 

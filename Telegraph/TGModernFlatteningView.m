@@ -63,6 +63,8 @@
             }
             else if ([view isKindOfClass:[YKRedPacketView class]]){
                 CGPoint child =[self convertPoint:point toView:self];
+                NSLog(@"这是红包view");
+                return view;
             }
             else if (view.tag == 0xbeef) {
                 result = view;
