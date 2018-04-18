@@ -4,9 +4,11 @@
 #import "TGModernFlatteningViewModel.h"
 #import "TGModernFlatteningView.h"
 #import "Masonry.h"
+
 #import "TGModernCollectionCell.h"
 #import "TGMessageModernConversationItem.h"
 #import <LegacyComponents/LegacyComponents.h>
+#import "WSRedPacketView.h"
 
 #define  YKScreenWidth [UIScreen mainScreen].bounds.size.width
 #define YKScale YKScreenWidth/375
@@ -27,9 +29,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor blueColor];
         [self addSubview];
-        
     }
     return  self;
 }
@@ -86,8 +87,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(UILabel *)redProfile{
     if (!_redProfile) {
         _redProfile = [UILabel new];
-        
-        _redProfile.text = @"领取红包";
+//        _redProfile.text = @"领取红包";
         _redProfile.textColor = [UIColor whiteColor];
         _redProfile.font = [UIFont systemFontOfSize:10*YKScale];
         //        [_redProfile sizeToFit];
@@ -97,8 +97,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(UILabel *)redSource{
     if (!_redSource) {
         _redSource = [UILabel new];
-        
-        _redSource.text = @"来自冯大爷的红包";
+//        _redSource.text = @"来自冯大爷的红包";
         _redSource.textColor = FUIColorFromRGB(0xbbbbbb);
         _redSource.font = [UIFont systemFontOfSize:11*YKScale];
         //        [_redSource sizeToFit];
@@ -109,12 +108,33 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];
+    
     TGModernCollectionCell *cell=(TGModernCollectionCell *)self.superview.superview.superview;
     TGMessageModernConversationItem *item=(TGMessageModernConversationItem *)cell.boundItem;
     
     NSString *link=item->_message.text;
+
+    //实现
+    WSRewardConfig *info = ({
+        WSRewardConfig *info   = [[WSRewardConfig alloc] init];
+        info.money         = 100.0;
+        info.avatarImage    = [UIImage imageNamed:@"hangqing"];
+        info.content = @"恭喜发财，吉祥如意";
+        info.userName  = @"小雨同学";
+        info;
+    });
+    
+    [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
+        NSLog(@"取消领取");
+    } finishBlock:^(float money) {
+        NSLog(@"领取金额：%f",money);
+    }];
+
+    
+    
     
 }
+
 
 
 @end

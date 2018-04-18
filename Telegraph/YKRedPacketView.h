@@ -10,8 +10,22 @@
 @interface YKRedPacketView : UIView
 @property (nonatomic , strong)UIImageView *backgroundView;
 
-@property (nonatomic , strong)UILabel *redTitle;
-@property (nonatomic , strong)UILabel *redProfile;
-@property (nonatomic , strong)UILabel *redSource;
+@property (nonatomic , strong)UILabel *redTitle; //恭喜发财
+
+@property (nonatomic , strong)UILabel *redProfile;//领取红包
+
+@property (nonatomic , strong)UILabel *redSource;//来源
+
+
+
+@property (nonatomic , strong)NSString *photoUrl;//头像来源
+
+@property (nonatomic , strong)NSString *photoTitle;//名字来源
+
+
+
+
+
+
 
 @end

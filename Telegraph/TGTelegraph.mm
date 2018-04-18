@@ -1437,6 +1437,8 @@ typedef std::map<int, std::pair<TGUser *, int > >::iterator UserDataToDispatchIt
     return 777000;
 }
 
+
+//创建serviceuserifneeded
 - (int)createServiceUserIfNeeded
 {
     if ([TGDatabaseInstance() loadUser:[self serviceUserUid]] == nil)

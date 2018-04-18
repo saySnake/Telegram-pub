@@ -40,6 +40,7 @@
         self.clipsToBounds = true;
         
         _contentViewForBinding = [[UIView alloc] initWithFrame:(CGRect){CGPointZero, frame.size}];
+//        _contentViewForBinding.userInteractionEnabled =NO;
         _contentViewForBinding.transform = CGAffineTransformMakeRotation((float)M_PI);
         [self addSubview:_contentViewForBinding];
     }

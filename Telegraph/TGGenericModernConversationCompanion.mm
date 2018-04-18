@@ -1817,7 +1817,7 @@ static NSString *addGameShareHash(NSString *url, NSString *addHash) {
     TGWebPageMediaAttachment *parsedWebpage = nil;
     if ([self canAttachLinkPreviews] && !disableLinkPreviews && [self allowExternalContent] && ([self allowMessageForwarding] || TGAppDelegateInstance.allowSecretWebpages))
     {
-#pragma 链接
+#pragma redpacket链接
         if ( ![YKUntil linkRedPacketText:text]) {
         NSString *webpageLink = [TGModernConversationInputTextPanel linkCandidateInText:text];
         if (webpageLink != nil) {

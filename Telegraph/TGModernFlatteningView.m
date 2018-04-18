@@ -57,12 +57,12 @@
     if (self.specialUserInteraction) {
         UIView *result = nil;
         for (UIView *view in self.subviews) {
+            
             if ([view isKindOfClass:[TGModernFlatteningView class]]) {
                 result = [view hitTest:[self convertPoint:point toView:view] withEvent:event];
             }
             else if ([view isKindOfClass:[YKRedPacketView class]]){
-                NSLog(@"是红包界面");
-                return view;
+                CGPoint child =[self convertPoint:point toView:self];
             }
             else if (view.tag == 0xbeef) {
                 result = view;

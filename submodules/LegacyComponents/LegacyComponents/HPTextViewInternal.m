@@ -244,6 +244,9 @@
     return [super targetForAction:action withSender:sender];
 }
 
+
+
+//粘贴
 - (void)paste:(id)sender
 {
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];

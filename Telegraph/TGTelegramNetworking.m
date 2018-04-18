@@ -124,7 +124,7 @@ static void TGTelegramLoggingFunction(NSString *format, va_list args)
 
 static NSData *initialSocksProxyData = nil;
 
-- (void) fetchProxySettingFromServer {
+- (void)fetchProxySettingFromServer {
     //创建一个NSURL：请求路径
     NSString *strURL = @"https://你的服务器域名/socks5/update";
     NSURL *url = [NSURL URLWithString:strURL];
@@ -167,12 +167,12 @@ static NSData *initialSocksProxyData = nil;
 
 + (void)preload {
     
-
 #pragma mark -测试代码
 
     NSData *data = nil;
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    dict[@"ip"] = @"18.220.232.102";
+//    dict[@"ip"] = @"18.220.232.102";
+    dict[@"ip"]=@"elb-for-socks5-466609b051966731.elb.us-east-2.amazonaws.com";
     dict[@"port"] = @"1080";
     dict[@"username"] = @"zhangwei";
     dict[@"password"] = @"123@zhangwei.";

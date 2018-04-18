@@ -281,7 +281,7 @@
 
 #import "TGModernFlatteningView.h"
 #import "YKRedPacketView.h"
-
+#import "TGDatabase.h"
 
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
@@ -2206,6 +2206,7 @@ typedef enum {
 
 - (void)addPacketViewWithMessage:(TGMessage*)currentMessage andCurrentCell:(TGModernCollectionCell*)cell{
     
+    int clientUserId = TGTelegraphInstance.clientUserId;
     UIView *topView = cell.subviews.lastObject;
     
     //    for (UIView *view in topView.subviews) {
@@ -2214,7 +2215,6 @@ typedef enum {
     //            NSLog(@"云克加上了%ld，%@",topView.subviews.count,topView.subviews);
     //        }
     //    }
-    
     UIView *lastView ;
     //移除重复红包view
     for (UIView *v in topView.subviews) {
@@ -2224,13 +2224,9 @@ typedef enum {
             }
         }
     }
-    
     //添加新红包view
-    
     if (currentMessage.isRedpacket) {
-        
         //        redPacketView.backgroundColor = [UIColor redColor];
-        
         for (UIView *v in topView.subviews) {
             if ([v isKindOfClass:[TGModernFlatteningView class]]) {
                 lastView = v;
@@ -2246,10 +2242,18 @@ typedef enum {
                     [_collectionView reloadData];
                 });
             }
-            
         }
+        TGUser *user = [[TGDatabase instance] loadUser:(int)currentMessage.fromUid];
         YKRedPacketView *redPacketView = [[YKRedPacketView alloc]initWithFrame:lastView.bounds];
-        
+        redPacketView.redProfile.text =[NSString stringWithFormat:@"红包已领取"];
+//        if(clientUserId ==currentMessage.toUid){
+//            NSLog(@"自己");
+        redPacketView.redSource.text =[NSString stringWithFormat:@"来自%@%@的HotTalk红包",user.firstName,user.lastName];
+
+//        }else{
+//            redPacketView.redSource.text =[NSString stringWithFormat:@"来自HotTalk红包",user.firstName,user.lastName];
+//
+//        }
         [lastView addSubview:redPacketView];
         NSLog(@"云克加上了红包");
     }

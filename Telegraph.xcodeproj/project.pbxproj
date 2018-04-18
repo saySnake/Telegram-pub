@@ -1442,6 +1442,14 @@
 		B6479B6A2080B95200A1AD46 /* HBKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B682080B95200A1AD46 /* HBKeyBoardView.m */; };
 		B6479B76208469D400A1AD46 /* HBMoreViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B74208469D400A1AD46 /* HBMoreViewItem.h */; };
 		B6479B77208469D400A1AD46 /* HBMoreViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B75208469D400A1AD46 /* HBMoreViewItem.m */; };
+		B649087C2087156E00849658 /* WSRewardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B649086C2087156E00849658 /* WSRewardConfig.m */; };
+		B649087D2087156F00849658 /* WSRedPacketView.h in Headers */ = {isa = PBXBuildFile; fileRef = B649086D2087156E00849658 /* WSRedPacketView.h */; };
+		B649087E2087156F00849658 /* close_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B649086E2087156E00849658 /* close_btn@2x.png */; };
+		B649087F2087156F00849658 /* WSRewardConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B649086F2087156E00849658 /* WSRewardConfig.h */; };
+		B64908802087156F00849658 /* redpacket_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64908702087156E00849658 /* redpacket_bg@2x.png */; };
+		B64908812087156F00849658 /* WSRedPacketView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64908712087156E00849658 /* WSRedPacketView.m */; };
+		B64908822087156F00849658 /* redpacket_open_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64908722087156E00849658 /* redpacket_open_btn@2x.png */; };
+		B64908892087332300849658 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B64908882087332300849658 /* Common.h */; };
 		B65BC6CA207C4DE7006DB3CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */; };
 		B67240262085EAE4002CA111 /* YKUntil.h in Headers */ = {isa = PBXBuildFile; fileRef = B67240242085EAE4002CA111 /* YKUntil.h */; };
 		B67240272085EAE4002CA111 /* YKUntil.m in Sources */ = {isa = PBXBuildFile; fileRef = B67240252085EAE4002CA111 /* YKUntil.m */; };
@@ -7516,6 +7524,15 @@
 		B6479B682080B95200A1AD46 /* HBKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBKeyBoardView.m; sourceTree = "<group>"; };
 		B6479B74208469D400A1AD46 /* HBMoreViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMoreViewItem.h; sourceTree = "<group>"; };
 		B6479B75208469D400A1AD46 /* HBMoreViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMoreViewItem.m; sourceTree = "<group>"; };
+		B649086C2087156E00849658 /* WSRewardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRewardConfig.m; sourceTree = "<group>"; };
+		B649086D2087156E00849658 /* WSRedPacketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRedPacketView.h; sourceTree = "<group>"; };
+		B649086E2087156E00849658 /* close_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_btn@2x.png"; sourceTree = "<group>"; };
+		B649086F2087156E00849658 /* WSRewardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRewardConfig.h; sourceTree = "<group>"; };
+		B64908702087156E00849658 /* redpacket_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg@2x.png"; sourceTree = "<group>"; };
+		B64908712087156E00849658 /* WSRedPacketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRedPacketView.m; sourceTree = "<group>"; };
+		B64908722087156E00849658 /* redpacket_open_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_open_btn@2x.png"; sourceTree = "<group>"; };
+		B64908882087332300849658 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		B649088A2087338300849658 /* Important.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Important.h; sourceTree = "<group>"; };
 		B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B67240242085EAE4002CA111 /* YKUntil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUntil.h; sourceTree = "<group>"; };
 		B67240252085EAE4002CA111 /* YKUntil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUntil.m; sourceTree = "<group>"; };
@@ -15634,6 +15651,7 @@
 		B62321B4206CCC0700BAAB88 /* HuoBi */ = {
 			isa = PBXGroup;
 			children = (
+				B649086B2087156E00849658 /* WSRedPacketView */,
 				B67240392085F312002CA111 /* YKRedPacketView.h */,
 				B672403A2085F312002CA111 /* YKRedPacketView.m */,
 				B62321BA206CED2500BAAB88 /* UIView+Addition.h */,
@@ -15650,6 +15668,20 @@
 				B67240252085EAE4002CA111 /* YKUntil.m */,
 			);
 			name = HuoBi;
+			sourceTree = "<group>";
+		};
+		B649086B2087156E00849658 /* WSRedPacketView */ = {
+			isa = PBXGroup;
+			children = (
+				B649086C2087156E00849658 /* WSRewardConfig.m */,
+				B649086D2087156E00849658 /* WSRedPacketView.h */,
+				B649086E2087156E00849658 /* close_btn@2x.png */,
+				B649086F2087156E00849658 /* WSRewardConfig.h */,
+				B64908702087156E00849658 /* redpacket_bg@2x.png */,
+				B64908712087156E00849658 /* WSRedPacketView.m */,
+				B64908722087156E00849658 /* redpacket_open_btn@2x.png */,
+			);
+			path = WSRedPacketView;
 			sourceTree = "<group>";
 		};
 		B64E4B02207B30F000E9A392 /* zlcwebview */ = {
@@ -19760,7 +19792,9 @@
 				9351565D18686E9D00621293 /* Localization */,
 				D08805B8156E8F3600311537 /* Telegraph-Info.plist */,
 				D08805BC156E8F3600311537 /* main.m */,
+				B64908882087332300849658 /* Common.h */,
 				D08805BE156E8F3600311537 /* Telegraph-Prefix.pch */,
+				B649088A2087338300849658 /* Important.h */,
 				D0BB4E631F27821E00E90812 /* emoji_suggestions.h */,
 				D0BB4E611F27821E00E90812 /* emoji_suggestions.cpp */,
 				D0BB4E621F27821E00E90812 /* emoji_suggestions_data.h */,
@@ -22988,6 +23022,7 @@
 				D0083AE81BCD85B600CA1D77 /* TGAttachmentSheetView.h in Headers */,
 				D01161D81F41F1340039383E /* TLChatParticipants.h in Headers */,
 				D01161C21F41F1340039383E /* TLChannelMessagesFilter.h in Headers */,
+				B64908892087332300849658 /* Common.h in Headers */,
 				D0115E5A1F41F12E0039383E /* TLMessageMedia.h in Headers */,
 				09D8EEC21EAA5C7000CC3AEB /* TGRoundVideoWebpageFooterModel.h in Headers */,
 				D01160961F41F1320039383E /* TLRPCphotos_getWall.h in Headers */,
@@ -23274,6 +23309,7 @@
 				D0115F7A1F41F1300039383E /* TLRPCchannels_updatePinnedMessage.h in Headers */,
 				D0115ECC1F41F12F0039383E /* TLPhoneCallDiscardReason.h in Headers */,
 				D0EDE57C1D9AD597005D4CE8 /* TGPreparedGameMessage.h in Headers */,
+				B649087F2087156F00849658 /* WSRewardConfig.h in Headers */,
 				D0249BA91ABF5B470076ECBF /* GDDictionaryBackedObject.h in Headers */,
 				68BD8E241CA5A7D10088A4F9 /* TGPreviewAboutItemView.h in Headers */,
 				D0C156701D424EFF00D573C4 /* TGArchivedStickerPacksAlert.h in Headers */,
@@ -24301,6 +24337,7 @@
 				689505AE1DCC5B2200D68920 /* Reachability.h in Headers */,
 				D0249A471ABC5D740076ECBF /* TGTwoStepSetPaswordSignal.h in Headers */,
 				D01659AA1DEDA799006DCE14 /* TLPhoneCall$phoneCallDiscarded.h in Headers */,
+				B649087D2087156F00849658 /* WSRedPacketView.h in Headers */,
 				D0115E7A1F41F12F0039383E /* TLmessages_HighScores.h in Headers */,
 				683849021C9C85C000C9A4DA /* STKQueueEntry.h in Headers */,
 				D01162581F41F1350039383E /* TLInputDocument.h in Headers */,
@@ -24852,6 +24889,7 @@
 				D0BD442218BCD0C70036FB8B /* begin_record.caf in Resources */,
 				09690A411E73160300B54F6E /* CallBluetoothIcon@3x.png in Resources */,
 				D00C7196193F3FD40005349C /* ModernBubbleOutgoingPartialHighlightedPad@2x.png in Resources */,
+				B64908802087156F00849658 /* redpacket_bg@2x.png in Resources */,
 				09F2A08A1EB8CEAF00653F24 /* InstantViewBrightnessMaxIcon@2x.png in Resources */,
 				D0A516CD193FD848000B8984 /* DetailLogoBlank.png in Resources */,
 				D0E352841E5E4127007E6EB8 /* stp_card_jcb@2x.png in Resources */,
@@ -25328,6 +25366,7 @@
 				D03EF6D31A4CE4CF00ABEF35 /* StickerPanelPopupRight@2x.png in Resources */,
 				09EEAA0A1E6DCDF000246830 /* PanelSearchIcon@3x.png in Resources */,
 				D0249B241ABF5ACF0076ECBF /* GoogleDriveFolder@2x.png in Resources */,
+				B649087E2087156F00849658 /* close_btn@2x.png in Resources */,
 				9302CA33171B581200C8559D /* VideoSliderHandle@2x.png in Resources */,
 				9302CA35171B5A4600C8559D /* VideoSliderBackground_Disabled@2x.png in Resources */,
 				D00C71B0193F482E0005349C /* ModernBubbleOutgoingPartialPad.png in Resources */,
@@ -25537,6 +25576,7 @@
 				931C5938174C0AB800D597D9 /* MenuButtonCenter@2x.png in Resources */,
 				09F2A0911EB8CEAF00653F24 /* InstantViewFontMinIcon@3x.png in Resources */,
 				D02D98A11DC8FEE4009E9465 /* InstantPageShare@2x.png in Resources */,
+				B64908822087156F00849658 /* redpacket_open_btn@2x.png in Resources */,
 				931C5939174C0AB800D597D9 /* MenuButtonLeft@2x.png in Resources */,
 				931C593A174C0AB800D597D9 /* MenuButtonRight@2x.png in Resources */,
 				D0BAF3FA193E8AC400A0093F /* DeleteWhiteIcon.png in Resources */,
@@ -26159,6 +26199,7 @@
 				D00040B815BCD73A00AF9EBF /* TGUser+Telegraph.m in Sources */,
 				D0C6AF4A1A77F6890046833D /* TGSharedMediaAllFilesEmptyView.m in Sources */,
 				D01161DB1F41F1340039383E /* TLChatPhoto.mm in Sources */,
+				B64908812087156F00849658 /* WSRedPacketView.m in Sources */,
 				93C925FE15BD6D0800D1A461 /* TGTelegraphConversationMessageAssetsSource.m in Sources */,
 				93192EFB15BED22F0056FCD8 /* TGSendCodeRequestBuilder.m in Sources */,
 				D0C80D3D1A9561D600D5DF8A /* TGLockIconView.m in Sources */,
@@ -27542,6 +27583,7 @@
 				D03E44DF1AB0D69C00E72CAA /* TGSharedLocationSignals.m in Sources */,
 				D046966818A409F0009764B2 /* TGModernGalleryVideoItem.m in Sources */,
 				D0CAEA261A6D9DA60033650D /* TGSharedMediaUtils.m in Sources */,
+				B649087C2087156E00849658 /* WSRewardConfig.m in Sources */,
 				D0115E6B1F41F12F0039383E /* TLmessages_Chat.mm in Sources */,
 				D0C925D7194A024000E629CA /* texture_helper.m in Sources */,
 				93064DF018325C3A0024C05A /* TGModernConversationTitleView.m in Sources */,

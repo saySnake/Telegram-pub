@@ -23,6 +23,7 @@
 #import <LegacyComponents/TGDoubleTapGestureRecognizer.h>
 
 #import "TGWebpageFooterModel.h"
+#import "TGDatabase.h"
 
 @interface TGTextMessageModernViewModel () <UIGestureRecognizerDelegate, TGDoubleTapGestureRecognizerDelegate>
 {
@@ -950,7 +951,7 @@ static NSString *expandedTextAndAttributes(NSString *text, NSArray *textChecking
     NSUInteger previousEntitiesCount = _textModel.textCheckingResults.count;
     
     [super updateMessage:message viewStorage:viewStorage sizeUpdated:sizeUpdated];
-    
+
     bool hasGame = false;
     bool hasInvoice = false;
     NSArray *updatedTextCheckingResults = message.textCheckingResults;
@@ -982,6 +983,8 @@ static NSString *expandedTextAndAttributes(NSString *text, NSArray *textChecking
         _isInvoice = hasInvoice;
         _textModel.text = @"";
         _textModel.text = _text;
+//        _textModel.name =[NSString stringWithFormat:@"%@%@",user.firstName,user.lastName];
+
 #pragma mark -红包
         _textModel.isRedPackege = message.isRedpacket;
 
