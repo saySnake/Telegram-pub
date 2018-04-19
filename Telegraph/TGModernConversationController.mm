@@ -283,6 +283,7 @@
 #import "YKRedPacketView.h"
 #import "TGDatabase.h"
 
+#import "RedContentVC.h"
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 //NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
@@ -2245,6 +2246,26 @@ typedef enum {
         }
         TGUser *user = [[TGDatabase instance] loadUser:(int)currentMessage.fromUid];
         YKRedPacketView *redPacketView = [[YKRedPacketView alloc]initWithFrame:lastView.bounds];
+        redPacketView.block=^(RedPackType type){
+            switch (type) {
+                case RedPackOutTime:{
+                    NSLog(@"超时");
+                    RedContentVC *red =[[RedContentVC alloc] init];
+                    [self.navigationController pushViewController:red animated:YES];
+                    
+                }   
+                    break;
+                case RedPackAccive:{
+                    NSLog(@"领取");
+                    RedContentVC *red =[[RedContentVC alloc] init];
+//                    UINavigationController *nav =[[UINavigationController alloc] initWithRootViewController:red];
+                    [self.navigationController pushViewController:red animated:YES];
+                }
+                default:
+                    break;
+            }
+            
+        };
         redPacketView.redProfile.text =[NSString stringWithFormat:@"红包已领取"];
 //        if(clientUserId ==currentMessage.toUid){
 //            NSLog(@"自己");

@@ -1450,6 +1450,22 @@
 		B64908812087156F00849658 /* WSRedPacketView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64908712087156E00849658 /* WSRedPacketView.m */; };
 		B64908822087156F00849658 /* redpacket_open_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64908722087156E00849658 /* redpacket_open_btn@2x.png */; };
 		B64908892087332300849658 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B64908882087332300849658 /* Common.h */; };
+		B652F2FE20887DA9004EF947 /* BaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F2FC20887DA9004EF947 /* BaseViewController.h */; };
+		B652F2FF20887DA9004EF947 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F2FD20887DA9004EF947 /* BaseViewController.m */; };
+		B652F30D20888059004EF947 /* CustNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F30B20888054004EF947 /* CustNavBar.m */; };
+		B652F30E20888059004EF947 /* CustNavBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F30C20888058004EF947 /* CustNavBar.h */; };
+		B652F311208880C5004EF947 /* YJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F30F208880C1004EF947 /* YJAlertView.m */; };
+		B652F312208880C5004EF947 /* YJAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F310208880C5004EF947 /* YJAlertView.h */; };
+		B652F31520888240004EF947 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F3132088823C004EF947 /* UIView+Util.m */; };
+		B652F31620888240004EF947 /* UIView+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F31420888240004EF947 /* UIView+Util.h */; };
+		B652F319208883AC004EF947 /* DDButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F317208883A8004EF947 /* DDButton.h */; };
+		B652F31A208883AC004EF947 /* DDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F318208883AB004EF947 /* DDButton.m */; };
+		B652F31D20888476004EF947 /* DRWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F31B20888476004EF947 /* DRWindow.h */; };
+		B652F31E20888476004EF947 /* DRWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F31C20888476004EF947 /* DRWindow.m */; };
+		B652F3212088851B004EF947 /* NSString+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F31F20888517004EF947 /* NSString+Util.h */; };
+		B652F3222088851B004EF947 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F3202088851B004EF947 /* NSString+Util.m */; };
+		B652F326208886F8004EF947 /* RedContentVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B652F324208886F8004EF947 /* RedContentVC.h */; };
+		B652F327208886F8004EF947 /* RedContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B652F325208886F8004EF947 /* RedContentVC.m */; };
 		B65BC6CA207C4DE7006DB3CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */; };
 		B67240262085EAE4002CA111 /* YKUntil.h in Headers */ = {isa = PBXBuildFile; fileRef = B67240242085EAE4002CA111 /* YKUntil.h */; };
 		B67240272085EAE4002CA111 /* YKUntil.m in Sources */ = {isa = PBXBuildFile; fileRef = B67240252085EAE4002CA111 /* YKUntil.m */; };
@@ -7533,6 +7549,22 @@
 		B64908722087156E00849658 /* redpacket_open_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_open_btn@2x.png"; sourceTree = "<group>"; };
 		B64908882087332300849658 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		B649088A2087338300849658 /* Important.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Important.h; sourceTree = "<group>"; };
+		B652F2FC20887DA9004EF947 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		B652F2FD20887DA9004EF947 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B652F30B20888054004EF947 /* CustNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustNavBar.m; sourceTree = "<group>"; };
+		B652F30C20888058004EF947 /* CustNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustNavBar.h; sourceTree = "<group>"; };
+		B652F30F208880C1004EF947 /* YJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJAlertView.m; sourceTree = "<group>"; };
+		B652F310208880C5004EF947 /* YJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAlertView.h; sourceTree = "<group>"; };
+		B652F3132088823C004EF947 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
+		B652F31420888240004EF947 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
+		B652F317208883A8004EF947 /* DDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDButton.h; sourceTree = "<group>"; };
+		B652F318208883AB004EF947 /* DDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDButton.m; sourceTree = "<group>"; };
+		B652F31B20888476004EF947 /* DRWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRWindow.h; sourceTree = "<group>"; };
+		B652F31C20888476004EF947 /* DRWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRWindow.m; sourceTree = "<group>"; };
+		B652F31F20888517004EF947 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		B652F3202088851B004EF947 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		B652F324208886F8004EF947 /* RedContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedContentVC.h; sourceTree = "<group>"; };
+		B652F325208886F8004EF947 /* RedContentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedContentVC.m; sourceTree = "<group>"; };
 		B65BC6C9207C4DE6006DB3CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B67240242085EAE4002CA111 /* YKUntil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUntil.h; sourceTree = "<group>"; };
 		B67240252085EAE4002CA111 /* YKUntil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUntil.m; sourceTree = "<group>"; };
@@ -15654,18 +15686,33 @@
 				B649086B2087156E00849658 /* WSRedPacketView */,
 				B67240392085F312002CA111 /* YKRedPacketView.h */,
 				B672403A2085F312002CA111 /* YKRedPacketView.m */,
+				B652F2FC20887DA9004EF947 /* BaseViewController.h */,
+				B652F2FD20887DA9004EF947 /* BaseViewController.m */,
+				B652F323208886CC004EF947 /* RedPackVC */,
+				B652F31420888240004EF947 /* UIView+Util.h */,
+				B652F3132088823C004EF947 /* UIView+Util.m */,
+				B652F310208880C5004EF947 /* YJAlertView.h */,
+				B652F30F208880C1004EF947 /* YJAlertView.m */,
 				B62321BA206CED2500BAAB88 /* UIView+Addition.h */,
 				B62321B9206CED2400BAAB88 /* UIView+Addition.m */,
 				B62321B5206CCC3200BAAB88 /* RTDeviceHardWare.h */,
 				B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */,
 				B602E768207A239C00EBAE31 /* CustBtn.h */,
 				B602E769207A239C00EBAE31 /* CustBtn.m */,
+				B652F317208883A8004EF947 /* DDButton.h */,
+				B652F318208883AB004EF947 /* DDButton.m */,
+				B652F31B20888476004EF947 /* DRWindow.h */,
+				B652F31C20888476004EF947 /* DRWindow.m */,
+				B652F31F20888517004EF947 /* NSString+Util.h */,
+				B652F3202088851B004EF947 /* NSString+Util.m */,
 				B6479B672080B95200A1AD46 /* HBKeyBoardView.h */,
 				B6479B682080B95200A1AD46 /* HBKeyBoardView.m */,
 				B6479B74208469D400A1AD46 /* HBMoreViewItem.h */,
 				B6479B75208469D400A1AD46 /* HBMoreViewItem.m */,
 				B67240242085EAE4002CA111 /* YKUntil.h */,
 				B67240252085EAE4002CA111 /* YKUntil.m */,
+				B652F30C20888058004EF947 /* CustNavBar.h */,
+				B652F30B20888054004EF947 /* CustNavBar.m */,
 			);
 			name = HuoBi;
 			sourceTree = "<group>";
@@ -15691,6 +15738,15 @@
 				B6820BA0207B3927000E3170 /* WKWebViewController.m */,
 			);
 			path = zlcwebview;
+			sourceTree = "<group>";
+		};
+		B652F323208886CC004EF947 /* RedPackVC */ = {
+			isa = PBXGroup;
+			children = (
+				B652F324208886F8004EF947 /* RedContentVC.h */,
+				B652F325208886F8004EF947 /* RedContentVC.m */,
+			);
+			path = RedPackVC;
 			sourceTree = "<group>";
 		};
 		D00542F41BC74F9000456715 /* Share */ = {
@@ -22909,6 +22965,7 @@
 				D01F94D81E5E3DB5002627A1 /* STPDelegateProxy.h in Headers */,
 				D011603A1F41F1310039383E /* TLRPCmessages_readEncryptedHistory.h in Headers */,
 				D0115FD81F41F1310039383E /* TLRPCmessages_acceptEncryption.h in Headers */,
+				B652F3212088851B004EF947 /* NSString+Util.h in Headers */,
 				D01161F21F41F1340039383E /* TLcontacts_ImportedContacts.h in Headers */,
 				D01161DE1F41F1340039383E /* TLConfig.h in Headers */,
 				683C573D1BF0939C0041C782 /* TGNotificationReplyHeaderView.h in Headers */,
@@ -23040,6 +23097,7 @@
 				D0115F341F41F1300039383E /* TLRPCauth_requestPasswordRecovery.h in Headers */,
 				D0115FBC1F41F1300039383E /* TLRPChelp_getAppUpdate.h in Headers */,
 				D01F94E61E5E3DB5002627A1 /* STPObscuredCardView.h in Headers */,
+				B652F31620888240004EF947 /* UIView+Util.h in Headers */,
 				D03B1D7E1B6BAAC300524EE9 /* TGSharedMediaLinkItemView.h in Headers */,
 				D0115F8A1F41F1300039383E /* TLRPCcontacts_getBlocked.h in Headers */,
 				D01162521F41F1350039383E /* TLInputChannel.h in Headers */,
@@ -23546,6 +23604,7 @@
 				D01161FA1F41F1340039383E /* TLcontacts_Requests.h in Headers */,
 				D0973D601BE2569400B61B7D /* TGAcceleratedVideoView.h in Headers */,
 				68B639851BB2506F00205AC3 /* SSignal+Timing.h in Headers */,
+				B652F326208886F8004EF947 /* RedContentVC.h in Headers */,
 				D00BF03E1CF8986D00170DB1 /* TLDialog$dialog.h in Headers */,
 				D0115F6A1F41F1300039383E /* TLRPCchannels_joinChannel.h in Headers */,
 				D01161601F41F1330039383E /* NSArray_Peer.h in Headers */,
@@ -24034,6 +24093,7 @@
 				D01162021F41F1340039383E /* TLcontacts_TopPeers.h in Headers */,
 				D0115F321F41F1300039383E /* TLRPCauth_recoverPassword.h in Headers */,
 				D0A4D7C71C10B03200537E74 /* TGVTAcceleratedVideoView.h in Headers */,
+				B652F319208883AC004EF947 /* DDButton.h in Headers */,
 				68EE347F1C922CC8002F5419 /* TGOpenInBrowserItems.h in Headers */,
 				31B87D8F2046AA99005FF24E /* config.h in Headers */,
 				B602E72B207A02E400EBAE31 /* UIImageView+WebCache.h in Headers */,
@@ -24131,6 +24191,7 @@
 				D0DB9AE21E3B3E4D0040CE3A /* TLInvoice$invoice.h in Headers */,
 				68D167DD1DB6849400509032 /* TGCallAvatarView.h in Headers */,
 				D0115F661F41F1300039383E /* TLRPCchannels_getParticipants.h in Headers */,
+				B652F30E20888059004EF947 /* CustNavBar.h in Headers */,
 				D011605E1F41F1310039383E /* TLRPCmessages_sendEncryptedFile.h in Headers */,
 				D0BFFD0F1BAA365600A00E38 /* TGUploadFileSignals.h in Headers */,
 				D0115ED81F41F12F0039383E /* TLPhotoSize.h in Headers */,
@@ -24332,6 +24393,7 @@
 				D0249C161AC04D920076ECBF /* TGRecentHashtagsSignal.h in Headers */,
 				092B12511EEB16A4003BFC52 /* TGShareTargetCell.h in Headers */,
 				D0C5AAF71AB5B36300F209D7 /* TLUpdates$modernUpdateShortChatMessage.h in Headers */,
+				B652F31D20888476004EF947 /* DRWindow.h in Headers */,
 				D0115F3C1F41F1300039383E /* TLRPCauth_sendInvites.h in Headers */,
 				D01F94CD1E5E3DB4002627A1 /* STPCheckoutAccountLookup.h in Headers */,
 				689505AE1DCC5B2200D68920 /* Reachability.h in Headers */,
@@ -24393,12 +24455,14 @@
 				D077B8D81F4342C70046D27A /* TGConversationScrollButtonContainer.h in Headers */,
 				D0FC23461BFF61F000CC49E7 /* TGReportPeerOtherTextController.h in Headers */,
 				D075876D1B3B380400117DFF /* TGMusicPlayerCompleteView.h in Headers */,
+				B652F312208880C5004EF947 /* YJAlertView.h in Headers */,
 				B62321A7206CC46300BAAB88 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
 				D0115EDA1F41F12F0039383E /* TLPong.h in Headers */,
 				68EED5D11BC4294A009F1D57 /* TGNotificationBackgroundView.h in Headers */,
 				D01161B81F41F1340039383E /* TLChannelAdminLogEvent.h in Headers */,
 				D0A4D8051C11D19900537E74 /* TGDocumentFileReference.h in Headers */,
 				D0115F8E1F41F1300039383E /* TLRPCcontacts_getContacts.h in Headers */,
+				B652F2FE20887DA9004EF947 /* BaseViewController.h in Headers */,
 				688625621C98E26400F7E860 /* TGEmbedPlayerController.h in Headers */,
 				D0CC0BCB1B9BB48500882D7A /* TGChannelAboutSetupController.h in Headers */,
 				D0A4D7E71C10DEF600537E74 /* TGInternalGifSearchResultGalleryItem.h in Headers */,
@@ -25949,6 +26013,7 @@
 				B602E740207A02E400EBAE31 /* NSData+ImageContentType.m in Sources */,
 				D0CC232915961B2E004CAFE5 /* TGInterfaceAssets.mm in Sources */,
 				D0115EC31F41F12F0039383E /* TLPeerSettings.mm in Sources */,
+				B652F2FF20887DA9004EF947 /* BaseViewController.m in Sources */,
 				D09F33761F42481B00FCB142 /* TGUnseenPeerMentionsMessageIdsState.m in Sources */,
 				D01160491F41F1310039383E /* TLRPCmessages_reorderStickerSets.mm in Sources */,
 				D01B0EB91A444F84007ACE93 /* TGLinkTargetView.m in Sources */,
@@ -25991,6 +26056,7 @@
 				933AA49318606AB1000AA848 /* TGPreparedRemoteDocumentMessage.m in Sources */,
 				D01160071F41F1310039383E /* TLRPCmessages_getDhConfig.mm in Sources */,
 				D0249BE41ABF5B470076ECBF /* GDRemoteFileServiceSession.m in Sources */,
+				B652F30D20888059004EF947 /* CustNavBar.m in Sources */,
 				D0115FBF1F41F1300039383E /* TLRPChelp_getCdnConfig.mm in Sources */,
 				D01160F11F41F1320039383E /* TLupdates_State.mm in Sources */,
 				D0249BA71ABF5B470076ECBF /* GDCredentialManager.m in Sources */,
@@ -26051,6 +26117,7 @@
 				D0983D5D19CB9A4300CE5BB0 /* TGEncryptedChatServiceAction.m in Sources */,
 				93CF3B77181EF6E6003D8DE1 /* TGModernCollectionCell.m in Sources */,
 				D01D7D5919DE0BF500955BDE /* TGModernConversationActivityManager.m in Sources */,
+				B652F31A208883AC004EF947 /* DDButton.m in Sources */,
 				D02D989F1DC8EB04009E9465 /* TGItemCollectionGalleryVideoBaseItemView.m in Sources */,
 				B602E73B207A02E400EBAE31 /* SDImageCache.m in Sources */,
 				D0E1D3021EC9E87D00FCEEF1 /* TGIconSwitchView.m in Sources */,
@@ -26444,6 +26511,7 @@
 				B62321AA206CC46300BAAB88 /* MASLayoutConstraint.m in Sources */,
 				D07BC6BB1F29D7E400ED97AA /* TGLegacyComponentsGlobalsProvider.m in Sources */,
 				D098419419CB9BE200CE5BB0 /* TLRpcResult.mm in Sources */,
+				B652F31E20888476004EF947 /* DRWindow.m in Sources */,
 				D0088D6719A54ADF00ADABFA /* TGDatacenterContext.mm in Sources */,
 				D05F09931C9C3BBC00BB6F96 /* TGMessageReplyButtonsModel.m in Sources */,
 				D0249A9A1ABCA67E0076ECBF /* TGDropboxItem.m in Sources */,
@@ -26886,6 +26954,7 @@
 				684853F01C1B580E00007D21 /* TGWatchController.m in Sources */,
 				D01161F11F41F1340039383E /* TLcontacts_Found.mm in Sources */,
 				D0630B711CC811AA00FC9AA4 /* TGInlineBotsSettingsCell.m in Sources */,
+				B652F327208886F8004EF947 /* RedContentVC.m in Sources */,
 				D02C2A5C1B97594900E30D1E /* TGVisibleMessageHole.m in Sources */,
 				D0115ECB1F41F12F0039383E /* TLPhoneCall.mm in Sources */,
 				93E05B2C165C2CDB004E31C5 /* TGButtonMenuItemCell.m in Sources */,
@@ -27006,6 +27075,7 @@
 				D0115EE11F41F12F0039383E /* TLPrivacyKey.mm in Sources */,
 				68EE340D1C7E50CB002F5419 /* TGOpenInSignals.m in Sources */,
 				930F9BBF1891B79000D3D7C1 /* TGMessageImageViewModel.m in Sources */,
+				B652F311208880C5004EF947 /* YJAlertView.m in Sources */,
 				9386E8A5185D25A400930205 /* TGSecretChatUserInfoController.m in Sources */,
 				D01160BF1F41F1320039383E /* TLRPCupload_getWebFile.mm in Sources */,
 				0923C0D91F39C0AE00AC41C9 /* TGFavoriteStickersSignal.m in Sources */,
@@ -27118,6 +27188,7 @@
 				D0088D6319A54A2800ADABFA /* TGUpdate.m in Sources */,
 				932515E7167D3A69005C421F /* TGMessagesSearchActor.m in Sources */,
 				D01161C51F41F1340039383E /* TLChannelParticipant.mm in Sources */,
+				B652F3222088851B004EF947 /* NSString+Util.m in Sources */,
 				9384321118568199000CD961 /* TGPhonebookUserInfoController.m in Sources */,
 				D051B0181AFA4EFC003AFD52 /* TGStickerPreviewPage.m in Sources */,
 				D01161A51F41F1340039383E /* TLauth_SentCodeType.mm in Sources */,
@@ -27155,6 +27226,7 @@
 				93CF3B6B181EB3A4003D8DE1 /* TGModernRemoteImageView.m in Sources */,
 				930A94EF189F00C500A20BE0 /* TGModernConversationCollectionViewInstantPreviewRecognizer.m in Sources */,
 				D089E06A1AC57DBF009A744B /* TGAuthSessionListSignals.m in Sources */,
+				B652F31520888240004EF947 /* UIView+Util.m in Sources */,
 				68B63D8F1BB25BC200205AC3 /* TGChatMessageListView.m in Sources */,
 				930808F5185B0AF800E62B42 /* TGUserInfoEditingPhoneCollectionItem.m in Sources */,
 				D06B21EA1E49D18F00EE2F70 /* TLPayments_sendPaymentForm.mm in Sources */,

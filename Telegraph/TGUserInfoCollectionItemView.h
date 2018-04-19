@@ -22,7 +22,11 @@
 - (void)setStatus:(NSString *)status active:(bool)active;
 
 - (void)setFirstName:(NSString *)firstName lastName:(NSString *)lastName uidForPlaceholderCalculation:(int32_t)uidForPlaceholderCalculation;
+
+//服务器获取头像
 - (void)setAvatarUri:(NSString *)avatarUri animated:(bool)animated synchronous:(bool)synchronous;
+
+
 - (void)setAvatarImage:(UIImage *)avatarImage animated:(bool)animated;
 - (void)setUpdatingAvatar:(bool)updatingAvatar animated:(bool)animated;
 - (void)setDisableAvatarPlaceholder:(bool)disable;

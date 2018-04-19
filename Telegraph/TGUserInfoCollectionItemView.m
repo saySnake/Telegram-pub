@@ -436,6 +436,8 @@
     }
 }
 
+
+
 - (void)setAvatarImage:(UIImage *)avatarImage animated:(bool)__unused animated
 {
     [_avatarView loadImage:avatarImage];

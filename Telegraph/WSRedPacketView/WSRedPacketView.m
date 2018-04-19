@@ -9,6 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "WSRedPacketView.h"
+#import <LegacyComponents/TGLetteredAvatarView.h>
+#import <LegacyComponents/LegacyComponents.h>
+#import <LegacyComponents/ASWatcher.h>
+
+#import "TGTelegraph.h"
+
+#import <LegacyComponents/TGDataResource.h>
+
+
+#import <LegacyComponents/TGImageManager.h>
+
+#import <LegacyComponents/UIImage+TG.h>
+
 
 //*******************************
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -19,9 +32,19 @@
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 100000
 // CAAnimationDelegate is not available before iOS 10 SDK
 @interface WSRedPacketView ()<UIGestureRecognizerDelegate>
+{
+    TGLetteredAvatarView *_avatarView;
+}
+
+
 #else
 @interface WSRedPacketView () <CAAnimationDelegate,UIGestureRecognizerDelegate>
 #endif
+{
+    TGLetteredAvatarView *_avatarView;
+}
+
+
 
 @property (nonatomic,strong) UIWindow       *alertWindow;
 @property (nonatomic,strong) UIImageView    *backgroundImageView;
@@ -98,7 +121,8 @@
         
         [_backgroundImageView addSubview:self.openButton];
         [_backgroundImageView addSubview:self.closeButton];
-        [_backgroundImageView addSubview:self.avatarImageView];
+//        [_backgroundImageView addSubview:self.avatarImageView];
+        [_backgroundImageView addSubview:_avatarView];
         [_backgroundImageView addSubview:self.userNameLabel];
         [_backgroundImageView addSubview:self.tipsLabel];
         [_backgroundImageView addSubview:self.messageLabel];
@@ -145,6 +169,22 @@
     return _closeButton;
 }
 
+- (TGLetteredAvatarView *)_avatarView
+{
+    if (!_avatarView) {
+        _avatarView = [[TGLetteredAvatarView alloc] initWithFrame:CGRectMake(_backgroundImageView.frame.size.width/2 - 24, 35, 48, 48)];
+        _avatarView.clipsToBounds = YES;
+        _avatarView.layer.cornerRadius = 24;
+        _avatarView.layer.borderWidth = 1;
+        _avatarView.layer.borderColor = [UIColor whiteColor].CGColor;
+        [_avatarView setSingleFontSize:28.0f doubleFontSize:28.0f useBoldFont:false];
+        _avatarView.fadeTransition = true;
+        _avatarView.userInteractionEnabled = true;
+    }
+    return _avatarView;
+}
+
+
 - (UIImageView *)avatarImageView
 {
     if (!_avatarImageView) {
@@ -154,6 +194,8 @@
         _avatarImageView.layer.borderWidth = 1;
         _avatarImageView.layer.borderColor = [UIColor whiteColor].CGColor;
         [_avatarImageView setImage:_data.avatarImage];
+        
+        
     }
     return _avatarImageView;
 }
@@ -212,7 +254,26 @@
                              }
                 }];
     }];
+}
 
+- (void)closeViewActions{
+    
+    [UIView animateWithDuration:0 animations:^{
+        self.backgroundImageView.transform = CGAffineTransformMakeScale(0., 0);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:.08
+                         animations:^{
+                             self.backgroundImageView.transform = CGAffineTransformMakeScale(0, 0);
+                         }completion:^(BOOL finish){
+                             [self.alertWindow removeFromSuperview];
+                             self.alertWindow.rootViewController = nil;
+                             self.alertWindow = nil;
+                             
+                             if (self.cancelBlock) {
+                                 self.cancelBlock();
+                             }
+                         }];
+    }];
 }
 
 - (void)openRedPacketAction
@@ -237,7 +298,8 @@
     theAnimation.removedOnCompletion = YES;
     theAnimation.fillMode = kCAFillModeForwards;
     theAnimation.delegate = self;
-    
+    [self closeViewActions];
+
     return theAnimation;
 }
 
@@ -269,6 +331,7 @@
     }
     _messageLabel.text = [NSString stringWithFormat:@"中奖金额%.2f",_data.money];
 }
+
 
 - (void)dealloc
 {

@@ -17,6 +17,8 @@
 #import <LegacyComponents/TGImageManager.h>
 
 #import <LegacyComponents/UIImage+TG.h>
+#import "TGUserInfoCollectionItemView.h"
+#import "RedContentVC.h"
 
 
 #define  YKScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -30,6 +32,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface YKRedPacketView(){
     
+    TGLetteredAvatarView *_avatarView;
+
 }
 
 @end
@@ -128,61 +132,96 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     CGPoint currentpoint=[touches.anyObject locationInView:self];
     BOOL ispoint =CGRectContainsPoint(self.bounds,currentpoint);
     if (ispoint ) {
-        
         int clid =TGTelegraphInstance.clientUserId;
-        
 //        int clientUserId = TGTelegraphInstance.clientUserId;
-        
-
         if (toud ==cid) {
             //自己红包
-            TGUser *user = [[TGDatabase instance] loadUser:(int32_t)toud];
             WSRewardConfig *info = ({
                 WSRewardConfig *info   = [[WSRewardConfig alloc] init];
-                info.money         = 100.0;
-              UIImage * image = [[TGImageManager instance] loadImageSyncWithUri:user.photoUrlSmall canWait:false decode:true acceptPartialData:false asyncTaskId:NULL progress:nil partialCompletion:nil completion:nil];
-
-//                info.avatarImage    = [UIImage imageNamed:user.photoUrlSmall];
-                info.avatarImage= image;
+                info.money             = 100.0;
+            TGUser *user = [[TGDatabase instance] loadUser:(int32_t)toud];
+                [self setAvatarUri:user.photoUrlSmall id:toud info:info];
                 info.content = @"恭喜发财，吉祥如意";
                 info.userName  = @"小雨同学";
                 info;
             });
             
             //实现
-            
             [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
                 NSLog(@"取消领取");
             } finishBlock:^(float money) {
                 NSLog(@"领取金额：%f",money);
+                RedPackType type ;
+                self.block(RedPackOutTime);
             }];
-
         }
         else{
             //别人红包
-            
             TGUser *user = [[TGDatabase instance] loadUser:(int32_t)fromuid];
             WSRewardConfig *info = ({
                 WSRewardConfig *info   = [[WSRewardConfig alloc] init];
                 info.money         = 100.0;
-                info.avatarImage    = [UIImage imageNamed:user.photoUrlSmall];
+                TGUserInfoCollectionItemView *item =[[TGUserInfoCollectionItemView alloc]init];
+//                info.avatarImage    = [UIImage imageNamed:user.photoUrlSmall];
                 info.content = @"恭喜发财，吉祥如意";
                 info.userName  = @"小雨同学";
                 info;
             });
-            
             //实现
-            
             [WSRedPacketView showRedPackerWithData:info cancelBlock:^{
                 NSLog(@"取消领取");
             } finishBlock:^(float money) {
                 NSLog(@"领取金额：%f",money);
+//                RedPackType type ;
+                self.block(RedPackOutTime);
+                
+                
             }];
-
-        }
-
+        };
     }
 }
+
+
+
+- (void)setAvatarUri:(NSString *)avatarUri id:(int)Id info:(WSRewardConfig *)info
+{
+    static UIImage *placeholder = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^
+                  {
+                      //!placeholder
+                      UIGraphicsBeginImageContextWithOptions(CGSizeMake(64.0f, 64.0f), false, 0.0f);
+                      CGContextRef context = UIGraphicsGetCurrentContext();
+                      
+                      CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+                      CGContextFillEllipseInRect(context, CGRectMake(0.0f, 0.0f, 64.0f, 64.0f));
+                      CGContextSetStrokeColorWithColor(context, UIColorRGB(0xd9d9d9).CGColor);
+                      CGContextSetLineWidth(context, 1.0f);
+                      CGContextStrokeEllipseInRect(context, CGRectMake(0.5f, 0.5f, 63.0f, 63.0f));
+                      
+                      placeholder = UIGraphicsGetImageFromCurrentImageContext();
+                      UIGraphicsEndImageContext();
+                  });
+    
+    UIImage *currentPlaceholder = [_avatarView currentImage];
+    if (currentPlaceholder == nil)
+        currentPlaceholder = placeholder;
+    
+    if (avatarUri.length == 0)
+    {
+        TGUser *user =[TGDatabaseInstance() loadUser:Id];
+        NSString *firstName =user.firstName;
+        NSString *lastName =user.lastName;
+        [info._avatarView loadUserPlaceholderWithSize:CGSizeMake(64.0f, 64.0f) uid:490906464 firstName:firstName lastName:lastName placeholder:placeholder];
+    }
+    else if (!TGStringCompare([_avatarView currentUrl], avatarUri))
+    {
+        info._avatarView.fadeTransitionDuration = 0.3;
+        info._avatarView.contentHints =  TGRemoteImageContentHintLoadFromDiskSynchronously;
+        [info._avatarView loadImage:avatarUri filter:@"circle:64x64" placeholder:currentPlaceholder forceFade:NO];
+    }
+}
+
 
 
 

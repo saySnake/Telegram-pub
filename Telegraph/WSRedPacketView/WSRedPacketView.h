@@ -20,4 +20,6 @@ typedef void(^WSFinishBlock)(float money);
                           cancelBlock:(WSCancelBlock)cancelBlock
                           finishBlock:(WSFinishBlock)finishBlock;
 
+- (void)closeViewAction;
+
 @end

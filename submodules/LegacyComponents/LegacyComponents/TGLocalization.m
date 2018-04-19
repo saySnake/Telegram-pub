@@ -78,7 +78,7 @@ static NSString *fallbackString(NSString *key) {
     return [[TGLocalization alloc] initWithVersion:_version code:_code dict:_dict isActive:isActive];
 }
 
-#pragma mark -修改
+#pragma mark -语言修改
 - (NSString *)get:(NSString *)key {
     
     return NSLocalizedString(key, nil);

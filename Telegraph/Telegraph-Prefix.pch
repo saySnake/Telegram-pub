@@ -10,10 +10,13 @@
 
 #import <MTProtoKit/MTLogging.h>
 #import "TGCommon.h"
+#import <objc/runtime.h>
 
 
 #import "Common.h"
 #import "Important.h"
+#import "UIView+Util.h"
+#import "NSString+Util.h"
 
 
 
