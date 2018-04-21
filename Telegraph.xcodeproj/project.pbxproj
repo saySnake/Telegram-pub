@@ -1501,6 +1501,10 @@
 		B6820BA3207B392A000E3170 /* WKWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B6820BA1207B392A000E3170 /* WKWebViewController.h */; };
 		B69BB869208ACF1D0089AA93 /* UIView+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB85E208ACF1C0089AA93 /* UIView+Common.h */; };
 		B69BB86A208ACF1D0089AA93 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB868208ACF1D0089AA93 /* UIView+Common.m */; };
+		B69BB873208AE0C90089AA93 /* CustAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB871208AE0C80089AA93 /* CustAlertView.m */; };
+		B69BB874208AE0C90089AA93 /* CustAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB872208AE0C80089AA93 /* CustAlertView.h */; };
+		B69BB877208AE0D10089AA93 /* YJActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB875208AE0D00089AA93 /* YJActionSheet.h */; };
+		B69BB878208AE0D10089AA93 /* YJActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB876208AE0D00089AA93 /* YJActionSheet.m */; };
 		B6E82661207B887700CD8D65 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82654207B885D00CD8D65 /* Icon-60@2x.png */; };
 		B6E82662207B887700CD8D65 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82655207B885F00CD8D65 /* Icon-40.png */; };
 		B6E82663207B887700CD8D65 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82656207B886100CD8D65 /* Icon-40@2x.png */; };
@@ -7626,6 +7630,10 @@
 		B6820BA1207B392A000E3170 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		B69BB85E208ACF1C0089AA93 /* UIView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Common.h"; sourceTree = "<group>"; };
 		B69BB868208ACF1D0089AA93 /* UIView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
+		B69BB871208AE0C80089AA93 /* CustAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustAlertView.m; sourceTree = "<group>"; };
+		B69BB872208AE0C80089AA93 /* CustAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustAlertView.h; sourceTree = "<group>"; };
+		B69BB875208AE0D00089AA93 /* YJActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJActionSheet.h; sourceTree = "<group>"; };
+		B69BB876208AE0D00089AA93 /* YJActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJActionSheet.m; sourceTree = "<group>"; };
 		B6E82654207B885D00CD8D65 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B6E82655207B885F00CD8D65 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		B6E82656207B886100CD8D65 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -15725,6 +15733,8 @@
 		B62321B4206CCC0700BAAB88 /* HuoBi */ = {
 			isa = PBXGroup;
 			children = (
+				B69BB87A208AE1B90089AA93 /* Catelog */,
+				B69BB870208AE0980089AA93 /* Common */,
 				B6521F8D208A00FD004D509E /* InfiniteScrollPicker */,
 				B649086B2087156E00849658 /* WSRedPacketView */,
 				B67240392085F312002CA111 /* YKRedPacketView.h */,
@@ -15732,16 +15742,8 @@
 				B652F2FC20887DA9004EF947 /* BaseViewController.h */,
 				B652F2FD20887DA9004EF947 /* BaseViewController.m */,
 				B652F323208886CC004EF947 /* RedPackVC */,
-				B652F31420888240004EF947 /* UIView+Util.h */,
-				B652F3132088823C004EF947 /* UIView+Util.m */,
-				B69BB85E208ACF1C0089AA93 /* UIView+Common.h */,
-				B69BB868208ACF1D0089AA93 /* UIView+Common.m */,
-				B6521F662089AE8D004D509E /* NSObject+Util.h */,
-				B6521F702089AE8E004D509E /* NSObject+Util.m */,
 				B652F310208880C5004EF947 /* YJAlertView.h */,
 				B652F30F208880C1004EF947 /* YJAlertView.m */,
-				B62321BA206CED2500BAAB88 /* UIView+Addition.h */,
-				B62321B9206CED2400BAAB88 /* UIView+Addition.m */,
 				B62321B5206CCC3200BAAB88 /* RTDeviceHardWare.h */,
 				B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */,
 				B602E768207A239C00EBAE31 /* CustBtn.h */,
@@ -15750,14 +15752,10 @@
 				B652F318208883AB004EF947 /* DDButton.m */,
 				B652F31B20888476004EF947 /* DRWindow.h */,
 				B652F31C20888476004EF947 /* DRWindow.m */,
-				B652F31F20888517004EF947 /* NSString+Util.h */,
-				B652F3202088851B004EF947 /* NSString+Util.m */,
 				B6479B672080B95200A1AD46 /* HBKeyBoardView.h */,
 				B6479B682080B95200A1AD46 /* HBKeyBoardView.m */,
 				B6479B74208469D400A1AD46 /* HBMoreViewItem.h */,
 				B6479B75208469D400A1AD46 /* HBMoreViewItem.m */,
-				B67240242085EAE4002CA111 /* YKUntil.h */,
-				B67240252085EAE4002CA111 /* YKUntil.m */,
 				B652F30C20888058004EF947 /* CustNavBar.h */,
 				B652F30B20888054004EF947 /* CustNavBar.m */,
 			);
@@ -15818,6 +15816,36 @@
 				B6521F89208A00B4004D509E /* SendRedVC.xib */,
 			);
 			path = RedPackVC;
+			sourceTree = "<group>";
+		};
+		B69BB870208AE0980089AA93 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B69BB875208AE0D00089AA93 /* YJActionSheet.h */,
+				B69BB876208AE0D00089AA93 /* YJActionSheet.m */,
+				B69BB872208AE0C80089AA93 /* CustAlertView.h */,
+				B69BB871208AE0C80089AA93 /* CustAlertView.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B69BB87A208AE1B90089AA93 /* Catelog */ = {
+			isa = PBXGroup;
+			children = (
+				B67240242085EAE4002CA111 /* YKUntil.h */,
+				B67240252085EAE4002CA111 /* YKUntil.m */,
+				B6521F662089AE8D004D509E /* NSObject+Util.h */,
+				B6521F702089AE8E004D509E /* NSObject+Util.m */,
+				B652F31420888240004EF947 /* UIView+Util.h */,
+				B652F3132088823C004EF947 /* UIView+Util.m */,
+				B69BB85E208ACF1C0089AA93 /* UIView+Common.h */,
+				B69BB868208ACF1D0089AA93 /* UIView+Common.m */,
+				B62321BA206CED2500BAAB88 /* UIView+Addition.h */,
+				B62321B9206CED2400BAAB88 /* UIView+Addition.m */,
+				B652F31F20888517004EF947 /* NSString+Util.h */,
+				B652F3202088851B004EF947 /* NSString+Util.m */,
+			);
+			path = Catelog;
 			sourceTree = "<group>";
 		};
 		D00542F41BC74F9000456715 /* Share */ = {
@@ -24181,6 +24209,7 @@
 				D01160DE1F41F1320039383E /* TLStickerSet.h in Headers */,
 				0916CCB71E8EA6BE00576568 /* TGSharedMediaVoiceMessageItem.h in Headers */,
 				D0C09C7E1A6E974D008369D7 /* TGSharedMediaItemView.h in Headers */,
+				B69BB877208AE0D10089AA93 /* YJActionSheet.h in Headers */,
 				D0115E701F41F12F0039383E /* TLmessages_DhConfig.h in Headers */,
 				D01160981F41F1320039383E /* TLRPCphotos_readWall.h in Headers */,
 				D010C2DF1EA8B3C800F41B96 /* TGCdnFileData.h in Headers */,
@@ -24250,6 +24279,7 @@
 				D01BAA3A1ECF228F00295217 /* TGSuggestedLocalizationController.h in Headers */,
 				D09262BD1D88381400742741 /* TGMultipleStickerPacksCollectionItemView.h in Headers */,
 				68CB04091E08DC3E000C22C4 /* TGRecentCallsController.h in Headers */,
+				B69BB874208AE0C90089AA93 /* CustAlertView.h in Headers */,
 				D01161281F41F1330039383E /* NSArray_DcOption.h in Headers */,
 				D011619C1F41F1330039383E /* TLauth_CodeType.h in Headers */,
 				D01F94DA1E5E3DB5002627A1 /* STPDispatchFunctions.h in Headers */,
@@ -26627,6 +26657,7 @@
 				D0DCF5041AE924F900D5B7A1 /* TGGroupInvitationInfo.m in Sources */,
 				93F3A0F618212E2B0005EB98 /* TGModernDateViewModel.m in Sources */,
 				D0F680121EE85A62000E5906 /* TGProxySetupController.m in Sources */,
+				B69BB873208AE0C90089AA93 /* CustAlertView.m in Sources */,
 				D0A54B4119BA086500886B73 /* TGCacheController.m in Sources */,
 				D070ADBF1D3FE3AD0044F7D9 /* TGArchivedStickerPacksController.m in Sources */,
 				D0EDE5591D9AB54C005D4CE8 /* TLGame$game.mm in Sources */,
@@ -26896,6 +26927,7 @@
 				D01F951C1E5E3DB5002627A1 /* UITableViewCell+Stripe_Borders.m in Sources */,
 				D01161EF1F41F1340039383E /* TLcontacts_ForeignLink.mm in Sources */,
 				D03B1D7B1B6BA87400524EE9 /* TGSharedMediaLinkItem.m in Sources */,
+				B69BB878208AE0D10089AA93 /* YJActionSheet.m in Sources */,
 				D01162891F41F1350039383E /* TLInvoice.mm in Sources */,
 				D0A4D7D01C10D2A900537E74 /* TGInternalGifSearchResult.m in Sources */,
 				B602E72E207A02E400EBAE31 /* SDWebImageDecoder.m in Sources */,
