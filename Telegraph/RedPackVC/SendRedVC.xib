@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment version="2304" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -275,21 +274,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fhb-vb-E05" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="04Q-7V-Zsi"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="hHn-Ni-agW" secondAttribute="trailing" id="9T9-VN-tvj"/>
-                <constraint firstItem="DIQ-kT-7nj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ABO-Df-urx"/>
-                <constraint firstItem="6S7-Zk-jRT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="BDr-ZE-Zmw"/>
-                <constraint firstItem="hHn-Ni-agW" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="J3t-H4-xmK"/>
+                <constraint firstItem="fhb-vb-E05" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="04Q-7V-Zsi"/>
+                <constraint firstAttribute="trailing" secondItem="hHn-Ni-agW" secondAttribute="trailing" id="9T9-VN-tvj"/>
+                <constraint firstItem="DIQ-kT-7nj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ABO-Df-urx"/>
+                <constraint firstItem="6S7-Zk-jRT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BDr-ZE-Zmw"/>
+                <constraint firstItem="hHn-Ni-agW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J3t-H4-xmK"/>
                 <constraint firstItem="hHn-Ni-agW" firstAttribute="top" secondItem="DIQ-kT-7nj" secondAttribute="bottom" id="Ken-gZ-2v3"/>
                 <constraint firstItem="6S7-Zk-jRT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SA6-86-eYC"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hHn-Ni-agW" secondAttribute="bottom" id="fVW-zd-mC4"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="DIQ-kT-7nj" secondAttribute="trailing" id="j40-qy-tcb"/>
-                <constraint firstItem="6S7-Zk-jRT" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="jFj-k4-V55"/>
-                <constraint firstItem="fhb-vb-E05" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="nhB-27-0O9"/>
+                <constraint firstAttribute="bottom" secondItem="hHn-Ni-agW" secondAttribute="bottom" id="fVW-zd-mC4"/>
+                <constraint firstAttribute="trailing" secondItem="DIQ-kT-7nj" secondAttribute="trailing" id="j40-qy-tcb"/>
+                <constraint firstItem="6S7-Zk-jRT" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="jFj-k4-V55"/>
+                <constraint firstItem="fhb-vb-E05" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="nhB-27-0O9"/>
                 <constraint firstItem="DIQ-kT-7nj" firstAttribute="top" secondItem="fhb-vb-E05" secondAttribute="bottom" id="rmG-5H-rsx"/>
                 <constraint firstItem="fhb-vb-E05" firstAttribute="top" secondItem="6S7-Zk-jRT" secondAttribute="bottom" id="uLX-qf-gpl"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="70.5" y="130"/>
         </view>
     </objects>

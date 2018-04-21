@@ -6,7 +6,6 @@
 //
 
 #import "TGAnotherViewController.h"
-#import "Masonry.h"
 #import "UIView+Addition.h"
 #import "RTDeviceHardWare.h"
 #import "SDCycleScrollView.h"

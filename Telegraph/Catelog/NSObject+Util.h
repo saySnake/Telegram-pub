@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface NSObject (Util)
 - (CGSize)sizeWithText:(NSString *)text;
 - (CGSize)sizeWithText:(NSString *)text withFont:(CGFloat)font;
@@ -48,5 +48,9 @@
 @end
 
 @interface NSNull (JSON)
+
+@end
+@interface UIResponder (Router)
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo;
 
 @end

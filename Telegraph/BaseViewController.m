@@ -30,7 +30,7 @@ void *const isModelPresent="isModelPresent";
  状态栏样式
  */
 -(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 /**
  百度统计

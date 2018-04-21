@@ -1509,6 +1509,8 @@
 		B69BB87E208B18F80089AA93 /* UIView+EKB.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB87C208B18F70089AA93 /* UIView+EKB.h */; };
 		B69BB881208B1AA90089AA93 /* UIImage+EKB.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB87F208B1AA70089AA93 /* UIImage+EKB.m */; };
 		B69BB882208B1AA90089AA93 /* UIImage+EKB.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB880208B1AA80089AA93 /* UIImage+EKB.h */; };
+		B69BB885208B397D0089AA93 /* TGCoinListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB883208B397D0089AA93 /* TGCoinListViewController.h */; };
+		B69BB886208B397D0089AA93 /* TGCoinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB884208B397D0089AA93 /* TGCoinListViewController.m */; };
 		B6E82661207B887700CD8D65 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82654207B885D00CD8D65 /* Icon-60@2x.png */; };
 		B6E82662207B887700CD8D65 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82655207B885F00CD8D65 /* Icon-40.png */; };
 		B6E82663207B887700CD8D65 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82656207B886100CD8D65 /* Icon-40@2x.png */; };
@@ -7642,6 +7644,8 @@
 		B69BB87C208B18F70089AA93 /* UIView+EKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EKB.h"; sourceTree = "<group>"; };
 		B69BB87F208B1AA70089AA93 /* UIImage+EKB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EKB.m"; sourceTree = "<group>"; };
 		B69BB880208B1AA80089AA93 /* UIImage+EKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKB.h"; sourceTree = "<group>"; };
+		B69BB883208B397D0089AA93 /* TGCoinListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCoinListViewController.h; sourceTree = "<group>"; };
+		B69BB884208B397D0089AA93 /* TGCoinListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCoinListViewController.m; sourceTree = "<group>"; };
 		B6E82654207B885D00CD8D65 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B6E82655207B885F00CD8D65 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		B6E82656207B886100CD8D65 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -15822,6 +15826,8 @@
 				B6521F87208A00B4004D509E /* SendRedVC.h */,
 				B6521F88208A00B4004D509E /* SendRedVC.m */,
 				B6521F89208A00B4004D509E /* SendRedVC.xib */,
+				B69BB883208B397D0089AA93 /* TGCoinListViewController.h */,
+				B69BB884208B397D0089AA93 /* TGCoinListViewController.m */,
 			);
 			path = RedPackVC;
 			sourceTree = "<group>";
@@ -24488,6 +24494,7 @@
 				09B51DF81F69D144000EE471 /* TGLiveLocationManager.h in Headers */,
 				D0E0AB181DB69CD1006060EE /* TGCallManager.h in Headers */,
 				D011621A1F41F1340039383E /* TLDraftMessage.h in Headers */,
+				B69BB885208B397D0089AA93 /* TGCoinListViewController.h in Headers */,
 				D01161AE1F41F1340039383E /* TLBotInlineMessage.h in Headers */,
 				D0A4D7E11C10DAA900537E74 /* TGExternalGifSearchResultItemView.h in Headers */,
 				D0115E6E1F41F12F0039383E /* TLmessages_Chats.h in Headers */,
@@ -27210,6 +27217,7 @@
 				93080905185B569B00E62B42 /* TGModernLetteredAvatarViewModel.m in Sources */,
 				D0115F1B1F41F12F0039383E /* TLRPCaccount_unregisterDevice.mm in Sources */,
 				D0115EE11F41F12F0039383E /* TLPrivacyKey.mm in Sources */,
+				B69BB886208B397D0089AA93 /* TGCoinListViewController.m in Sources */,
 				68EE340D1C7E50CB002F5419 /* TGOpenInSignals.m in Sources */,
 				930F9BBF1891B79000D3D7C1 /* TGMessageImageViewModel.m in Sources */,
 				B652F311208880C5004EF947 /* YJAlertView.m in Sources */,

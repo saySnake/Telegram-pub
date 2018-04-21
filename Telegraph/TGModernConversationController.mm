@@ -555,7 +555,9 @@ typedef enum {
     }else if (a==ICChatBoxItemRedPackage){
         NSLog(@"发送红包");
         SendRedVC *send =[[SendRedVC alloc] init];
-        [self presentViewController:send animated:YES completion:nil];
+        UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:send];
+        nav.navigationBarHidden=YES;
+        [self presentViewController:nav animated:YES completion:nil];
         
     }
 }

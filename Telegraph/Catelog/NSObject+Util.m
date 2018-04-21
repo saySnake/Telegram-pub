@@ -183,3 +183,11 @@
     return sig;
 }
 @end
+@implementation UIResponder (Router)
+
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
+{
+    [[self nextResponder] routerEventWithName:eventName userInfo:userInfo];
+}
+
+@end
