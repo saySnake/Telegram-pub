@@ -1505,6 +1505,10 @@
 		B69BB874208AE0C90089AA93 /* CustAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB872208AE0C80089AA93 /* CustAlertView.h */; };
 		B69BB877208AE0D10089AA93 /* YJActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB875208AE0D00089AA93 /* YJActionSheet.h */; };
 		B69BB878208AE0D10089AA93 /* YJActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB876208AE0D00089AA93 /* YJActionSheet.m */; };
+		B69BB87D208B18F80089AA93 /* UIView+EKB.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB87B208B18F70089AA93 /* UIView+EKB.m */; };
+		B69BB87E208B18F80089AA93 /* UIView+EKB.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB87C208B18F70089AA93 /* UIView+EKB.h */; };
+		B69BB881208B1AA90089AA93 /* UIImage+EKB.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB87F208B1AA70089AA93 /* UIImage+EKB.m */; };
+		B69BB882208B1AA90089AA93 /* UIImage+EKB.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB880208B1AA80089AA93 /* UIImage+EKB.h */; };
 		B6E82661207B887700CD8D65 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82654207B885D00CD8D65 /* Icon-60@2x.png */; };
 		B6E82662207B887700CD8D65 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82655207B885F00CD8D65 /* Icon-40.png */; };
 		B6E82663207B887700CD8D65 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82656207B886100CD8D65 /* Icon-40@2x.png */; };
@@ -7634,6 +7638,10 @@
 		B69BB872208AE0C80089AA93 /* CustAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustAlertView.h; sourceTree = "<group>"; };
 		B69BB875208AE0D00089AA93 /* YJActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJActionSheet.h; sourceTree = "<group>"; };
 		B69BB876208AE0D00089AA93 /* YJActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJActionSheet.m; sourceTree = "<group>"; };
+		B69BB87B208B18F70089AA93 /* UIView+EKB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EKB.m"; sourceTree = "<group>"; };
+		B69BB87C208B18F70089AA93 /* UIView+EKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EKB.h"; sourceTree = "<group>"; };
+		B69BB87F208B1AA70089AA93 /* UIImage+EKB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EKB.m"; sourceTree = "<group>"; };
+		B69BB880208B1AA80089AA93 /* UIImage+EKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKB.h"; sourceTree = "<group>"; };
 		B6E82654207B885D00CD8D65 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B6E82655207B885F00CD8D65 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		B6E82656207B886100CD8D65 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -15832,6 +15840,10 @@
 		B69BB87A208AE1B90089AA93 /* Catelog */ = {
 			isa = PBXGroup;
 			children = (
+				B69BB880208B1AA80089AA93 /* UIImage+EKB.h */,
+				B69BB87F208B1AA70089AA93 /* UIImage+EKB.m */,
+				B69BB87C208B18F70089AA93 /* UIView+EKB.h */,
+				B69BB87B208B18F70089AA93 /* UIView+EKB.m */,
 				B67240242085EAE4002CA111 /* YKUntil.h */,
 				B67240252085EAE4002CA111 /* YKUntil.m */,
 				B6521F662089AE8D004D509E /* NSObject+Util.h */,
@@ -23771,6 +23783,7 @@
 				D04324B11DC1096C00E0C528 /* TGInstantPageEmbedView.h in Headers */,
 				D0115F601F41F1300039383E /* TLRPCchannels_getFullChannel.h in Headers */,
 				D0115F961F41F1300039383E /* TLRPCcontacts_getStatuses.h in Headers */,
+				B69BB882208B1AA90089AA93 /* UIImage+EKB.h in Headers */,
 				D0115F0C1F41F12F0039383E /* TLRPCaccount_registerDevice.h in Headers */,
 				D0C09C771A6E974D008369D7 /* TGSharedMediaImageItem.h in Headers */,
 				D04324DF1DC26E2D00E0C528 /* DrawingContext.h in Headers */,
@@ -23984,6 +23997,7 @@
 				6852EAEE1D0F108100178AD8 /* TGPreviewConversationItemView.h in Headers */,
 				D0249BBB1ABF5B470076ECBF /* GDFileServiceSession.h in Headers */,
 				D011626A1F41F1350039383E /* TLInputNotifyPeer.h in Headers */,
+				B69BB87E208B18F80089AA93 /* UIView+EKB.h in Headers */,
 				D01F949A1E5E3DB4002627A1 /* Fabric+FABKits.h in Headers */,
 				D0C735501C876AE900BB3149 /* TLaccount_updateProfile$updateProfile.h in Headers */,
 				681653B61CC0CDA6006D88C2 /* TGChatActionsContainerView.h in Headers */,
@@ -26087,6 +26101,7 @@
 				68EED5D21BC4294A009F1D57 /* TGNotificationBackgroundView.m in Sources */,
 				D004C3A9157E54F20084AE3F /* TGLogoutRequestBuilder.m in Sources */,
 				B6521F93208A00FD004D509E /* InfiniteScrollPicker.m in Sources */,
+				B69BB87D208B18F80089AA93 /* UIView+EKB.m in Sources */,
 				686ED3021BF362B6001F2F96 /* TGNotificationContactPreviewView.m in Sources */,
 				D011613F1F41F1330039383E /* NSArray_InputContact.mm in Sources */,
 				D011608D1F41F1320039383E /* TLRPCphone_setCallRating.mm in Sources */,
@@ -26402,6 +26417,7 @@
 				B6521F8B208A00B4004D509E /* SendRedVC.m in Sources */,
 				D098405119CB9BE200CE5BB0 /* NSInputStream+TL.m in Sources */,
 				D0C7FDCB15D301A5001A998A /* TGActor.m in Sources */,
+				B69BB881208B1AA90089AA93 /* UIImage+EKB.m in Sources */,
 				D033A70F1C75E580006A2EAB /* TLRPCmessages_editMessage.mm in Sources */,
 				93EB7AB6184F8B3000891DBF /* TGModernConversationTitleIcon.m in Sources */,
 				68D167D31DB649EE00509032 /* TGCallInfoView.m in Sources */,

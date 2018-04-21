@@ -26,7 +26,7 @@ typedef void(^approveButtonClicked)(NSString *text);//同意并转发时的发�
 /** 创建无网的提示框 */
 +(CustAlertView *)creatNoNetworkAlert;
 
-+(CustAlertView *)creatPayAlertView:
++(CustAlertView *)creatPayAlertView;
 
 -(void)showAlertInViewController:(UIWindow *)vc;
 

@@ -39,6 +39,9 @@
 //本地磁盘
 #define   IWDefault  [NSUserDefaults standardUserDefaults]
 
+
+#define KBaseColor HEXCOLOR(0x646464)
+
 #if DEBUG
 #define DLog(id, ...) NSLog((@"%s [Line %d] " id),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else

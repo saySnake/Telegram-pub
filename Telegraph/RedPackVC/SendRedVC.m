@@ -35,20 +35,7 @@
 - (void)requestView
 {
     
-    NSMutableArray *array =[[NSMutableArray alloc] init];
-    for (int i =0; i<3; i++) {
-        [array addObject:[UIImage imageNamed:@"Mask"]];
-        ETHModel *model =[[ETHModel alloc] init];
-        model.name =@"BTC";
-        model.money =@"3.00002";
-    }
-    
-    self.isp =[[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, 0, DScreenW, self.typeView.height)];
-    [self.isp setImageAry:array];
-    [self.isp setHeightOffset:20];
-    [self.isp setPositionRatio:2];
-    [self.isp setAlphaOfobjs:0.8];
-    [self.typeView addSubview:self.isp];
+
 }
 
 - (IBAction)fanhuiAction:(id)sender {

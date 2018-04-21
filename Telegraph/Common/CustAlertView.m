@@ -8,6 +8,8 @@
 //
 
 #import "CustAlertView.h"
+#import "UIView+EKB.h"
+#import "UIImage+EKB.h"
 @interface CustAlertView ()<UITextFieldDelegate ,UITextViewDelegate>
 {
     CGFloat orgY;
