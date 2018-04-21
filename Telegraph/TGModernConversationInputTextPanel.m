@@ -1329,6 +1329,9 @@ static CGRect viewFrame(UIView *view)
     [[NSNotificationCenter defaultCenter] postNotificationName:@"postNotication" object:@(itemType)];
 }
 
+
+
+
 - (void)attachButtonInteractionBegan
 {
     id<TGModernConversationInputTextPanelDelegate> delegate = (id<TGModernConversationInputTextPanelDelegate>)self.delegate;

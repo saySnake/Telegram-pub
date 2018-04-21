@@ -1347,6 +1347,8 @@ NSString *authorNameYou = @"  __TGLocalized__YOU";
 
 #pragma mark - Interface logic
 
+
+//设置左面右面按钮
 - (void)updateBarButtonItemsAnimated:(bool)animated
 {
     [self setLeftBarButtonItem:[self controllerLeftBarButtonItem] animated:animated];

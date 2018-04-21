@@ -93,7 +93,7 @@
 -(void)actionButton:(id)sender
 {
     if (_itemClick) {
-        self.itemClick([sender tag]);
+//        self.itemClick([sender tag]);
     }
 }
 -(void)navTitleClick:(id)sender{

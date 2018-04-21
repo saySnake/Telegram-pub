@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RedListCell" rowHeight="69" id="KGk-i7-Jjw" customClass="RedListViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="68.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frf-1K-6qo">
+                        <rect key="frame" x="30" y="21" width="35" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="5kX-ln-F4v"/>
+                            <constraint firstAttribute="width" priority="200" constant="50" placeholder="YES" id="nsm-3B-sgI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07-10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-d8-XUZ">
+                        <rect key="frame" x="30" y="45" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" priority="900" constant="70" placeholder="YES" id="0x6-uA-jBb"/>
+                            <constraint firstAttribute="height" constant="21" id="MYm-bF-xTH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.02BTC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-zu-al1">
+                        <rect key="frame" x="339" y="24" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="NKd-At-XfA"/>
+                            <constraint firstAttribute="width" priority="900" constant="70" placeholder="YES" id="m34-Eb-gdf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CCT-d8-XUZ" firstAttribute="top" secondItem="Frf-1K-6qo" secondAttribute="bottom" constant="2" id="57x-91-nEG"/>
+                    <constraint firstItem="Frf-1K-6qo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Hdg-PY-wU7"/>
+                    <constraint firstItem="CCT-d8-XUZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Ii7-yd-7cq"/>
+                    <constraint firstItem="WN8-zu-al1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PsI-56-1Af"/>
+                    <constraint firstItem="Frf-1K-6qo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="XuL-5x-nlc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WN8-zu-al1" secondAttribute="trailing" constant="10" id="Zli-Jt-yEy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="money" destination="WN8-zu-al1" id="8Mn-zT-r1D"/>
+                <outlet property="name" destination="Frf-1K-6qo" id="U8O-Md-dbK"/>
+                <outlet property="time" destination="CCT-d8-XUZ" id="iyr-iV-QoE"/>
+            </connections>
+            <point key="canvasLocation" x="93.5" y="66.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -284,6 +284,8 @@
 #import "TGDatabase.h"
 
 #import "RedContentVC.h"
+
+#import "SendRedVC.h"
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 //NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
@@ -550,6 +552,11 @@ typedef enum {
         [self _displayMediaPicker:false fromFileMenu:false];
     }else if (a ==ICChatBoxItemVideo){
         [self _displayMediaPicker:false fromFileMenu:false];
+    }else if (a==ICChatBoxItemRedPackage){
+        NSLog(@"发送红包");
+        SendRedVC *send =[[SendRedVC alloc] init];
+        [self presentViewController:send animated:YES completion:nil];
+        
     }
 }
 
@@ -2251,7 +2258,7 @@ typedef enum {
                 case RedPackOutTime:{
                     NSLog(@"超时");
                     RedContentVC *red =[[RedContentVC alloc] init];
-                    [self.navigationController pushViewController:red animated:YES];
+                   [self.navigationController pushViewController:red animated:YES];
                     
                 }   
                     break;
@@ -2266,15 +2273,26 @@ typedef enum {
             }
             
         };
-        redPacketView.redProfile.text =[NSString stringWithFormat:@"红包已领取"];
-//        if(clientUserId ==currentMessage.toUid){
-//            NSLog(@"自己");
-        redPacketView.redSource.text =[NSString stringWithFormat:@"来自%@%@的HotTalk红包",user.firstName,user.lastName];
-
-//        }else{
-//            redPacketView.redSource.text =[NSString stringWithFormat:@"来自HotTalk红包",user.firstName,user.lastName];
+//        redPacketView.redProfile.text =[NSString stringWithFormat:@"红包已领取"];
 //
-//        }
+//
+//
+////        if(clientUserId ==currentMessage.toUid){
+////            NSLog(@"自己");
+//
+//
+//
+//
+//
+//        redPacketView.redSource.text =[NSString stringWithFormat:@"来自%@%@的HotTalk红包",user.firstName,user.lastName];
+//
+//
+//
+//
+////        }else{
+////            redPacketView.redSource.text =[NSString stringWithFormat:@"来自HotTalk红包",user.firstName,user.lastName];
+////
+////        }
         [lastView addSubview:redPacketView];
         NSLog(@"云克加上了红包");
     }

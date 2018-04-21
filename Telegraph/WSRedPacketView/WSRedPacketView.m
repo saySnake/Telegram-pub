@@ -122,7 +122,19 @@
         [_backgroundImageView addSubview:self.openButton];
         [_backgroundImageView addSubview:self.closeButton];
 //        [_backgroundImageView addSubview:self.avatarImageView];
+        
+        
+        _avatarView = [[TGLetteredAvatarView alloc] initWithFrame:CGRectMake(_backgroundImageView.frame.size.width/2 - 24, 35, 48, 48)];
+        _avatarView.clipsToBounds = YES;
+        _avatarView.layer.cornerRadius = 24;
+        _avatarView.layer.borderWidth = 1;
+        _avatarView.layer.borderColor = [UIColor whiteColor].CGColor;
+        [_avatarView setSingleFontSize:28.0f doubleFontSize:28.0f useBoldFont:false];
+        _avatarView.fadeTransition = true;
+        _avatarView.userInteractionEnabled = true;
         [_backgroundImageView addSubview:_avatarView];
+        
+        
         [_backgroundImageView addSubview:self.userNameLabel];
         [_backgroundImageView addSubview:self.tipsLabel];
         [_backgroundImageView addSubview:self.messageLabel];
@@ -203,7 +215,7 @@
 - (UILabel *)userNameLabel
 {
     if (!_userNameLabel) {
-        _userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, _avatarImageView.frame.size.height + _avatarImageView.frame.origin.y + 10, _backgroundImageView.frame.size.width - 40, 20)];
+        _userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, _avatarView.frame.size.height + _avatarView.frame.origin.y + 10, _backgroundImageView.frame.size.width - 40, 20)];
         _userNameLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:226.0/255.0 blue:177.0/255.0 alpha:1];
         _userNameLabel.font = [UIFont systemFontOfSize:17];
         _userNameLabel.text = _data.userName;

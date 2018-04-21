@@ -182,7 +182,6 @@ static NSData *initialSocksProxyData = nil;
     
     
     
-    
 #pragma mark -服务器布socks5
 //    [[TGTelegramNetworking alloc] fetchProxySettingFromServer];
     

@@ -90,7 +90,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(UILabel *)redTitle{
     if (!_redTitle) {
         _redTitle = [UILabel new];
-        _redTitle.text = @"恭喜发财 大吉大利";
+//        _redTitle.text = @"恭喜发财 大吉大利";
         _redTitle.textColor = [UIColor whiteColor];
         _redTitle.font = [UIFont systemFontOfSize:17*YKScale];
         //        [_redTitle sizeToFit];
