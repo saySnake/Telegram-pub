@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, sendType){
 @protocol SendRedVCDelegate<NSObject>;
 
 @optional
--(void)SendRedVC:(SendRedVC *)vc;
+-(void)SendRedVC:(SendRedVC *)vc url:(NSString *)url;
 
 @end
 

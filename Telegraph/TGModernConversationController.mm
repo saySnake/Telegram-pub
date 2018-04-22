@@ -595,10 +595,10 @@ typedef enum {
 
 
 //发送信息内容
-- (void)SendRedVC:(SendRedVC *)vc
+- (void)SendRedVC:(SendRedVC *)vc url:(NSString *)url
 {
     //代理发送红包
-    _inputTextPanel.inputField.text =@"https://www.biyong.info/redpacket.html";
+    _inputTextPanel.inputField.text =url;
     [_inputTextPanel sendButtonPressed];
 }
 

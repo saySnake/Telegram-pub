@@ -199,8 +199,8 @@
     payAlert.amount =@"0.02BTC";
     [payAlert show:self];
     payAlert.completeHandle = ^(NSString *inputPwd) {
-        if ([self.delegate respondsToSelector:@selector(SendRedVC:)]) {
-            [self.delegate SendRedVC:self];
+        if ([self.delegate respondsToSelector:@selector(SendRedVC:url:)]) {
+            [self.delegate SendRedVC:self url:@"https://www.biyong.info/redpacket.html"];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
         NSLog(@"密码是%@",inputPwd);
