@@ -9,25 +9,144 @@
 #import "InfiniteScrollPicker.h"
 #import "ETHModel.h"
 #import "TGCoinListViewController.h"
-@interface SendRedVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "DCPaymentView.h"
+#import "TGCoinTypeModel.h"
+@interface SendRedVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *moneyField;
 @property (weak, nonatomic) IBOutlet UITextField *redCountField;
 @property (weak, nonatomic) IBOutlet UITextField *remarkField;
 @property (weak, nonatomic) IBOutlet UIButton *sendMoneyBtn;
-@property (weak, nonatomic) IBOutlet UIView *typeView;
+@property (weak, nonatomic) IBOutlet UIView *typeView;//滚动视图子视图
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *signleBtn;//拼手气红包或者单个红包
+@property (weak, nonatomic) IBOutlet UILabel *singleLabel;
 
 @property (nonatomic ,strong)InfiniteScrollPicker *isp;
 
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;//单个金额或者总额
+
+@property (nonatomic ,strong) NSMutableArray *dataArr;
+
+
+@property (weak, nonatomic) IBOutlet UIView *backView;
+
+
+@property (nonatomic ,strong) UILabel *usdtLabel;
 @end
 
 @implementation SendRedVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
+    self.dataArr =[NSMutableArray array];
+    [self data];
     [self requestView];
+    
+    [self.moneyField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [self.redCountField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+
+    self.moneyField.backgroundColor =[UIColor clearColor];
+    self.moneyField.adjustsFontSizeToFitWidth =YES;
+    self.moneyField.delegate =self;
+    
+    self.redCountField.delegate =self;
+    self.remarkField.delegate =self;
+    self.usdtLabel =[[UILabel alloc] init];
+    self.usdtLabel.hidden =YES;
+    self.signleBtn.tag =SingeleType;
+    self.signleBtn.titleLabel.text =@"改为拼手气红包";
+    self.sendMoneyBtn.enabled =NO;
+    
+    [self.sendMoneyBtn setBackgroundColor:RGBACOLOR(255.0f, 197.0f, 199.0f, 0.6)];
+    self.sendMoneyBtn.enabled =NO;
 }
+
+
+- (IBAction)singleBtnAction:(UIButton *)sender {
+    if ([sender.titleLabel.text isEqualToString:@"改为拼手气红包"]) {
+        [self.totalLabel setText:@"总额"];
+        [sender setTitle:@"改为普通红包" forState:UIControlStateNormal];
+        sender.frame =CGRectMake(CGRectGetMaxX(self.singleLabel.frame), CGRectGetMinY(self.singleLabel.frame)-5, [self buutonText:sender.titleLabel.text], 30);
+        sender.tag =luckType;
+        return;
+    }
+    
+    if ([sender.titleLabel.text isEqualToString:@"改为普通红包"]) {
+        [self.totalLabel setText:@"单个金额"];
+        [sender setTitle:@"改为拼手气红包" forState:UIControlStateNormal];
+        sender.frame =CGRectMake(CGRectGetMaxX(self.singleLabel.frame), CGRectGetMinY(self.singleLabel.frame)-5, [self buutonText:sender.titleLabel.text], 30);
+        sender.tag =SingeleType;
+        return;
+    }
+}
+
+-(CGFloat)buutonText:(NSString *)text
+{
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:16]};
+    CGFloat length = [text boundingRectWithSize:CGSizeMake(320, 2000) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.width; //为button赋值
+    return length;
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+        return [textField resignFirstResponder];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (self.moneyField.text.length!=0 && self.redCountField.text.length!=0) {
+        self.sendMoneyBtn.enabled =YES;
+        [self.sendMoneyBtn setBackgroundColor:[UIColor redColor]];
+    }
+    
+    if (textField ==self.moneyField) {
+        self.usdtLabel.hidden =textField.text.length?NO:YES;
+        self.usdtLabel.text =@"≈169 USD";
+        self.usdtLabel.textColor =[UIColor lightGrayColor];
+        CGSize size =[self.usdtLabel.text sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]}];
+        self.usdtLabel.frame =CGRectMake(CGRectGetMaxX(self.moneyField.frame) +10, CGRectGetMinY(self.moneyField.frame), size.width+10, 30);
+        [self.backView addSubview:self.usdtLabel];
+    }
+}
+
+
+- (void) textFieldDidChange:(UITextField *) TextField
+{
+    if (TextField.text.length>15 && TextField.text.length <30) {
+        CGSize size =[TextField.text sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]}];
+        TextField.frame =CGRectMake(20, CGRectGetMaxY(self.totalLabel.frame)+10, size.width+10, 30);
+    }
+    else if (TextField.text.length ==0 ){
+        self.usdtLabel.hidden =YES;
+
+    }
+}
+
+
+- (void)data
+{
+    for (int i =0; i<3; i++) {
+        TGCoinTypeModel *model =[[TGCoinTypeModel alloc] init];
+        model.CoinName =@"BTC";
+        model.CoinMoney =@"10.0000002";
+        [self.dataArr addObject:model];
+    }
+    
+    TGCoinTypeModel *bo =[[TGCoinTypeModel alloc] init];
+    [self.dataArr insertObject:bo atIndex:0];
+    [self.dataArr insertObject:bo atIndex:self.dataArr.count];
+    [_collectionView reloadData];
+}
+
+
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;
@@ -47,6 +166,9 @@
         _collectionView.showsHorizontalScrollIndicator=NO;
         _collectionView.backgroundColor=[UIColor whiteColor];
         [_collectionView registerClass:[CoinCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"a"];
+        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
     return _collectionView;
 }
@@ -71,23 +193,60 @@
 
 - (IBAction)senAction:(id)sender {
     NSLog(@"塞进红包");
+    DCPaymentView *payAlert =[[DCPaymentView alloc] init];
+    payAlert.title =@"支付";
+    payAlert.detail =@"群红包";
+    payAlert.amount =@"0.02BTC";
+    [payAlert show:self];
+    payAlert.completeHandle = ^(NSString *inputPwd) {
+        if ([self.delegate respondsToSelector:@selector(SendRedVC:)]) {
+            [self.delegate SendRedVC:self];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        NSLog(@"密码是%@",inputPwd);
+        
+    };
 }
 
 
 #pragma mark - UICollectionViewDelegate / dataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return (self.dataArr.count);
 }
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CoinCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    return cell;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.item ==0) {
+        UICollectionViewCell *ce =[collectionView dequeueReusableCellWithReuseIdentifier:@"a" forIndexPath:indexPath];
+        return ce;
+    }
+    if (indexPath.item ==(long)[self.dataArr count]-1) {
+        UICollectionViewCell *ce =[collectionView dequeueReusableCellWithReuseIdentifier:@"a" forIndexPath:indexPath];
+        return ce;
+        }
+    if (indexPath.item !=0 && indexPath.item!=(long)[self.dataArr count]-1) {
+        TGCoinTypeModel *model =self.dataArr[indexPath.item];
+        CoinCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        cell.model =model;
+        return cell;
+    }
+    return nil;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CoinCollectionViewCell * cell = (CoinCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    NSLog(@"%ld",indexPath.item);
+}
+
 @end
 
 
 @implementation CoinCollectionViewCell
--(instancetype)initWithFrame:(CGRect)frame{
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
     if (self=[super initWithFrame:frame]) {
         [self.contentView addSubview:self.iconView];
         [self.contentView addSubview:self.nameLabel];
@@ -117,6 +276,13 @@
     }
     return self;
 }
+
+- (void)setModel:(TGCoinTypeModel *)model
+{
+    _model =model;
+    _nameLabel.text =model.CoinName;
+    _countLabel.text =model.CoinMoney;
+}
 - (UIImageView *)iconView{
     if (_iconView==nil) {
         _iconView=[[UIImageView alloc] init];
@@ -142,10 +308,6 @@
     return _countLabel;
 }
 @end
-
-
-
-
 
 
 @implementation CoinCollectionViewLayout
@@ -229,8 +391,6 @@
     
     // 修改原有的偏移量
     proposedContentOffset.x += minDelta;
-    
-    
     return proposedContentOffset;
 }
 

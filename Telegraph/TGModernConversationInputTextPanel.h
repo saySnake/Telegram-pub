@@ -36,6 +36,8 @@
 
 @protocol TGModernConversationInputTextPanelDelegate <TGModernConversationInputPanelDelegate>
 
+- (void)inputPanelRequestedSendMessage:(TGModernConversationInputTextPanel *)input;
+
 - (void)inputTextPanelHasIndicatedTypingActivity:(TGModernConversationInputTextPanel *)inputTextPanel;
 - (void)inputTextPanelHasCancelledTypingActivity:(TGModernConversationInputTextPanel *)inputTextPanel;
 - (void)inputPanelRequestedSendMessage:(TGModernConversationInputTextPanel *)inputTextPanel text:(NSString *)text;
@@ -203,5 +205,7 @@
 - (NSInteger)textCaretPosition;
 
 - (UIView *)keyboardSnapshotView;
+
+- (void)sendButtonPressed;
 
 @end

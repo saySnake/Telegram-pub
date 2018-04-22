@@ -33,8 +33,8 @@
     __weak typeof (self) action = self;
     self.navigationController.navigationBar.hidden =YES;
 
-    UILabel *view =[[UIView alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 64)];
-    view.backgroundColor =RGBACOLOR(235.0f, 95.0f, 72.0f, 1);
+    UILabel *views =[[UIView alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 64)];
+    views.backgroundColor =RGBACOLOR(235.0f, 95.0f, 72.0f, 1);
     
     UIButton *leftB=[UIButton buttonWithType:UIButtonTypeCustom];
     leftB.frame =CGRectMake(12, 20, 40, 40);
@@ -51,16 +51,16 @@
     rightBtn.titleLabel.font =kFont13;
     rightBtn.frame =CGRectMake(DScreenW -70, 20, 70, 40);
     [rightBtn addTarget: self action:@selector(loadmore:) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:rightBtn];
+    [views addSubview:rightBtn];
     
     //Tap给imageView 用
     self.view.backgroundColor =[UIColor whiteColor];
 //    [leftB addTarget:self action:@selector(actionButton:) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:leftB];
-    view.backgroundColor =HEXCOLOR(0xF42C27);
-    [self.view addSubview:view];
+    [views addSubview:leftB];
+    views.backgroundColor =HEXCOLOR(0xF42C27);
+    [self.view addSubview:views];
     
-    [self setUpViews:view];
+    [self setUpViews:views];
 }
 
 
@@ -96,7 +96,7 @@
 {
     NSLog(@"返回");
     self.navigationController.navigationBar.hidden =NO;
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -115,6 +115,7 @@
     CGFloat centery =CGRectGetMaxY(backImg.frame);
     
     UIImageView *titleImg =[[UIImageView alloc] initWithFrame:CGRectMake(centerx, centery, 40, 40)];
+    titleImg.image =[UIImage imageNamed:@"oval2Copy"];
     titleImg.backgroundColor =[UIColor blueColor];
     titleImg.cornerRadius =20;
     titleImg.center =CGPointMake(centerx, centery);
@@ -164,6 +165,7 @@
     UILabel *redLabel =[[UILabel alloc] init];
     redLabel.textColor =[UIColor blueColor];
     redLabel.frame =CGRectMake(centerx, CGRectGetMaxY(countLabel.frame)+30, 150, 20);
+    redLabel.textColor =RGBACOLOR(40.0f, 168.0f, 240.0f, 1);
     redLabel.font =kFontSmall;
     redLabel.text =@"已存入钱包中,可直接消费";
     redLabel.center =CGPointMake(centerx, CGRectGetMaxY(typeLabel.frame)+20);

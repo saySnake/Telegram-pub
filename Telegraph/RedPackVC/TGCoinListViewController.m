@@ -6,10 +6,15 @@
 //
 
 #import "TGCoinListViewController.h"
+#import "TGCoinTypeModel.h"
+#import "RTDragCellTableView.h"
+#define RTColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RTRandomColor RTColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
-@interface TGCoinListViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tableView;
+@interface TGCoinListViewController ()<UITableViewDelegate,UITableViewDataSource,RTDragCellTableViewDataSource,RTDragCellTableViewDelegate>
+@property (nonatomic, strong) RTDragCellTableView *tableView;
 
+@property (nonatomic, strong)NSMutableArray *dataArr;
 @end
 
 @implementation TGCoinListViewController
@@ -17,15 +22,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupSubViews];
-    // Do any additional setup after loading the view.
 }
--(UITableView *)tableView{
+
+- (NSMutableArray *)dataArr
+{
+    if (!_dataArr) {
+//        NSMutableArray *arr =[NSMutableArray array];
+        _dataArr =[NSMutableArray array];
+        for (int i =0; i<20; i++) {
+            UIColor *color = RTRandomColor;
+            RTDragModel *model =[[RTDragModel alloc] init];
+            model.name =@"BTC";
+            model.money =@"10.0000002";
+            model.img =@"";
+            model.imgColor =RTRandomColor;
+            model.titlebackgroundColor =color;
+            [_dataArr addObject:model];
+        }
+    }
+    return _dataArr;
+}
+
+
+-(RTDragCellTableView *)tableView{
     if (_tableView==nil) {
-        _tableView=[[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView=[[RTDragCellTableView alloc] init];
+        _tableView.allowsSelection = YES;
         _tableView.delegate=self;
         _tableView.dataSource=self;
         _tableView.separatorColor=RGBACOLOR(244, 244, 244, 1);
         _tableView.backgroundColor=[UIColor clearColor];
+        _tableView.tableHeaderView =[[UIView  alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 0.01)];
+        _tableView.tableFooterView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 0.01)];
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior=UIScrollViewContentInsetAdjustmentNever;
         } else {
@@ -36,6 +64,8 @@
     }
     return _tableView;
 }
+
+
 - (void)setupSubViews{
     UIView *navBar=[[UIView alloc] init];
     navBar.backgroundColor=[UIColor whiteColor];
@@ -71,17 +101,37 @@
 - (void)backAction:(UIButton *)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 #pragma mark - tableView delegate/dataSource
+
+- (NSArray *)originalArrayDataForTableView:(RTDragCellTableView *)tableView
+{
+    if (tableView) {
+        return _dataArr;
+    }
+    return nil;
+}
+
+- (void)tableView:(RTDragCellTableView *)tableView newArrayDataForDataSource:(NSArray *)newArray
+{
+    _dataArr = (NSMutableArray *)newArray;
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TGCoinListViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text=@"BTC";
-    cell.detailTextLabel.text=@"10.0000002";
 
+    TGCoinListViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!cell) {
+        cell =[[TGCoinListViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    RTDragModel *model =_dataArr[indexPath.item];
+    cell.model =model;
     return cell;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
 }
@@ -91,31 +141,55 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.001f;
 }
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
-    return YES;
-}
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return UITableViewCellEditingStyleNone;
-}
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
-    
-}
-//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath{
-//    return proposedDestinationIndexPath;
-//}
 @end
 
+
 @implementation TGCoinListViewCell
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self=[super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier]) {
         self.showsReorderControl=NO;
+        self.img =[[UIImageView alloc]init];
+        self.img.cornerRadius=9;
+        [self.contentView addSubview:self.img];
+        
+        self.name =[[UILabel alloc]init];
+        [self.contentView addSubview:self.name];
+        
+        self.money =[[UILabel alloc]init];
+        self.money.textAlignment =2;
+        self.money.textColor =RGBACOLOR(142.0f, 142.0f, 147.0f, 1);
+        [self.contentView addSubview:self.money];
+
     }
     return self;
 }
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.imageView.frame=CGRectMake(20, self.height/2-18.f/2, 18, 18);
-    self.textLabel.frame=CGRectMake(self.imageView.maxX+5, self.height/2-self.textLabel.height/2, self.textLabel.width, self.textLabel.height);
-    self.detailTextLabel.frame=CGRectMake(self.width-self.detailTextLabel.width-20, self.height/2-self.detailTextLabel.height/2, self.detailTextLabel.width, self.detailTextLabel.height);
+
+- (void)setModel:(RTDragModel *)model
+{
+    _model =model;
+    self.name.text =_model.name;
+    self.money.text =_model.money;
+    self.name.textColor =_model.titlebackgroundColor;
+    self.img.backgroundColor =_model.imgColor;
 }
+
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.img.frame=CGRectMake(20, self.height/2-18.f/2, 18, 18);
+//    self.img.backgroundColor =[UIColor orangeColor];
+    
+    self.name.frame=CGRectMake(self.img.maxX+5, self.height/2-18.f/2, 200, 18);
+
+    self.money.frame=CGRectMake(self.width-200-20, self.height/2-18.f/2, 200, 18);
+}
+
 @end
+
+@implementation RTDragModel
+
+@end
+

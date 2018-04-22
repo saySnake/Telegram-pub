@@ -40,6 +40,7 @@
 #import "HBMoreViewItem.h"
 #import "TGModernConversationController.h"
 #import "YKUntil.h"
+#import "NSObject+Util.h"
 #define App_Frame_Width    [[UIScreen mainScreen] bounds].size.width
 
 
@@ -1326,7 +1327,8 @@ static CGRect viewFrame(UIView *view)
 #pragma mark -HBBoardDelegate
 - (void)chatBoxMoreView:(HBKeyBoardView *)chatBoxMoreView didSelectItem:(ICChatBoxItem )itemType
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"postNotication" object:@(itemType)];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"postNotication" object:@(itemType)];
+    [self routerEventWithName:@"postNotication" userInfo:@{@"typekey":@(itemType),@"view":self}];
 }
 
 

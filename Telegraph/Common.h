@@ -39,6 +39,10 @@
 //本地磁盘
 #define   IWDefault  [NSUserDefaults standardUserDefaults]
 
+#define CTColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+//随机颜色
+#define TGRandomColor CTColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
 
 #define KBaseColor HEXCOLOR(0x646464)
 

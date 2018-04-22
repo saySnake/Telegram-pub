@@ -286,6 +286,7 @@
 #import "RedContentVC.h"
 
 #import "SendRedVC.h"
+#import "NSObject+Util.h"
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 //NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
@@ -310,7 +311,7 @@ typedef enum {
     TGModernConversationPanelAnimationSlideFar = 3
 } TGModernConversationPanelAnimation;
 
-@interface TGModernConversationController () <UICollectionViewDataSource, TGModernConversationViewLayoutDelegate, UIViewControllerTransitioningDelegate, HPGrowingTextViewDelegate, UIGestureRecognizerDelegate, TGLegacyCameraControllerDelegate, TGModernConversationInputTextPanelDelegate, TGModernConversationEditingPanelDelegate, TGModernConversationTitleViewDelegate, TGForwardContactPickerControllerDelegate, TGAudioRecorderDelegate, NSUserActivityDelegate, UIDocumentInteractionControllerDelegate, UIDocumentPickerDelegate, TGImagePickerControllerDelegate, TGSearchBarDelegate, TGKeyCommandResponder>
+@interface TGModernConversationController () <UICollectionViewDataSource, TGModernConversationViewLayoutDelegate, UIViewControllerTransitioningDelegate, HPGrowingTextViewDelegate, UIGestureRecognizerDelegate, TGLegacyCameraControllerDelegate, TGModernConversationInputTextPanelDelegate, TGModernConversationEditingPanelDelegate, TGModernConversationTitleViewDelegate, TGForwardContactPickerControllerDelegate, TGAudioRecorderDelegate, NSUserActivityDelegate, UIDocumentInteractionControllerDelegate, UIDocumentPickerDelegate, TGImagePickerControllerDelegate, TGSearchBarDelegate, TGKeyCommandResponder,SendRedVCDelegate>
 {
     bool _alreadyHadWillAppear;
     bool _alreadyHadDidAppear;
@@ -536,6 +537,35 @@ typedef enum {
 @implementation TGModernConversationController
 
 
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
+{
+    NSLog(@"%@",userInfo);
+    ICChatBoxItem  a =(ICChatBoxItem)[userInfo[@"typekey"] integerValue];
+    TGModernConversationInputTextPanel *input =userInfo[@"view"];
+    input.delegate =self;
+    if ([eventName isEqualToString:@"postNotication"]) {
+        if (a ==ICChatBoxItemCamera) {
+            [self xiangji];
+        }else if (a ==ICChatBoxItemPerson){
+            [self _displayContactPicker];
+        }else if (a ==ICChatBoxItemDoc){
+            [self _displayMediaPicker:false fromFileMenu:false];
+        }else if ( a==ICChatBoxItemLocation){
+            [self _displayLocationPicker];
+        }else if (a ==ICChatBoxItemAlbum){
+            [self _displayMediaPicker:false fromFileMenu:false];
+        }else if (a ==ICChatBoxItemVideo){
+            [self _displayMediaPicker:false fromFileMenu:false];
+        }else if (a==ICChatBoxItemRedPackage){
+            NSLog(@"发送红包");
+            SendRedVC *send =[[SendRedVC alloc] init];
+            send.delegate =self;
+            UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:send];
+            nav.navigationBarHidden=YES;
+            [self presentViewController:nav animated:YES completion:nil];
+        }
+    }
+}
 
 -(void)aa:(NSNotification *)noti
 {
@@ -555,12 +585,23 @@ typedef enum {
     }else if (a==ICChatBoxItemRedPackage){
         NSLog(@"发送红包");
         SendRedVC *send =[[SendRedVC alloc] init];
+        send.delegate =self;
         UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:send];
         nav.navigationBarHidden=YES;
         [self presentViewController:nav animated:YES completion:nil];
         
     }
 }
+
+
+//发送信息内容
+- (void)SendRedVC:(SendRedVC *)vc
+{
+    //代理发送红包
+    _inputTextPanel.inputField.text =@"https://www.biyong.info/redpacket.html";
+    [_inputTextPanel sendButtonPressed];
+}
+
 
 - (void)xiangji
 {
@@ -591,7 +632,7 @@ typedef enum {
     self = [super init];
     if (self != nil)
     {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aa:) name:@"postNotication" object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aa:) name:@"postNotication" object:nil];
         _actionHandle = [[ASHandle alloc] initWithDelegate:self releaseOnMainThread:true];
         _requestDateJumpDisposable = [[SMetaDisposable alloc] init];
         
@@ -2260,16 +2301,14 @@ typedef enum {
                 case RedPackOutTime:{
                     NSLog(@"超时");
                     RedContentVC *red =[[RedContentVC alloc] init];
-                   [self.navigationController pushViewController:red animated:YES];
+                    [self.navigationController presentViewController:red animated:NO completion:nil];
                     
                 }   
                     break;
                 case RedPackAccive:{
                     NSLog(@"领取");
                     RedContentVC *red =[[RedContentVC alloc] init];
-//                    UINavigationController *nav =[[UINavigationController alloc] initWithRootViewController:red];
-                    [self.navigationController pushViewController:red animated:YES];
-                }
+                    [self.navigationController presentViewController:red animated:NO completion:nil];                }
                 default:
                     break;
             }

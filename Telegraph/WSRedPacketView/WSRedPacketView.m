@@ -56,6 +56,10 @@
 @property (nonatomic,strong) UIButton       *openButton;
 @property (nonatomic,strong) UIButton       *closeButton;
 
+
+@property (nonatomic,strong)UIImageView * upImageView;
+@property (nonatomic,strong)UIImageView * downImageView;
+
 @property (nonatomic,copy) WSCancelBlock    cancelBlock;
 @property (nonatomic,copy) WSFinishBlock    finishBlock;
 
@@ -115,12 +119,34 @@
         
         UIImage *image =  [UIImage imageNamed:@"redpacket_bg"];
         CGFloat width = ScreenWidth - 50 * ViewScaleIphone5Value;
+        UIImage *image1 =[UIImage imageNamed:@"redpacket_bg01@2x"];
+        UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
+
         CGFloat height = width * (image.size.height / image.size.width);
+        CGFloat height1 = width * (image1.size.height / image1.size.width);
+        CGFloat height2 = width * (image2.size.height / image2.size.width);
+
+
         _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, ScreenHeight / 2 - height / 2, width, height)];
-        _backgroundImageView.image = image;
         
-        [_backgroundImageView addSubview:self.openButton];
-        [_backgroundImageView addSubview:self.closeButton];
+        
+        _backgroundImageView.image = image;
+        _upImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, ScreenHeight / 2 - height / 2, width, height1/2)];
+        _downImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, CGRectGetMaxY(_upImageView.frame) , width, height2/2)];
+//        UIImage *image1 =[UIImage imageNamed:@"redpacket_bg01@2x"];
+//        UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
+        [_backgroundImageView addSubview:_upImageView];
+        _upImageView.image =image1;
+        _downImageView.image =image2;
+        [_backgroundImageView addSubview:_downImageView];
+        [_backgroundImageView addSubview:_upImageView];
+
+        [_upImageView addSubview:self.openButton];
+        [_upImageView addSubview:self.closeButton];
+//        [_backgroundImageView addSubview:self.openButton];
+//        [_backgroundImageView addSubview:self.closeButton];
+        
+        
 //        [_backgroundImageView addSubview:self.avatarImageView];
         
         
@@ -132,12 +158,16 @@
         [_avatarView setSingleFontSize:28.0f doubleFontSize:28.0f useBoldFont:false];
         _avatarView.fadeTransition = true;
         _avatarView.userInteractionEnabled = true;
-        [_backgroundImageView addSubview:_avatarView];
+        [_upImageView addSubview:_avatarView];
         
         
-        [_backgroundImageView addSubview:self.userNameLabel];
-        [_backgroundImageView addSubview:self.tipsLabel];
-        [_backgroundImageView addSubview:self.messageLabel];
+//        [_backgroundImageView addSubview:self.userNameLabel];
+//        [_backgroundImageView addSubview:self.tipsLabel];
+//        [_backgroundImageView addSubview:self.messageLabel];
+
+        [_upImageView addSubview:self.userNameLabel];
+        [_upImageView addSubview:self.tipsLabel];
+        [_upImageView addSubview:self.messageLabel];
         
         self.backgroundImageView.transform = CGAffineTransformMakeScale(0.05, 0.05);
         
@@ -165,7 +195,8 @@
 
         CGFloat widthOrHeight = 100 * ViewScaleIphone5Value;
         
-        _openButton = [[UIButton alloc]initWithFrame:CGRectMake(_backgroundImageView.frame.size.width/2 - widthOrHeight/2, _backgroundImageView.frame.size.height/2 , widthOrHeight,widthOrHeight)];
+//        _openButton = [[UIButton alloc]initWithFrame:CGRectMake(_backgroundImageView.frame.size.width/2 - widthOrHeight/2, _backgroundImageView.frame.size.height/2 , widthOrHeight,widthOrHeight)];
+        _openButton = [[UIButton alloc]initWithFrame:CGRectMake(_backgroundImageView.frame.size.width/2 - widthOrHeight/2, CGRectGetMaxY(_upImageView.frame)-widthOrHeight/2 , widthOrHeight,widthOrHeight)];
         [_openButton setImage:[UIImage imageNamed:@"redpacket_open_btn"] forState:UIControlStateNormal];
         
     }
@@ -281,16 +312,38 @@
                              self.alertWindow.rootViewController = nil;
                              self.alertWindow = nil;
                              
-                             if (self.cancelBlock) {
-                                 self.cancelBlock();
+                             if (self.finishBlock) {
+                                 self.finishBlock(1);
                              }
                          }];
     }];
 }
 
+
+//打开红包动画
 - (void)openRedPacketAction
 {
-    [_openButton.layer addAnimation:[self confirmViewRotateInfo] forKey:@"transform"];
+//    [_openButton.layer addAnimation:[self confirmViewRotateInfo] forKey:@"transform"];
+    [self openAnimation];
+}
+
+- (void)openAnimation
+{
+    
+//    _upImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, ScreenHeight / 2 - height / 2, width, height/2)];
+    
+    UIImage *image1 =[UIImage imageNamed:@"redpacket_bg01@2x"];
+    UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
+    CGFloat width = ScreenWidth - 50 * ViewScaleIphone5Value;
+    CGFloat height1 = width * (image1.size.height / image1.size.width);
+    CGFloat height2 = width * (image2.size.height / image2.size.width);
+
+    [UIView animateWithDuration:2 animations:^{
+        _upImageView.frame =CGRectMake(25 * ViewScaleIphone5Value, -ScreenHeight / 2 - height1 / 2,width, height1/2);
+        _downImageView.frame =CGRectMake(25 * ViewScaleIphone5Value,-CGRectGetMaxY(_upImageView.frame) , width, height2/2);
+    } completion:^(BOOL finished) {
+        [self closeViewActions];
+    }];
 }
 
 - (CAKeyframeAnimation *)confirmViewRotateInfo

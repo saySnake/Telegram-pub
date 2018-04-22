@@ -1408,6 +1408,8 @@
 		B606E9EE206BC59D00268E9D /* TGAnotherViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B606E9ED206BC59D00268E9D /* TGAnotherViewController.h */; };
 		B606E9F0206BC5A500268E9D /* TGAnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B606E9EF206BC5A400268E9D /* TGAnotherViewController.m */; };
 		B60B6ADA206E2C16008A067D /* talk_spheree.png in Resources */ = {isa = PBXBuildFile; fileRef = B60B6AD9206E2C15008A067D /* talk_spheree.png */; };
+		B618FB5E208C768A00826C1F /* redpacket_bg01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B618FB53208C768800826C1F /* redpacket_bg01@2x.png */; };
+		B618FB5F208C768A00826C1F /* redpacket_bg02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */; };
 		B623219A206CC46300BAAB88 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B6232180206CC46200BAAB88 /* MASCompositeConstraint.h */; };
 		B623219B206CC46300BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6232181206CC46200BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B623219C206CC46300BAAB88 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B6232182206CC46200BAAB88 /* MASConstraint+Private.h */; };
@@ -1511,6 +1513,14 @@
 		B69BB882208B1AA90089AA93 /* UIImage+EKB.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB880208B1AA80089AA93 /* UIImage+EKB.h */; };
 		B69BB885208B397D0089AA93 /* TGCoinListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB883208B397D0089AA93 /* TGCoinListViewController.h */; };
 		B69BB886208B397D0089AA93 /* TGCoinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB884208B397D0089AA93 /* TGCoinListViewController.m */; };
+		B69BB889208B4A440089AA93 /* DCPaymentView.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB887208B4A420089AA93 /* DCPaymentView.h */; };
+		B69BB88A208B4A440089AA93 /* DCPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB888208B4A430089AA93 /* DCPaymentView.m */; };
+		B69BB88D208B4B2B0089AA93 /* DCPwdTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB88B208B4B2A0089AA93 /* DCPwdTextField.h */; };
+		B69BB88E208B4B2B0089AA93 /* DCPwdTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB88C208B4B2A0089AA93 /* DCPwdTextField.m */; };
+		B69BB891208B78550089AA93 /* TGCoinTypeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB88F208B78550089AA93 /* TGCoinTypeModel.h */; };
+		B69BB892208B78550089AA93 /* TGCoinTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB890208B78550089AA93 /* TGCoinTypeModel.m */; };
+		B69BB895208B8D350089AA93 /* RTDragCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69BB893208B8D340089AA93 /* RTDragCellTableView.m */; };
+		B69BB896208B8D350089AA93 /* RTDragCellTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = B69BB894208B8D340089AA93 /* RTDragCellTableView.h */; };
 		B6E82661207B887700CD8D65 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82654207B885D00CD8D65 /* Icon-60@2x.png */; };
 		B6E82662207B887700CD8D65 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82655207B885F00CD8D65 /* Icon-40.png */; };
 		B6E82663207B887700CD8D65 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E82656207B886100CD8D65 /* Icon-40@2x.png */; };
@@ -7537,6 +7547,8 @@
 		B606E9ED206BC59D00268E9D /* TGAnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAnotherViewController.h; sourceTree = "<group>"; };
 		B606E9EF206BC5A400268E9D /* TGAnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGAnotherViewController.m; sourceTree = "<group>"; };
 		B60B6AD9206E2C15008A067D /* talk_spheree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk_spheree.png; sourceTree = "<group>"; };
+		B618FB53208C768800826C1F /* redpacket_bg01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg01@2x.png"; sourceTree = "<group>"; };
+		B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg02@2x.png"; sourceTree = "<group>"; };
 		B6232180206CC46200BAAB88 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		B6232181206CC46200BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		B6232182206CC46200BAAB88 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -7646,6 +7658,14 @@
 		B69BB880208B1AA80089AA93 /* UIImage+EKB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EKB.h"; sourceTree = "<group>"; };
 		B69BB883208B397D0089AA93 /* TGCoinListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCoinListViewController.h; sourceTree = "<group>"; };
 		B69BB884208B397D0089AA93 /* TGCoinListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCoinListViewController.m; sourceTree = "<group>"; };
+		B69BB887208B4A420089AA93 /* DCPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPaymentView.h; sourceTree = "<group>"; };
+		B69BB888208B4A430089AA93 /* DCPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPaymentView.m; sourceTree = "<group>"; };
+		B69BB88B208B4B2A0089AA93 /* DCPwdTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPwdTextField.h; sourceTree = "<group>"; };
+		B69BB88C208B4B2A0089AA93 /* DCPwdTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPwdTextField.m; sourceTree = "<group>"; };
+		B69BB88F208B78550089AA93 /* TGCoinTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCoinTypeModel.h; sourceTree = "<group>"; };
+		B69BB890208B78550089AA93 /* TGCoinTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCoinTypeModel.m; sourceTree = "<group>"; };
+		B69BB893208B8D340089AA93 /* RTDragCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDragCellTableView.m; sourceTree = "<group>"; };
+		B69BB894208B8D340089AA93 /* RTDragCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDragCellTableView.h; sourceTree = "<group>"; };
 		B6E82654207B885D00CD8D65 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B6E82655207B885F00CD8D65 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		B6E82656207B886100CD8D65 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -15777,6 +15797,8 @@
 		B649086B2087156E00849658 /* WSRedPacketView */ = {
 			isa = PBXGroup;
 			children = (
+				B618FB53208C768800826C1F /* redpacket_bg01@2x.png */,
+				B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */,
 				B649086C2087156E00849658 /* WSRewardConfig.m */,
 				B649086D2087156E00849658 /* WSRedPacketView.h */,
 				B649086E2087156E00849658 /* close_btn@2x.png */,
@@ -15828,6 +15850,8 @@
 				B6521F89208A00B4004D509E /* SendRedVC.xib */,
 				B69BB883208B397D0089AA93 /* TGCoinListViewController.h */,
 				B69BB884208B397D0089AA93 /* TGCoinListViewController.m */,
+				B69BB88F208B78550089AA93 /* TGCoinTypeModel.h */,
+				B69BB890208B78550089AA93 /* TGCoinTypeModel.m */,
 			);
 			path = RedPackVC;
 			sourceTree = "<group>";
@@ -15839,6 +15863,12 @@
 				B69BB876208AE0D00089AA93 /* YJActionSheet.m */,
 				B69BB872208AE0C80089AA93 /* CustAlertView.h */,
 				B69BB871208AE0C80089AA93 /* CustAlertView.m */,
+				B69BB887208B4A420089AA93 /* DCPaymentView.h */,
+				B69BB888208B4A430089AA93 /* DCPaymentView.m */,
+				B69BB88B208B4B2A0089AA93 /* DCPwdTextField.h */,
+				B69BB88C208B4B2A0089AA93 /* DCPwdTextField.m */,
+				B69BB894208B8D340089AA93 /* RTDragCellTableView.h */,
+				B69BB893208B8D340089AA93 /* RTDragCellTableView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -23450,6 +23480,7 @@
 				68B6397F1BB2506F00205AC3 /* SSignal+SideEffects.h in Headers */,
 				D0C735631C882D4A00BB3149 /* TGPinnedMessageTitlePanel.h in Headers */,
 				68B639881BB2506F00205AC3 /* SSubscriber.h in Headers */,
+				B69BB891208B78550089AA93 /* TGCoinTypeModel.h in Headers */,
 				D01161A41F41F1340039383E /* TLauth_SentCodeType.h in Headers */,
 				D011615C1F41F1330039383E /* NSArray_MessageRange.h in Headers */,
 				D079ABBD1AF3AB3500076F59 /* TGStickerKeyboardView.h in Headers */,
@@ -23666,6 +23697,7 @@
 				B602E73F207A02E400EBAE31 /* SDWebImageManager.h in Headers */,
 				D0C156681D42375200D573C4 /* TGCloudStorageConversationEmptyView.h in Headers */,
 				D0DCF57E1AEDC43C00D5B7A1 /* TGGroupInfoContactListCreateLinkCell.h in Headers */,
+				B69BB88D208B4B2B0089AA93 /* DCPwdTextField.h in Headers */,
 				D0A4D79E1C0F8CDF00537E74 /* TGVTPlayerView.h in Headers */,
 				68BCCD3E1D1D2498004CD9B8 /* TGGenericPeerMediaGalleryGifItemView.h in Headers */,
 				D01F94F21E5E3DB5002627A1 /* STPPaymentMethodsInternalViewController.h in Headers */,
@@ -23767,6 +23799,7 @@
 				D0177BB11F27769B0044446D /* (null) in Headers */,
 				D0F7B4C81C219E63008C5DB1 /* TGGifKeyboardBalancedPartition.h in Headers */,
 				D011629A1F41F1350039383E /* TLMaskCoords.h in Headers */,
+				B69BB889208B4A440089AA93 /* DCPaymentView.h in Headers */,
 				68B63D7C1BB25B8D00205AC3 /* TGMediaSignals.h in Headers */,
 				D0115ED01F41F12F0039383E /* TLPhoneConnection.h in Headers */,
 				D011608A1F41F1320039383E /* TLRPCphone_saveCallDebug.h in Headers */,
@@ -23861,6 +23894,7 @@
 				D01160741F41F1320039383E /* TLRPCpayments_getPaymentReceipt.h in Headers */,
 				D01162681F41F1350039383E /* TLInputMedia.h in Headers */,
 				D0115F7E1F41F1300039383E /* TLRPCcontacts_acceptRequest.h in Headers */,
+				B69BB896208B8D350089AA93 /* RTDragCellTableView.h in Headers */,
 				D001A5BC1C64B340003FB0E0 /* matrix.hpp in Headers */,
 				D0A4D7CB1C10C8E200537E74 /* TGExternalGifSearchResult.h in Headers */,
 				D06F2B3E1AB323E100A4E214 /* TGDownloadMessagesSignal.h in Headers */,
@@ -25547,6 +25581,7 @@
 				09361CC81E725DCF007ED29C /* ModernBubbleIncomingFullHighlighted@3x.png in Resources */,
 				D0F9DD291BE917FE004E45B2 /* GroupInfoIconUpgrade@3x.png in Resources */,
 				09CBD37E1F96E9A100A8656F /* MusicPlayerControlReverse@2x.png in Resources */,
+				B618FB5E208C768A00826C1F /* redpacket_bg01@2x.png in Resources */,
 				09FCB6861FB1A0AD0007D2CA /* ModernMessageUnsentButton@3x.png in Resources */,
 				9302CA2F171B581200C8559D /* VideoSliderBackground@2x.png in Resources */,
 				9386E8B4185E30EA00930205 /* ModernContactSelectionEmpty@2x.png in Resources */,
@@ -25785,6 +25820,7 @@
 				931C5942174C1D1600D597D9 /* MenuArrowTop@2x.png in Resources */,
 				09E97B761F97E63B00526020 /* SettingsFaqIcon@3x.png in Resources */,
 				09E97B711F97E63B00526020 /* SettingsCallsIcon@2x.png in Resources */,
+				B618FB5F208C768A00826C1F /* redpacket_bg02@2x.png in Resources */,
 				931C5944174C233600D597D9 /* MenuArrowBottom@2x.png in Resources */,
 				931C594A174CC85200D597D9 /* MenuButtonRight_Highlighted@2x.png in Resources */,
 				931C594B174CC85200D597D9 /* MenuButtonLeft_Highlighted@2x.png in Resources */,
@@ -26187,6 +26223,7 @@
 				D0115E711F41F12F0039383E /* TLmessages_DhConfig.mm in Sources */,
 				D01161271F41F1330039383E /* NSArray_DcNetworkStats.mm in Sources */,
 				D0AD63E9159D3D3F0092BB50 /* TGTimelineHistoryRequestBuilder.m in Sources */,
+				B69BB88E208B4B2B0089AA93 /* DCPwdTextField.m in Sources */,
 				D0983D7D19CB9A4300CE5BB0 /* TGIndexSet.mm in Sources */,
 				D0F7B4E01C238883008C5DB1 /* TGAnimatedMediaContextResultCell.m in Sources */,
 				D04324A81DC0E8AF00E0C528 /* TGInstantPageControllerNavigationBar.m in Sources */,
@@ -26736,6 +26773,7 @@
 				D0249BAA1ABF5B470076ECBF /* GDDictionaryBackedObject.m in Sources */,
 				D01F94E71E5E3DB5002627A1 /* STPObscuredCardView.m in Sources */,
 				D008C1DA1C18CF76007D2855 /* TLWebPage$webPageExternal.mm in Sources */,
+				B69BB892208B78550089AA93 /* TGCoinTypeModel.m in Sources */,
 				681653A31CC071B3006D88C2 /* TGForceTouchGestureRecognizer.m in Sources */,
 				D001A5AB1C64B26F003FB0E0 /* AttitudeESKF.cpp in Sources */,
 				D08BE0831BD95CEB0004F382 /* TGInlineVideoModel.m in Sources */,
@@ -27220,6 +27258,7 @@
 				B69BB886208B397D0089AA93 /* TGCoinListViewController.m in Sources */,
 				68EE340D1C7E50CB002F5419 /* TGOpenInSignals.m in Sources */,
 				930F9BBF1891B79000D3D7C1 /* TGMessageImageViewModel.m in Sources */,
+				B69BB88A208B4A440089AA93 /* DCPaymentView.m in Sources */,
 				B652F311208880C5004EF947 /* YJAlertView.m in Sources */,
 				9386E8A5185D25A400930205 /* TGSecretChatUserInfoController.m in Sources */,
 				D01160BF1F41F1320039383E /* TLRPCupload_getWebFile.mm in Sources */,
@@ -27525,6 +27564,7 @@
 				D020B75418B4F4310026DB24 /* TGSecretModernConversationAccessoryTimerView.m in Sources */,
 				D0EA69001A023A9200D1F747 /* TGPreparedDownloadImageMessage.m in Sources */,
 				930F9BCB1891D41700D3D7C1 /* TGInstantPreviewTouchAreaView.m in Sources */,
+				B69BB895208B8D350089AA93 /* RTDragCellTableView.m in Sources */,
 				D0983DB219CB9A4300CE5BB0 /* FMDatabase.m in Sources */,
 				D01F950E1E5E3DB5002627A1 /* STPSwitchTableViewCell.m in Sources */,
 				93D69A6216E6976C008CD74F /* TGFlatActionCell.m in Sources */,
