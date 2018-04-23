@@ -71,6 +71,9 @@
                             <state key="normal" title="2018" image="triangle2Copy">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="timePicker:" destination="-1" eventType="touchUpInside" id="BhN-FK-xE9"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval2Copy" translatesAutoresizingMaskIntoConstraints="NO" id="fsJ-Bq-hkY">
                             <rect key="frame" x="152" y="25" width="72" height="72"/>

@@ -129,12 +129,10 @@
 {
     if (_layoutData == nil || ABS(containerSize.width - _cachedLayoutContainerWidth) > FLT_EPSILON || _cachedLayoutFlags != _layoutFlags || ABS(_additionalTrailingWidth - _cachedAdditionalTrailingWidth) > FLT_EPSILON)
     {
-        
-        
+
         if (self.isRedPackege) {
-            
             UIImage*image = [UIImage imageNamed:@"红包背景"];
-            self.frame = CGRectMake(0, 0, YKScale*image.size.width*0.85-7, image.size.height*YKScale*0.85-5);
+            self.frame = CGRectMake(0, 0, YKScale*image.size.width*0.85-7, image.size.height*YKScale*0.85-10);
 
         }else{
         _layoutData = [TGReusableLabel calculateLayout:_text additionalAttributes:_additionalAttributes textCheckingResults:_textCheckingResults font:_font textColor:_textColor frame:CGRectZero orMaxWidth:(float)containerSize.width flags:_layoutFlags textAlignment:(NSTextAlignment)_alignment outIsRTL:&_isRTL additionalTrailingWidth:_additionalTrailingWidth maxNumberOfLines:_maxNumberOfLines numberOfLinesToInset:_linesInset.numberOfLinesToInset linesInset:_linesInset.inset containsEmptyNewline:&_containsEmptyNewline additionalLineSpacing:_additionalLineSpacing ellipsisString:_ellipsisString];

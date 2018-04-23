@@ -1408,8 +1408,6 @@
 		B606E9EE206BC59D00268E9D /* TGAnotherViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B606E9ED206BC59D00268E9D /* TGAnotherViewController.h */; };
 		B606E9F0206BC5A500268E9D /* TGAnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B606E9EF206BC5A400268E9D /* TGAnotherViewController.m */; };
 		B60B6ADA206E2C16008A067D /* talk_spheree.png in Resources */ = {isa = PBXBuildFile; fileRef = B60B6AD9206E2C15008A067D /* talk_spheree.png */; };
-		B618FB5E208C768A00826C1F /* redpacket_bg01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B618FB53208C768800826C1F /* redpacket_bg01@2x.png */; };
-		B618FB5F208C768A00826C1F /* redpacket_bg02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */; };
 		B623219A206CC46300BAAB88 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B6232180206CC46200BAAB88 /* MASCompositeConstraint.h */; };
 		B623219B206CC46300BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6232181206CC46200BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B623219C206CC46300BAAB88 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B6232182206CC46200BAAB88 /* MASConstraint+Private.h */; };
@@ -1440,6 +1438,14 @@
 		B62321B8206CCC3200BAAB88 /* RTDeviceHardWare.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */; };
 		B62321BB206CED2500BAAB88 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B62321B9206CED2400BAAB88 /* UIView+Addition.m */; };
 		B62321BC206CED2500BAAB88 /* UIView+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = B62321BA206CED2500BAAB88 /* UIView+Addition.h */; };
+		B646979D208D7373000726B1 /* redpacket_bgs.png in Resources */ = {isa = PBXBuildFile; fileRef = B6469793208D7372000726B1 /* redpacket_bgs.png */; };
+		B646979F208D7394000726B1 /* redpacket_open_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B646979E208D7393000726B1 /* redpacket_open_btn@2x.png */; };
+		B64697A1208D74BC000726B1 /* redpacket_bg02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64697A0208D74BB000726B1 /* redpacket_bg02@2x.png */; };
+		B64697A5208D7B16000726B1 /* redpacket_bg01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64697A4208D7B15000726B1 /* redpacket_bg01@2x.png */; };
+		B64697AC208DA83E000726B1 /* QFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64697A7208DA83D000726B1 /* QFDatePickerView.m */; };
+		B64697AD208DA83E000726B1 /* QFDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B64697A8208DA83D000726B1 /* QFDatePickerView.h */; };
+		B64697AE208DA83E000726B1 /* QFTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64697AA208DA83E000726B1 /* QFTimePickerView.m */; };
+		B64697AF208DA83E000726B1 /* QFTimePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B64697AB208DA83E000726B1 /* QFTimePickerView.h */; };
 		B6479B692080B95200A1AD46 /* HBKeyBoardView.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B672080B95200A1AD46 /* HBKeyBoardView.h */; };
 		B6479B6A2080B95200A1AD46 /* HBKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6479B682080B95200A1AD46 /* HBKeyBoardView.m */; };
 		B6479B76208469D400A1AD46 /* HBMoreViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B6479B74208469D400A1AD46 /* HBMoreViewItem.h */; };
@@ -1448,9 +1454,7 @@
 		B649087D2087156F00849658 /* WSRedPacketView.h in Headers */ = {isa = PBXBuildFile; fileRef = B649086D2087156E00849658 /* WSRedPacketView.h */; };
 		B649087E2087156F00849658 /* close_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B649086E2087156E00849658 /* close_btn@2x.png */; };
 		B649087F2087156F00849658 /* WSRewardConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B649086F2087156E00849658 /* WSRewardConfig.h */; };
-		B64908802087156F00849658 /* redpacket_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64908702087156E00849658 /* redpacket_bg@2x.png */; };
 		B64908812087156F00849658 /* WSRedPacketView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64908712087156E00849658 /* WSRedPacketView.m */; };
-		B64908822087156F00849658 /* redpacket_open_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64908722087156E00849658 /* redpacket_open_btn@2x.png */; };
 		B64908892087332300849658 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B64908882087332300849658 /* Common.h */; };
 		B6521F712089AE8F004D509E /* NSObject+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = B6521F662089AE8D004D509E /* NSObject+Util.h */; };
 		B6521F722089AE8F004D509E /* NSObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B6521F702089AE8E004D509E /* NSObject+Util.m */; };
@@ -7547,8 +7551,6 @@
 		B606E9ED206BC59D00268E9D /* TGAnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGAnotherViewController.h; sourceTree = "<group>"; };
 		B606E9EF206BC5A400268E9D /* TGAnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGAnotherViewController.m; sourceTree = "<group>"; };
 		B60B6AD9206E2C15008A067D /* talk_spheree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk_spheree.png; sourceTree = "<group>"; };
-		B618FB53208C768800826C1F /* redpacket_bg01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg01@2x.png"; sourceTree = "<group>"; };
-		B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg02@2x.png"; sourceTree = "<group>"; };
 		B6232180206CC46200BAAB88 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		B6232181206CC46200BAAB88 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		B6232182206CC46200BAAB88 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -7579,6 +7581,14 @@
 		B62321B6206CCC3200BAAB88 /* RTDeviceHardWare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardWare.m; sourceTree = "<group>"; };
 		B62321B9206CED2400BAAB88 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		B62321BA206CED2500BAAB88 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		B6469793208D7372000726B1 /* redpacket_bgs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpacket_bgs.png; sourceTree = "<group>"; };
+		B646979E208D7393000726B1 /* redpacket_open_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_open_btn@2x.png"; sourceTree = "<group>"; };
+		B64697A0208D74BB000726B1 /* redpacket_bg02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg02@2x.png"; sourceTree = "<group>"; };
+		B64697A4208D7B15000726B1 /* redpacket_bg01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg01@2x.png"; sourceTree = "<group>"; };
+		B64697A7208DA83D000726B1 /* QFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFDatePickerView.m; sourceTree = "<group>"; };
+		B64697A8208DA83D000726B1 /* QFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFDatePickerView.h; sourceTree = "<group>"; };
+		B64697AA208DA83E000726B1 /* QFTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFTimePickerView.m; sourceTree = "<group>"; };
+		B64697AB208DA83E000726B1 /* QFTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFTimePickerView.h; sourceTree = "<group>"; };
 		B6479B672080B95200A1AD46 /* HBKeyBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBKeyBoardView.h; sourceTree = "<group>"; };
 		B6479B682080B95200A1AD46 /* HBKeyBoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBKeyBoardView.m; sourceTree = "<group>"; };
 		B6479B74208469D400A1AD46 /* HBMoreViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMoreViewItem.h; sourceTree = "<group>"; };
@@ -7587,9 +7597,7 @@
 		B649086D2087156E00849658 /* WSRedPacketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRedPacketView.h; sourceTree = "<group>"; };
 		B649086E2087156E00849658 /* close_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_btn@2x.png"; sourceTree = "<group>"; };
 		B649086F2087156E00849658 /* WSRewardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSRewardConfig.h; sourceTree = "<group>"; };
-		B64908702087156E00849658 /* redpacket_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_bg@2x.png"; sourceTree = "<group>"; };
 		B64908712087156E00849658 /* WSRedPacketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSRedPacketView.m; sourceTree = "<group>"; };
-		B64908722087156E00849658 /* redpacket_open_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpacket_open_btn@2x.png"; sourceTree = "<group>"; };
 		B64908882087332300849658 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		B649088A2087338300849658 /* Important.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Important.h; sourceTree = "<group>"; };
 		B6521F662089AE8D004D509E /* NSObject+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Util.h"; sourceTree = "<group>"; };
@@ -15794,18 +15802,36 @@
 			name = HuoBi;
 			sourceTree = "<group>";
 		};
+		B64697A6208DA83D000726B1 /* QFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B64697A7208DA83D000726B1 /* QFDatePickerView.m */,
+				B64697A8208DA83D000726B1 /* QFDatePickerView.h */,
+			);
+			path = QFDatePickerView;
+			sourceTree = "<group>";
+		};
+		B64697A9208DA83E000726B1 /* QFTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B64697AA208DA83E000726B1 /* QFTimePickerView.m */,
+				B64697AB208DA83E000726B1 /* QFTimePickerView.h */,
+			);
+			path = QFTimePickerView;
+			sourceTree = "<group>";
+		};
 		B649086B2087156E00849658 /* WSRedPacketView */ = {
 			isa = PBXGroup;
 			children = (
-				B618FB53208C768800826C1F /* redpacket_bg01@2x.png */,
-				B618FB5D208C768900826C1F /* redpacket_bg02@2x.png */,
+				B6469793208D7372000726B1 /* redpacket_bgs.png */,
+				B64697A4208D7B15000726B1 /* redpacket_bg01@2x.png */,
 				B649086C2087156E00849658 /* WSRewardConfig.m */,
 				B649086D2087156E00849658 /* WSRedPacketView.h */,
 				B649086E2087156E00849658 /* close_btn@2x.png */,
+				B64697A0208D74BB000726B1 /* redpacket_bg02@2x.png */,
 				B649086F2087156E00849658 /* WSRewardConfig.h */,
-				B64908702087156E00849658 /* redpacket_bg@2x.png */,
+				B646979E208D7393000726B1 /* redpacket_open_btn@2x.png */,
 				B64908712087156E00849658 /* WSRedPacketView.m */,
-				B64908722087156E00849658 /* redpacket_open_btn@2x.png */,
 			);
 			path = WSRedPacketView;
 			sourceTree = "<group>";
@@ -15835,6 +15861,8 @@
 		B652F323208886CC004EF947 /* RedPackVC */ = {
 			isa = PBXGroup;
 			children = (
+				B64697A6208DA83D000726B1 /* QFDatePickerView */,
+				B64697A9208DA83E000726B1 /* QFTimePickerView */,
 				B652F324208886F8004EF947 /* RedContentVC.h */,
 				B652F325208886F8004EF947 /* RedContentVC.m */,
 				B6521F732089CC46004D509E /* RedListVC.h */,
@@ -23642,6 +23670,7 @@
 				D01160A61F41F1320039383E /* TLRPCreq_DH_params.h in Headers */,
 				D01161CC1F41F1340039383E /* TLchannels_ChannelParticipants.h in Headers */,
 				68EED5D91BC43AA1009F1D57 /* TGNotificationView.h in Headers */,
+				B64697AD208DA83E000726B1 /* QFDatePickerView.h in Headers */,
 				684853E01C1A221E00007D21 /* TGBingSearchResultItem+TGMediaItem.h in Headers */,
 				D0760B2D1E9D0C9100F1F3C4 /* SecretLayer66.h in Headers */,
 				D0630B741CCA189E00FC9AA4 /* TGModernConversationComplexMediaContextResultsAssociatedPanel.h in Headers */,
@@ -24338,6 +24367,7 @@
 				D011619C1F41F1330039383E /* TLauth_CodeType.h in Headers */,
 				D01F94DA1E5E3DB5002627A1 /* STPDispatchFunctions.h in Headers */,
 				D01F951D1E5E3DB5002627A1 /* UIToolbar+Stripe_InputAccessory.h in Headers */,
+				B64697AF208DA83E000726B1 /* QFTimePickerView.h in Headers */,
 				D0C09C681A6E974D008369D7 /* TGSharedMediaCollectionLayout.h in Headers */,
 				D011620A1F41F1340039383E /* TLDcNetworkStats.h in Headers */,
 				68D167ED1DB6989200509032 /* TGCallAcceptButton.h in Headers */,
@@ -25118,7 +25148,6 @@
 				D0BD442218BCD0C70036FB8B /* begin_record.caf in Resources */,
 				09690A411E73160300B54F6E /* CallBluetoothIcon@3x.png in Resources */,
 				D00C7196193F3FD40005349C /* ModernBubbleOutgoingPartialHighlightedPad@2x.png in Resources */,
-				B64908802087156F00849658 /* redpacket_bg@2x.png in Resources */,
 				09F2A08A1EB8CEAF00653F24 /* InstantViewBrightnessMaxIcon@2x.png in Resources */,
 				D0A516CD193FD848000B8984 /* DetailLogoBlank.png in Resources */,
 				D0E352841E5E4127007E6EB8 /* stp_card_jcb@2x.png in Resources */,
@@ -25387,6 +25416,7 @@
 				D06569F21BCEE54400282019 /* ConversationChannelInlineShareIcon@2x.png in Resources */,
 				D00C71AF193F482E0005349C /* ModernBubbleOutgoingFullHighlightedPad.png in Resources */,
 				9321E9F116A9B5C100F9D09C /* notification.caf in Resources */,
+				B646979F208D7394000726B1 /* redpacket_open_btn@2x.png in Resources */,
 				93C23075183C31D60071CB58 /* ModernMessageImageBorder@2x.png in Resources */,
 				09361CF91E7263AD007ED29C /* CallStar_Highlighted@3x.png in Resources */,
 				B6521F782089CC46004D509E /* RedListVC.xib in Resources */,
@@ -25434,6 +25464,7 @@
 				D0E352691E5E4127007E6EB8 /* stp_card_cvc@2x.png in Resources */,
 				09E97B731F97E63B00526020 /* SettingsPrivacyIcon@3x.png in Resources */,
 				D0C92536194915C800E629CA /* SearchBarIconLight.png in Resources */,
+				B64697A5208D7B16000726B1 /* redpacket_bg01@2x.png in Resources */,
 				93316A53184E5175005EBBEF /* ModernConversationUnreadSeparator@2x.png in Resources */,
 				93F3A0FF1821B6B60005EB98 /* ModernConversationInput@2x.png in Resources */,
 				090C24781E7743D900AF4DFC /* ShareExternalIcon@3x.png in Resources */,
@@ -25574,6 +25605,7 @@
 				0978FEEB1E93C5B600F76E38 /* ModernConversationSend@3x.png in Resources */,
 				D061F28C1A928F580031BCBE /* NavigationBackArrow.png in Resources */,
 				09361CD41E725DCF007ED29C /* ModernBubbleOutgoingPartialHighlighted@3x.png in Resources */,
+				B646979D208D7373000726B1 /* redpacket_bgs.png in Resources */,
 				D0F0AAF71EC37770005EE2A5 /* Apple_Pay_Payment_Mark@3x.png in Resources */,
 				D0C925CE194A024000E629CA /* start_arrow_ipad@2x.png in Resources */,
 				D020B75F18B509C50026DB24 /* ModernConversationMicButton_Highlighted@2x.png in Resources */,
@@ -25581,7 +25613,6 @@
 				09361CC81E725DCF007ED29C /* ModernBubbleIncomingFullHighlighted@3x.png in Resources */,
 				D0F9DD291BE917FE004E45B2 /* GroupInfoIconUpgrade@3x.png in Resources */,
 				09CBD37E1F96E9A100A8656F /* MusicPlayerControlReverse@2x.png in Resources */,
-				B618FB5E208C768A00826C1F /* redpacket_bg01@2x.png in Resources */,
 				09FCB6861FB1A0AD0007D2CA /* ModernMessageUnsentButton@3x.png in Resources */,
 				9302CA2F171B581200C8559D /* VideoSliderBackground@2x.png in Resources */,
 				9386E8B4185E30EA00930205 /* ModernContactSelectionEmpty@2x.png in Resources */,
@@ -25748,6 +25779,7 @@
 				D06569E61BCEDFC300282019 /* SearchBarIconLightLarge@2x.png in Resources */,
 				09034EC01EE1725B006997DB /* ModernContactListInviteIcon@2x.png in Resources */,
 				09FCB6951FB2FAE80007D2CA /* PasscodePlaceholderIcon@2x.png in Resources */,
+				B64697A1208D74BC000726B1 /* redpacket_bg02@2x.png in Resources */,
 				D0E352A31E5E4128007E6EB8 /* stp_icon_chevron_right_small@3x.png in Resources */,
 				09FAA0C41F4361460099E8E7 /* StickersGroupCross@2x.png in Resources */,
 				D0D97D861B3B99F5003457CD /* MusicPlayerControlForward@3x.png in Resources */,
@@ -25809,7 +25841,6 @@
 				931C5938174C0AB800D597D9 /* MenuButtonCenter@2x.png in Resources */,
 				09F2A0911EB8CEAF00653F24 /* InstantViewFontMinIcon@3x.png in Resources */,
 				D02D98A11DC8FEE4009E9465 /* InstantPageShare@2x.png in Resources */,
-				B64908822087156F00849658 /* redpacket_open_btn@2x.png in Resources */,
 				931C5939174C0AB800D597D9 /* MenuButtonLeft@2x.png in Resources */,
 				931C593A174C0AB800D597D9 /* MenuButtonRight@2x.png in Resources */,
 				D0BAF3FA193E8AC400A0093F /* DeleteWhiteIcon.png in Resources */,
@@ -25820,7 +25851,6 @@
 				931C5942174C1D1600D597D9 /* MenuArrowTop@2x.png in Resources */,
 				09E97B761F97E63B00526020 /* SettingsFaqIcon@3x.png in Resources */,
 				09E97B711F97E63B00526020 /* SettingsCallsIcon@2x.png in Resources */,
-				B618FB5F208C768A00826C1F /* redpacket_bg02@2x.png in Resources */,
 				931C5944174C233600D597D9 /* MenuArrowBottom@2x.png in Resources */,
 				931C594A174CC85200D597D9 /* MenuButtonRight_Highlighted@2x.png in Resources */,
 				931C594B174CC85200D597D9 /* MenuButtonLeft_Highlighted@2x.png in Resources */,
@@ -26305,6 +26335,7 @@
 				D01160D31F41F1320039383E /* TLSendMessageAction.mm in Sources */,
 				D03538341AD2E8F200B0B33E /* TGSignalImageViewWithProgress.m in Sources */,
 				D044E1681B2AFCBD001EE087 /* TGChatSearchController.m in Sources */,
+				B64697AC208DA83E000726B1 /* QFDatePickerView.m in Sources */,
 				D01D6A551D2FE3F900222936 /* TGGroupInviteSheetItemView.m in Sources */,
 				9342137C18575C80003F000F /* TGGroupInfoSelectContactController.m in Sources */,
 				D01161291F41F1330039383E /* NSArray_DcOption.mm in Sources */,
@@ -27862,6 +27893,7 @@
 				D0CFE4741A35AB8300839901 /* lz4.c in Sources */,
 				93038410181151EF00CAC996 /* TGAccountSettingsController.m in Sources */,
 				68D167D71DB64A2100509032 /* TGCallButton.m in Sources */,
+				B64697AE208DA83E000726B1 /* QFTimePickerView.m in Sources */,
 				D0249BEC1ABF5B470076ECBF /* GDURLUtilities.m in Sources */,
 				D0F905131C32DBAE0026ECAE /* TGBotContextResultSendMessageText.m in Sources */,
 				D03E44E31AB0D77300E72CAA /* TGRemoteHttpLocationSignal.m in Sources */,

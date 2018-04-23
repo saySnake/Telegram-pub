@@ -202,6 +202,8 @@ static NSString *expandedTextAndAttributes(NSString *text, NSArray *textChecking
 
 - (void)bindViewToContainer:(UIView *)container viewStorage:(TGModernViewStorage *)viewStorage
 {
+    
+//    container.backgroundColor =[UIColor redColor];
     [super bindViewToContainer:container viewStorage:viewStorage];
     
     [self updateSearchHighlight:false];

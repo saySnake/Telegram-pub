@@ -8,6 +8,9 @@
 #import "RedListVC.h"
 #import "RedListViewCell.h"
 #import "ReceRedModel.h"
+#import "QFDatePickerView.h"
+#import "QFTimePickerView.h"
+
 
 @interface RedListVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -49,6 +52,9 @@
 }
 
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navBar setHidden:YES];
@@ -79,6 +85,14 @@
     return 0;
 }
 
+- (IBAction)timePicker:(id)sender
+{
+    QFDatePickerView *datePickerView = [[QFDatePickerView alloc]initYearPickerViewWithResponse:^(NSString *str) {
+        NSString *string = str;
+        NSLog(@"str = %@",string);
+    }];
+    [datePickerView show];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

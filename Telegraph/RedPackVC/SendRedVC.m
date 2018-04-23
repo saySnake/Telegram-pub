@@ -119,12 +119,13 @@
 
 - (void) textFieldDidChange:(UITextField *) TextField
 {
+    
+    self.usdtLabel.hidden =YES;
     if (TextField.text.length>15 && TextField.text.length <30) {
         CGSize size =[TextField.text sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]}];
         TextField.frame =CGRectMake(20, CGRectGetMaxY(self.totalLabel.frame)+10, size.width+10, 30);
     }
     else if (TextField.text.length ==0 ){
-        self.usdtLabel.hidden =YES;
 
     }
 }

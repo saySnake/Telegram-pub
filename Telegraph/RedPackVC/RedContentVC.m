@@ -33,8 +33,10 @@
     __weak typeof (self) action = self;
     self.navigationController.navigationBar.hidden =YES;
 
-    UILabel *views =[[UIView alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 64)];
-    views.backgroundColor =RGBACOLOR(235.0f, 95.0f, 72.0f, 1);
+    UIImageView *views =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, DScreenW, 64)];
+    views.userInteractionEnabled =YES;
+    views.image =[UIImage imageNamed:@"Path3"];
+    views.backgroundColor =HEXCOLOR(0xEB5F48);
     
     UIButton *leftB=[UIButton buttonWithType:UIButtonTypeCustom];
     leftB.frame =CGRectMake(12, 20, 40, 40);
@@ -114,10 +116,10 @@
     CGFloat centerx =DScreenW*0.5;
     CGFloat centery =CGRectGetMaxY(backImg.frame);
     
-    UIImageView *titleImg =[[UIImageView alloc] initWithFrame:CGRectMake(centerx, centery, 40, 40)];
+    UIImageView *titleImg =[[UIImageView alloc] initWithFrame:CGRectMake(centerx, centery, 60, 60)];
     titleImg.image =[UIImage imageNamed:@"oval2Copy"];
     titleImg.backgroundColor =[UIColor blueColor];
-    titleImg.cornerRadius =20;
+    titleImg.cornerRadius =30;
     titleImg.center =CGPointMake(centerx, centery);
     [self.view addSubview:titleImg];
     

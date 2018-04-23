@@ -117,22 +117,24 @@
 {
     if (!_backgroundImageView) {
         
-        UIImage *image =  [UIImage imageNamed:@"redpacket_bg"];
+        UIImage *image =  [UIImage imageNamed:@"redpacket_bgs"];
         CGFloat width = ScreenWidth - 50 * ViewScaleIphone5Value;
         UIImage *image1 =[UIImage imageNamed:@"redpacket_bg01@2x"];
         UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
 
         CGFloat height = width * (image.size.height / image.size.width);
         CGFloat height1 = width * (image1.size.height / image1.size.width);
-        CGFloat height2 = width * (image2.size.height / image2.size.width);
+//        CGFloat height2 = width * (image2.size.height / image2.size.width);
 
 
         _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, ScreenHeight / 2 - height / 2, width, height)];
         
         
         _backgroundImageView.image = image;
-        _upImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, ScreenHeight / 2 - height / 2, width, height1/2)];
-        _downImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, CGRectGetMaxY(_upImageView.frame) , width, height2/2)];
+        _upImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _backgroundImageView.width, height/2)];
+        _downImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _backgroundImageView.width, height+10)];
+
+//        _downImageView = [[UIImageView alloc] initWithFrame:CGRectMake(25 * ViewScaleIphone5Value, CGRectGetMaxY(_upImageView.frame) , width, height2/2)];
 //        UIImage *image1 =[UIImage imageNamed:@"redpacket_bg01@2x"];
 //        UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
         [_backgroundImageView addSubview:_upImageView];
@@ -307,10 +309,11 @@
         [UIView animateWithDuration:.08
                          animations:^{
                              self.backgroundImageView.transform = CGAffineTransformMakeScale(0, 0);
-                         }completion:^(BOOL finish){
                              [self.alertWindow removeFromSuperview];
                              self.alertWindow.rootViewController = nil;
                              self.alertWindow = nil;
+
+                         }completion:^(BOOL finish){
                              
                              if (self.finishBlock) {
                                  self.finishBlock(1);
@@ -323,8 +326,11 @@
 //打开红包动画
 - (void)openRedPacketAction
 {
-//    [_openButton.layer addAnimation:[self confirmViewRotateInfo] forKey:@"transform"];
-    [self openAnimation];
+    [_openButton.layer addAnimation:[self confirmViewRotateInfo] forKey:@"transform"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self openAnimation];
+
+    });
 }
 
 - (void)openAnimation
@@ -336,11 +342,12 @@
     UIImage *image2 =[UIImage imageNamed:@"redpacket_bg02@2x"];
     CGFloat width = ScreenWidth - 50 * ViewScaleIphone5Value;
     CGFloat height1 = width * (image1.size.height / image1.size.width);
-    CGFloat height2 = width * (image2.size.height / image2.size.width);
+    UIImage *image =  [UIImage imageNamed:@"redpacket_bgs"];
+    CGFloat height = width * (image.size.height / image.size.width);
 
-    [UIView animateWithDuration:2 animations:^{
-        _upImageView.frame =CGRectMake(25 * ViewScaleIphone5Value, -ScreenHeight / 2 - height1 / 2,width, height1/2);
-        _downImageView.frame =CGRectMake(25 * ViewScaleIphone5Value,-CGRectGetMaxY(_upImageView.frame) , width, height2/2);
+    [UIView animateWithDuration:0.5 animations:^{
+        _upImageView.frame =CGRectMake(0, -ScreenHeight / 2 - height1 / 2,width, height/2);
+        _downImageView.frame =CGRectMake(0 ,DScreenH , width, height);
     } completion:^(BOOL finished) {
         [self closeViewActions];
     }];
@@ -356,15 +363,12 @@
                            [NSValue valueWithCATransform3D:CATransform3DMakeRotation(6.28, 0, 0.5, 0)],
                            nil];
     
-    
     theAnimation.cumulative = YES;
-    theAnimation.duration = .4;
+    theAnimation.duration = .3;
     theAnimation.repeatCount = 3;
     theAnimation.removedOnCompletion = YES;
     theAnimation.fillMode = kCAFillModeForwards;
     theAnimation.delegate = self;
-    [self closeViewActions];
-
     return theAnimation;
 }
 
@@ -384,17 +388,17 @@
         
         return NO;
     }
-    
     return (![_backgroundImageView pointInside:[touch locationInView:_backgroundImageView] withEvent:nil]);
 }
 
 
+//delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     if (self.finishBlock) {
         self.finishBlock(_data.money);
     }
-    _messageLabel.text = [NSString stringWithFormat:@"中奖金额%.2f",_data.money];
+//    _messageLabel.text = [NSString stringWithFormat:@"中奖金额%.2f",_data.money];
 }
 
 

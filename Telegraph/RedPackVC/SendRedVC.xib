@@ -157,8 +157,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1E-dr-NGg">
                             <rect key="frame" x="20" y="193" width="374" height="0.66666666666665719"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="bFN-gb-1t4"/>
+                                <constraint firstAttribute="height" priority="900" constant="0.5" id="bFN-gb-1t4" userLabel="height = 0.2"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注名" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KS-Kg-Krm">
@@ -183,8 +184,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UI-Vb-DUJ">
                             <rect key="frame" x="20" y="275" width="374" height="0.66666666666668561"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="XSe-yq-Ivi"/>
+                                <constraint firstAttribute="height" constant="0.29999999999999999" id="XSe-yq-Ivi"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5r-Y4-O9r">
