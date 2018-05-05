@@ -13,6 +13,7 @@
 #import "CustBtn.h"
 #import "TGApplication.h"
 #import "WKWebViewController.h"
+#import "HBLoginViewController.h"
 
 @interface TGAnotherViewController ()<SDCycleScrollViewDelegate>
 
@@ -301,6 +302,9 @@
     NSLog(@"---点击了第%ld张图片", (long)index);
     
 //    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
+    HBLoginViewController *HBLogVC = [[HBLoginViewController alloc]init];
+    [self.navigationController pushViewController:HBLogVC animated:YES];
+   
 }
 
 

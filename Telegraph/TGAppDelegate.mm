@@ -361,6 +361,7 @@ static unsigned int overrideIndexAbove(__unused id self, __unused SEL _cmd)
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     PGTick;
+    NSLog(@"lauch...%@",NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
     if (iosMajorVersion() >= 9) {
         if ([effectiveLocalization().code isEqualToString:@"ar"]) {
             [UIView appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;

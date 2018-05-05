@@ -287,6 +287,8 @@
 
 #import "SendRedVC.h"
 #import "NSObject+Util.h"
+#import "YKUntil.h"
+
 //#if TARGET_IPHONE_SIMULATOR
 //NSInteger TGModernConversationControllerUnloadHistoryLimit = 500;
 //NSInteger TGModernConversationControllerUnloadHistoryThreshold = 200;
@@ -2252,6 +2254,19 @@ typedef enum {
     //替换cell内容
     TGMessage *currentMessage = [item valueForKey:@"_message"];
     [self addPacketViewWithMessage:currentMessage andCurrentCell:cell];
+    
+    
+    
+    //别人的头像（peeriD  对方的uid）
+    TGUser *fromUser =[TGDatabaseInstance() loadUser:(int)[self peerId]];
+   
+    
+    //对方头像
+    TGLetteredAvatarView *fromIconView =[_avatarButton valueForKey:@"_avatarView"];
+    UIImage *image =[YKUntil convertViewToImage:fromIconView];
+//    fromIconView.image =image;
+//    [fromIconView loadImage:_avatarUrl filter:@"circle:40x40" placeholder:(currentImage != nil ? currentImage : (_isChat ? placeholder : placeholder)) forceFade:true];
+
 }
 
 - (void)addPacketViewWithMessage:(TGMessage*)currentMessage andCurrentCell:(TGModernCollectionCell*)cell{

@@ -209,20 +209,6 @@
 			remoteGlobalIDString = D02601D71A55CA2300716290;
 			remoteInfo = Share;
 		};
-		692AB9141E675E8800706ACC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 692AB9071E675E8800706ACC /* Telegraph.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 68744C0D1BB1A9F700FE6542;
-			remoteInfo = watchkitapp;
-		};
-		692AB9161E675E8800706ACC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 692AB9071E675E8800706ACC /* Telegraph.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 68744C191BB1A9F700FE6542;
-			remoteInfo = "watchkitapp Extension";
-		};
 		692AB9181E675E8800706ACC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 692AB9071E675E8800706ACC /* Telegraph.xcodeproj */;
@@ -555,8 +541,6 @@
 			children = (
 				692AB9111E675E8800706ACC /* Telegram.app */,
 				692AB9131E675E8800706ACC /* Share.appex */,
-				692AB9151E675E8800706ACC /* watchkitapp.app */,
-				692AB9171E675E8800706ACC /* watchkitapp Extension.appex */,
 				692AB9191E675E8800706ACC /* SiriIntents.appex */,
 				692AB91B1E675E8800706ACC /* LegacyDatabase.framework */,
 				69960A0E1EF85C2900F9D091 /* Widget.appex */,
@@ -990,6 +974,7 @@
 				TargetAttributes = {
 					69F842351E67540700C110F7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K42S56CR2B;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1030,20 +1015,6 @@
 			fileType = "wrapper.app-extension";
 			path = Share.appex;
 			remoteRef = 692AB9121E675E8800706ACC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		692AB9151E675E8800706ACC /* watchkitapp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = watchkitapp.app;
-			remoteRef = 692AB9141E675E8800706ACC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		692AB9171E675E8800706ACC /* watchkitapp Extension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = "watchkitapp Extension.appex";
-			remoteRef = 692AB9161E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		692AB9191E675E8800706ACC /* SiriIntents.appex */ = {
@@ -1291,8 +1262,9 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K42S56CR2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1328,6 +1300,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K42S56CR2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1414,6 +1387,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K42S56CR2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1494,6 +1468,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K42S56CR2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

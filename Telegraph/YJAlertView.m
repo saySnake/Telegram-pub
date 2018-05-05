@@ -685,9 +685,8 @@
     
     [UIView animateWithDuration:duration delay:0.0f options:0 animations:animations completion:nil];
 
-    
-
 }
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     if (_isOpenTapClose) {
         [self close];

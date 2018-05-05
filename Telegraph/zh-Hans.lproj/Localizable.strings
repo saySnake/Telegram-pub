@@ -107,8 +107,12 @@
 // State
 "State.Connecting" = "连接中...";
 "State.connecting" = "连接中";
-"State.ConnectingToProxy" = "正在连接代理...";
-"State.ConnectingToProxyInfo" = "点击设置";
+//"State.ConnectingToProxy" = "正在连接代理...";
+"State.ConnectingToProxy" = "";
+
+//"State.ConnectingToProxyInfo" = "点击设置";
+"State.ConnectingToProxyInfo" = ""; //代理
+
 "State.Updating" = "收取中...";
 "State.WaitingForNetwork" = "等待网络连接";
 
@@ -517,7 +521,8 @@
 "DialogList.You" = "我";
 
 // Settings
-"Settings.TabTitle" = "设置";
+//"Settings.TabTitle" = "设置";
+"Settings.TabTitle" = "我的";
 "Settings.SetProfilePhoto" = "上传头像";
 "Settings.Logout" = "注销";
 "Settings.Title" = "设置";
@@ -1248,6 +1253,7 @@
 
 "ChatSettings.Other" = "其他";
 "ChatSettings.Stickers" = "贴纸";
+"redWallect.red" ="红包";
 
 "StickerPacksSettings.Title" = "贴纸设置";
 "StickerPacksSettings.ShowStickersButton" = "显示贴纸面板";
@@ -2880,3 +2886,28 @@
 /* new from translations.telegram.org */
 
 "Map.ETAHours_0" = "%@ 小时";
+
+
+/*火币登录相关*/
+"HBLogin.hotpay" = "开通HotPay";
+"HBLogin.LogTitle" = "登录HotPay";
+"login_account_tips" = "请输入正确的手机号或邮箱地址";
+"login_account_hint" = "输入手机号或邮箱地址";
+"login_pwd_tips" = "请输入正确的登录密码";
+"login_pwd_text_hint" = "输入登录密码";
+"wallet_login" = "登录";
+"login_forget_pwd" = "忘记密码";
+"search_country_hint" = "搜索";
+"country_category_common" = "常用";
+"country_category_all" = "全部";
+"Hb_QuickRegister" = "快速开通";
+"HBlogTips" = "国际注册后不可更改";
+"register_phone_tips" = "请输入正确的手机号码";
+"register_phone_hint" = "输入手机号码";
+"register_next" = "下一步";
+"trade_status_fail" = "失败";
+"register_phone_alert_msg" = "该手机号已注册，可以直接登录";
+"register_alert_cancel" = "知道了";
+"register_alert_other" = "去登录";
+//"HBLogin.hotpay" = "开通HotPay";
+//"HBLogin.hotpay" = "开通HotPay";

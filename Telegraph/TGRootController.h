@@ -10,6 +10,7 @@
 @class TGCallStatusBarView;
 @class TGVolumeBarView;
 @class TGAnotherViewController; //1
+@class HBFindViewController;
 
 
 @interface TGRootController : TGViewController
@@ -26,6 +27,8 @@
 
 
 @property (nonatomic, strong, readonly) TGAnotherViewController *anotherBarView;//2
+
+@property (nonatomic, strong, readonly) HBFindViewController *findViewController;//2
 
 
 - (SSignal *)sizeClass;

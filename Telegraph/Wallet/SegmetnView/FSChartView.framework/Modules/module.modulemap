@@ -1,0 +1,6 @@
+framework module FSChartView {
+  umbrella header "FSChartView.h"
+
+  export *
+  module * { export * }
+}

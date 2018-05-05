@@ -19,7 +19,8 @@
 #import "NSString+Util.h"
 //#import "NSObject+Util.h"
 #import "UIView+Common.h"
-
+#import "HBLoginCommom.h"
+#import "RTDeviceHardWare.h"
 
 
 #ifdef DEBUG
@@ -29,6 +30,7 @@
 #else
 #define NSLog(...)
 #endif
+
 
 
 #endif

@@ -20,7 +20,7 @@
 
 
 #import "TGAnotherViewController.h"
-
+#import "HBFindViewController.h"
 
 @interface TGRootController ()
 {
@@ -67,7 +67,7 @@
         _accountSettingsController = [[TGAccountSettingsController alloc] initWithUid:0];
         
         _anotherBarView = [[TGAnotherViewController alloc]init]; //3
-        
+        _findViewController = [[HBFindViewController alloc] init];
         
         _callsController = [[TGRecentCallsController alloc] init];
         _callsController.presentation = _presentation;
@@ -85,7 +85,7 @@
                                                  _dialogListController, //会话
                                                  _contactsController,//联系人
                                                  _callsController, //电话
-                                                 _anotherBarView, //发现
+                                                 _findViewController, //发现
                                                  _accountSettingsController,//设置
                                                  nil]]; //4 把call替换了 OK？？
         

@@ -132,23 +132,28 @@
         self.accessibilityTraits = UIAccessibilityTraitButton;
         self.accessibilityLabel = title;
         _imageView = [[UIImageView alloc] initWithImage:image];
-        if ([title isEqualToString:TGLocalized(@"Contacts.TabTitle")]) {
+        
+        if ([title isEqualToString:TGLocalized(@"Contacts.TabTitle")]) { //联系人
             
-            _imageView.image = [UIImage imageNamed:@"person_selected"];
+            _imageView.image = [UIImage imageNamed:@"contacts_1"];
         }
-        if ([title isEqualToString:TGLocalized(@"DialogList.TabTitle")]) {
+        
+        if ([title isEqualToString:TGLocalized(@"DialogList.TabTitle")]){
             
-            _imageView.image = [UIImage imageNamed:@"commit_selected"];
+            _imageView.image = [UIImage imageNamed:@"chats_1"]; //会话
         }
-        if ([title isEqualToString:TGLocalized(@"Settings.TabTitle")]) {
+        
+        if ([title isEqualToString:TGLocalized(@"Settings.TabTitle")]) {//我的
             
             _imageView.image = [UIImage imageNamed:@"set_selected"];
         }
+        
         if ([title isEqualToString:TGLocalized(@"Calls.TabTitle")]) {
             
             _imageView.image = [UIImage imageNamed:@"found_selected"];
         }
-        if ([title isEqualToString:TGLocalized(@"Founds.TabTitle")]) {
+        
+        if ([title isEqualToString:TGLocalized(@"Founds.TabTitle")]) {//发现
             
             _imageView.image = [UIImage imageNamed:@"found_selected"];
         }
@@ -354,11 +359,11 @@
         
         _tabButtons = [[NSMutableArray alloc] init];
         
-        _contactsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarContactsIcon title:TGLocalized(@"Contacts.TabTitle") presentation:presentation];
-        _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation];
-        _foundsButton = [[TGTabBarButton alloc] initWithImage:[UIImage imageNamed:@"found_selected"] title:TGLocalized(@"Founds.TabTitle") presentation:presentation];
-        _callsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarCallsIcon title:TGLocalized(@"Calls.TabTitle") presentation:presentation];
-        _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
+        _contactsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarContactsIcon title:TGLocalized(@"Contacts.TabTitle") presentation:presentation]; //
+        _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation]; //
+        _foundsButton = [[TGTabBarButton alloc] initWithImage:[UIImage imageNamed:@"found_selected"] title:TGLocalized(@"Founds.TabTitle") presentation:presentation];//
+        _callsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarCallsIcon title:TGLocalized(@"Calls.TabTitle") presentation:presentation]; //
+        _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation]; //
         _callsButton.hidden = true;
         _callsHidden = true;
         

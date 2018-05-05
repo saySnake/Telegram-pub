@@ -172,14 +172,13 @@ static NSData *initialSocksProxyData = nil;
     NSData *data = nil;
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 //    dict[@"ip"] = @"18.220.232.102";
-    dict[@"ip"]=@"elb-for-socks5-466609b051966731.elb.us-east-2.amazonaws.com";
+    dict[@"ip"]=@"ss5.hottalk.im";
     dict[@"port"] = @"1080";
     dict[@"username"] = @"zhangwei";
     dict[@"password"] = @"123@zhangwei.";
     dict[@"inactive"] = @(FALSE);
     data = [NSKeyedArchiver archivedDataWithRootObject:dict];
     [TGDatabaseInstance() setCustomProperty:@"socksProxyData" value:data];
-    
     
     
 #pragma mark -服务器布socks5

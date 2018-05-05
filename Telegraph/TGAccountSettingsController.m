@@ -73,6 +73,8 @@
 #import "TGEditProfileController.h"
 
 #import "TGLegacyComponentsContext.h"
+#import "TGWallectVC.h"
+
 
 @interface TGAccountSettingsController () <TGWallpaperControllerDelegate>
 {
@@ -80,7 +82,7 @@
     
     bool _editing;
     
-    TGCollectionMenuSection *_headerSection;
+    TGCollectionMenuSection *_headerSection;  //section
     TGCollectionMenuSection *_settingsSection;
     TGCollectionMenuSection *_shortcutSection;
     
@@ -97,6 +99,14 @@
     TGDisclosureActionCollectionItem *_callSettingsItem;
     TGDisclosureActionCollectionItem *_savedMessagesItem;
     TGDisclosureActionCollectionItem *_stickerSettingsItem;
+    TGDisclosureActionCollectionItem *_redWallectSettingsItem; //红包item
+
+    /***
+     TGDisclosureActionCollectionItem *_stickerSettingsItem;
+
+     ***/
+    
+    
     TGDisclosureActionCollectionItem *_supportItem;
     TGDisclosureActionCollectionItem *_faqItem;
     
@@ -148,17 +158,25 @@
         
         NSMutableArray *settingsItems = [[NSMutableArray alloc] init];
         [settingsItems addObject:(_notificationsItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.NotificationsAndSounds") action:@selector(notificationsAndSoundsPressed)])];
+        
         [settingsItems addObject:(_privacySettingsItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.PrivacySettings") action:@selector(privacySettingsPressed)])];
         [settingsItems addObject:(_chatSettingsItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.ChatSettings") action:@selector(chatSettingsPressed)])];
         [settingsItems addObject:_wallpapersItem];
         [settingsItems addObject:_languageItem];
         
+
+        
         NSMutableArray *shortcutItems = [[NSMutableArray alloc] init];
         [shortcutItems addObject:(_savedMessagesItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.SavedMessages") action:@selector(savedMessagesPressed)])];
         [shortcutItems addObject:(_stickerSettingsItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"ChatSettings.Stickers") action:@selector(stickerSettingsPressed)])];
         
+        //红包
+        [shortcutItems addObject:(_redWallectSettingsItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"redWallect.red") action:@selector(redWallectPressed)])];
+
+        
         _shortcutSection = [[TGCollectionMenuSection alloc] initWithItems:shortcutItems];
         [self.menuSections addSection:_shortcutSection];
+        
         
         _settingsSection = [[TGCollectionMenuSection alloc] initWithItems:settingsItems];
         [self.menuSections addSection:_settingsSection];
@@ -243,7 +261,8 @@
 {
     [super loadView];
     
-    _savedMessagesItem.icon = TGImageNamed(@"SettingsSavedMessagesIcon.png");
+    _redWallectSettingsItem.icon =TGImageNamed(@"SettingsSavedMessagesIcon.png"); //红包的信息
+    _savedMessagesItem.icon = TGImageNamed(@"SettingsSavedMessagesIcon.png"); //保存的信息
     _notificationsItem.icon = TGImageNamed(@"SettingsNotificationsIcon.png");
     _privacySettingsItem.icon = TGImageNamed(@"SettingsPrivacyIcon.png");
     _chatSettingsItem.icon = TGImageNamed(@"SettingsDataIcon.png");
@@ -448,6 +467,7 @@
     }];
 }
 
+
 - (void)_commitCancelAvatarUpdate
 {
     [_profileDataItem setUpdatingAvatar:nil hasUpdatingAvatar:false];
@@ -473,6 +493,7 @@
     }];
 }
 
+
 - (void)_commitDeleteAvatar
 {
     [_profileDataItem setHasUpdatingAvatar:true];
@@ -485,6 +506,7 @@
     [ActionStageInstance() requestActor:action options:options watcher:self];
     [ActionStageInstance() requestActor:action options:options watcher:TGTelegraphInstance];
 }
+
 
 - (void)updatePhoneCallsEnabled:(bool)enabled
 {
@@ -540,6 +562,13 @@
     
     if (changed)
         [self.collectionView reloadData];
+}
+
+
+//红包入口
+- (void)redWallectPressed
+{
+    [self.navigationController pushViewController:[[TGWallectVC alloc] init] animated:true];
 }
 
 - (void)notificationsAndSoundsPressed
